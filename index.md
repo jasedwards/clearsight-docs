@@ -1,1 +1,1 @@
-- [Framework](/framework)
+- [Framework](./framework)
