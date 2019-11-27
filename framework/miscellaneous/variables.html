@@ -1,0 +1,2222 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Clearsight Apps Framework</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Clearsight Apps Framework</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-variables">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+<ol class="breadcrumb">
+  <li>Miscellaneous</li>
+  <li>Variables</li>
+</ol>
+
+<section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#ACTIVATE_APP" title="libs/shared/framework/collaborative-platform/src/lib/portal-events.const.ts"><b>ACTIVATE_APP</b>&nbsp;&nbsp;&nbsp;(libs/.../portal-events.const.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#ActivateAppEventName" title="libs/shared/framework/browser/src/lib/window-events.ts"><b>ActivateAppEventName</b>&nbsp;&nbsp;&nbsp;(libs/.../window-events.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#CLOSE_APP_HOOK" title="libs/shared/framework/close-app/src/lib/close-app-hook.token.ts"><b>CLOSE_APP_HOOK</b>&nbsp;&nbsp;&nbsp;(libs/.../close-app-hook.token.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#CLOSE_HANDLER" title="libs/shared/framework/close-app/src/lib/close-handler.token.ts"><b>CLOSE_HANDLER</b>&nbsp;&nbsp;&nbsp;(libs/.../close-handler.token.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#CloseAppEvent" title="libs/shared/framework/browser/src/lib/window-events.ts"><b>CloseAppEvent</b>&nbsp;&nbsp;&nbsp;(libs/.../window-events.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#CloseRecentItemEventName" title="libs/shared/framework/browser/src/lib/window-events.ts"><b>CloseRecentItemEventName</b>&nbsp;&nbsp;&nbsp;(libs/.../window-events.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#CODE_DEPENDENCY_HANDLER" title="libs/shared/framework/code-dependency/src/lib/code-dependency-handler.token.ts"><b>CODE_DEPENDENCY_HANDLER</b>&nbsp;&nbsp;&nbsp;(libs/.../code-dependency-handler.token.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#Colors" title="libs/shared/framework/branding/src/lib/colors.const.ts"><b>Colors</b>&nbsp;&nbsp;&nbsp;(libs/.../colors.const.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#components" title="libs/shared/framework/dual-list/src/lib/dual-list.module.ts"><b>components</b>&nbsp;&nbsp;&nbsp;(libs/.../dual-list.module.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#CONFIRM_DIALOG_SERVICE" title="libs/shared/framework/dialog/src/lib/confirm-dialog/confirm-dialog-service.token.ts"><b>CONFIRM_DIALOG_SERVICE</b>&nbsp;&nbsp;&nbsp;(libs/.../confirm-dialog-service.token.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/color-picker/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/data-table/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/drag-drop/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/auto-collapsible/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/formatters/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/date/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/accessibility/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/code-dependency/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/dialog/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/collaborative-platform/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/button/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/close-app/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/alert/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/browser/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/branding/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="libs/shared/framework/dual-list/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#dateRoutes" title="libs/shared/framework/date/src/lib/date.module.ts"><b>dateRoutes</b>&nbsp;&nbsp;&nbsp;(libs/.../date.module.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#GRID_LAYOUT" title="libs/shared/framework/data-table/src/lib/grid-layout/grid-layout.token.ts"><b>GRID_LAYOUT</b>&nbsp;&nbsp;&nbsp;(libs/.../grid-layout.token.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#LICENSED_APPS" title="libs/shared/framework/collaborative-platform/src/lib/portal-events.const.ts"><b>LICENSED_APPS</b>&nbsp;&nbsp;&nbsp;(libs/.../portal-events.const.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#LOG_MESSAGE" title="libs/shared/framework/collaborative-platform/src/lib/portal-events.const.ts"><b>LOG_MESSAGE</b>&nbsp;&nbsp;&nbsp;(libs/.../portal-events.const.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#MockCodeDependencyMessage" title="libs/shared/framework/code-dependency/src/lib/testing-utilities/mock-code-dependency-message.ts"><b>MockCodeDependencyMessage</b>&nbsp;&nbsp;&nbsp;(libs/.../mock-code-dependency-message.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#MockCodeDependencyMessage" title="libs/shared/framework/code-dependency/src/lib/mock-code-dependency-message.ts"><b>MockCodeDependencyMessage</b>&nbsp;&nbsp;&nbsp;(libs/.../mock-code-dependency-message.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#MockInvalidatedResponse" title="libs/shared/framework/code-dependency/src/lib/testing-utilities/mock-code-dependency-message.ts"><b>MockInvalidatedResponse</b>&nbsp;&nbsp;&nbsp;(libs/.../mock-code-dependency-message.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#MockInvalidatedResponse" title="libs/shared/framework/code-dependency/src/lib/mock-code-dependency-message.ts"><b>MockInvalidatedResponse</b>&nbsp;&nbsp;&nbsp;(libs/.../mock-code-dependency-message.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#NAV_APP" title="libs/shared/framework/collaborative-platform/src/lib/portal-events.const.ts"><b>NAV_APP</b>&nbsp;&nbsp;&nbsp;(libs/.../portal-events.const.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#NAV_COMMANDS" title="libs/shared/framework/collaborative-platform/src/lib/portal-events.const.ts"><b>NAV_COMMANDS</b>&nbsp;&nbsp;&nbsp;(libs/.../portal-events.const.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#NavClicked" title="libs/shared/framework/browser/src/lib/window-events.ts"><b>NavClicked</b>&nbsp;&nbsp;&nbsp;(libs/.../window-events.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#ON_CLOSED" title="libs/shared/framework/collaborative-platform/src/lib/portal-events.const.ts"><b>ON_CLOSED</b>&nbsp;&nbsp;&nbsp;(libs/.../portal-events.const.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#ON_DELETE_FAVORITE" title="libs/shared/framework/collaborative-platform/src/lib/portal-events.const.ts"><b>ON_DELETE_FAVORITE</b>&nbsp;&nbsp;&nbsp;(libs/.../portal-events.const.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#ON_VIEWS_LOADED" title="libs/shared/framework/collaborative-platform/src/lib/portal-events.const.ts"><b>ON_VIEWS_LOADED</b>&nbsp;&nbsp;&nbsp;(libs/.../portal-events.const.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#OnClosedEventName" title="libs/shared/framework/browser/src/lib/window-events.ts"><b>OnClosedEventName</b>&nbsp;&nbsp;&nbsp;(libs/.../window-events.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#OpenRecentItemEventName" title="libs/shared/framework/browser/src/lib/window-events.ts"><b>OpenRecentItemEventName</b>&nbsp;&nbsp;&nbsp;(libs/.../window-events.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#PostClientInfoEvent" title="libs/shared/framework/browser/src/lib/window-events.ts"><b>PostClientInfoEvent</b>&nbsp;&nbsp;&nbsp;(libs/.../window-events.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#RemoveRecentItemEventName" title="libs/shared/framework/browser/src/lib/window-events.ts"><b>RemoveRecentItemEventName</b>&nbsp;&nbsp;&nbsp;(libs/.../window-events.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#RequestClientInfoEvent" title="libs/shared/framework/browser/src/lib/window-events.ts"><b>RequestClientInfoEvent</b>&nbsp;&nbsp;&nbsp;(libs/.../window-events.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#RequestLicensedAppsEvent" title="libs/shared/framework/browser/src/lib/window-events.ts"><b>RequestLicensedAppsEvent</b>&nbsp;&nbsp;&nbsp;(libs/.../window-events.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/formatters/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/accessibility/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/color-picker/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/browser/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/code-dependency/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/auto-collapsible/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/date/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/close-app/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/data-table/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/alert/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/dialog/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/button/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/drag-drop/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/branding/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/dual-list/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="libs/shared/framework/collaborative-platform/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(libs/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#RETURN_LICENSED_APPS" title="libs/shared/framework/collaborative-platform/src/lib/portal-events.const.ts"><b>RETURN_LICENSED_APPS</b>&nbsp;&nbsp;&nbsp;(libs/.../portal-events.const.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#ReturnLicensedAppsEvent" title="libs/shared/framework/browser/src/lib/window-events.ts"><b>ReturnLicensedAppsEvent</b>&nbsp;&nbsp;&nbsp;(libs/.../window-events.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#ScrollTo" title="libs/shared/framework/browser/src/lib/scroll-to.const.ts"><b>ScrollTo</b>&nbsp;&nbsp;&nbsp;(libs/.../scroll-to.const.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#SetRecentItemsEventName" title="libs/shared/framework/browser/src/lib/window-events.ts"><b>SetRecentItemsEventName</b>&nbsp;&nbsp;&nbsp;(libs/.../window-events.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#WINDOW_TOKEN" title="libs/shared/framework/browser/src/lib/window-events.token.ts"><b>WINDOW_TOKEN</b>&nbsp;&nbsp;&nbsp;(libs/.../window-events.token.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>libs/shared/framework/collaborative-platform/src/lib/portal-events.const.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ACTIVATE_APP"></a>
+                        <span class="name">
+                            <b>
+                            ACTIVATE_APP</b>
+                            <a href="#ACTIVATE_APP"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;ACTIVATE_APP&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="LICENSED_APPS"></a>
+                        <span class="name">
+                            <b>
+                            LICENSED_APPS</b>
+                            <a href="#LICENSED_APPS"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;LICENSED_APPS&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="LOG_MESSAGE"></a>
+                        <span class="name">
+                            <b>
+                            LOG_MESSAGE</b>
+                            <a href="#LOG_MESSAGE"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;LOG_MESSAGE&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="NAV_APP"></a>
+                        <span class="name">
+                            <b>
+                            NAV_APP</b>
+                            <a href="#NAV_APP"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;APP_NAV&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="NAV_COMMANDS"></a>
+                        <span class="name">
+                            <b>
+                            NAV_COMMANDS</b>
+                            <a href="#NAV_COMMANDS"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;NAV_COMMANDS&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ON_CLOSED"></a>
+                        <span class="name">
+                            <b>
+                            ON_CLOSED</b>
+                            <a href="#ON_CLOSED"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;ON_CLOSED&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ON_DELETE_FAVORITE"></a>
+                        <span class="name">
+                            <b>
+                            ON_DELETE_FAVORITE</b>
+                            <a href="#ON_DELETE_FAVORITE"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;ON_DELETE_FAVORITES&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ON_VIEWS_LOADED"></a>
+                        <span class="name">
+                            <b>
+                            ON_VIEWS_LOADED</b>
+                            <a href="#ON_VIEWS_LOADED"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;ON_VIEWS_LOADED&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="RETURN_LICENSED_APPS"></a>
+                        <span class="name">
+                            <b>
+                            RETURN_LICENSED_APPS</b>
+                            <a href="#RETURN_LICENSED_APPS"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;RETURN_LICENSED_APPS&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/browser/src/lib/window-events.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ActivateAppEventName"></a>
+                        <span class="name">
+                            <b>
+                            ActivateAppEventName</b>
+                            <a href="#ActivateAppEventName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;ACTIVATE_APP&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="CloseAppEvent"></a>
+                        <span class="name">
+                            <b>
+                            CloseAppEvent</b>
+                            <a href="#CloseAppEvent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;CLOSE_APP&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="CloseRecentItemEventName"></a>
+                        <span class="name">
+                            <b>
+                            CloseRecentItemEventName</b>
+                            <a href="#CloseRecentItemEventName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;CLOSE_RECENT_ITEM&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="NavClicked"></a>
+                        <span class="name">
+                            <b>
+                            NavClicked</b>
+                            <a href="#NavClicked"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;NAV_CLICKED&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="OnClosedEventName"></a>
+                        <span class="name">
+                            <b>
+                            OnClosedEventName</b>
+                            <a href="#OnClosedEventName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;ON_CLOSED&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="OpenRecentItemEventName"></a>
+                        <span class="name">
+                            <b>
+                            OpenRecentItemEventName</b>
+                            <a href="#OpenRecentItemEventName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;OPEN_RECENT_ITEM&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="PostClientInfoEvent"></a>
+                        <span class="name">
+                            <b>
+                            PostClientInfoEvent</b>
+                            <a href="#PostClientInfoEvent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;POST_CLIENT_INFO&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="RemoveRecentItemEventName"></a>
+                        <span class="name">
+                            <b>
+                            RemoveRecentItemEventName</b>
+                            <a href="#RemoveRecentItemEventName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;REMOVE_RECENT_ITEM&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="RequestClientInfoEvent"></a>
+                        <span class="name">
+                            <b>
+                            RequestClientInfoEvent</b>
+                            <a href="#RequestClientInfoEvent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;CLIENT_INFO&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="RequestLicensedAppsEvent"></a>
+                        <span class="name">
+                            <b>
+                            RequestLicensedAppsEvent</b>
+                            <a href="#RequestLicensedAppsEvent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;LICENSED_APPS&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ReturnLicensedAppsEvent"></a>
+                        <span class="name">
+                            <b>
+                            ReturnLicensedAppsEvent</b>
+                            <a href="#ReturnLicensedAppsEvent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;RETURN_LICENSED_APPS&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="SetRecentItemsEventName"></a>
+                        <span class="name">
+                            <b>
+                            SetRecentItemsEventName</b>
+                            <a href="#SetRecentItemsEventName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;SET_RECENT_ITEMS&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/close-app/src/lib/close-app-hook.token.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="CLOSE_APP_HOOK"></a>
+                        <span class="name">
+                            <b>
+                            CLOSE_APP_HOOK</b>
+                            <a href="#CLOSE_APP_HOOK"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new InjectionToken&lt;ICloseAppHook&gt;(&#x27;CLOSE_APP_HOOK&#x27;)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/close-app/src/lib/close-handler.token.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="CLOSE_HANDLER"></a>
+                        <span class="name">
+                            <b>
+                            CLOSE_HANDLER</b>
+                            <a href="#CLOSE_HANDLER"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new InjectionToken&lt;CloseHandler&gt;(&#x27;CLOSE_HANDLER&#x27;)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/code-dependency/src/lib/code-dependency-handler.token.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="CODE_DEPENDENCY_HANDLER"></a>
+                        <span class="name">
+                            <b>
+                            CODE_DEPENDENCY_HANDLER</b>
+                            <a href="#CODE_DEPENDENCY_HANDLER"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new InjectionToken&lt;ICodeDependencyHandler&gt;(&#x27;CODE_DEPENDENCY_HANDLER&#x27;)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/branding/src/lib/colors.const.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="Colors"></a>
+                        <span class="name">
+                            <b>
+                            Colors</b>
+                            <a href="#Colors"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  primary: &#x27;#267aae&#x27;,
+  actionPlan: &#x27;#780A78&#x27;,
+  claim: &#x27;#039027&#x27;,
+  incident: &#x27;#E0D900&#x27;, //#FFFF00&#x27;,
+  location: &#x27;#30439D&#x27;,
+  occurrence: &#x27;#FF7900&#x27;,
+  policy: &#x27;#AA00AA&#x27;,
+  alert: &#x27;#FF0000&#x27;,
+  TelephoneOutage: &#x27;#C0C0C0&#x27;,
+  AdministrativeMessage: &#x27;#FFFFFF&#x27;,
+  AirQualityAlert: &#x27;#808080&#x27;,
+  AirStagnationAdvisory: &#x27;#808080&#x27;,
+  AsancheWarning: &#x27;#1E90FF&#x27;,
+  AvalancheWatch: &#x27;#F4A460&#x27;,
+  BlizzarhfallAdvisory: &#x27;#696969&#x27;,
+  AshfallWarning: &#x27;#A9A9A9&#x27;,
+  AvaldWarning: &#x27;#FF4500&#x27;,
+  BlizzardWatch: &#x27;#ADFF2F&#x27;,
+  BlowingDustAdvisory: &#x27;#BDB76B&#x27;,
+  BlowingSnowAdvisory: &#x27;#ADD8E6&#x27;,
+  BriskWindAdvisory: &#x27;#D8BFD8&#x27;,
+  ChildAbductionEmergency: &#x27;#808080&#x27;,
+  CivilDangerWarning: &#x27;#FFB6C1&#x27;,
+  CivilEmergencyMessage: &#x27;#FFB6C1&#x27;,
+  CoastalFloodAdvisory: &#x27;#7CFC00&#x27;,
+  CoastalFloodStatement: &#x27;#6B8E23&#x27;,
+  CoastalFloodWarning: &#x27;#228B22&#x27;,
+  CoastalFloodWatch: &#x27;#66CDAA&#x27;,
+  DenseFogAdvisory: &#x27;#708090&#x27;,
+  DenseSmokeAdvisory: &#x27;#F0E68C&#x27;,
+  DustStormWarning: &#x27;#FFE4C4&#x27;,
+  EarthquakeWarning: &#x27;#8B4513&#x27;,
+  EvacuationImmediate: &#x27;#7FFF00&#x27;,
+  ExcessiveHeatWarning: &#x27;#C71585&#x27;,
+  ExcessiveHeatWatch: &#x27;#800000&#x27;,
+  ExtremeColdWarning: &#x27;#0000FF&#x27;,
+  ExtremeColdWatch: &#x27;#0000FF&#x27;,
+  ExtremeFireDanger: &#x27;#E9967A&#x27;,
+  ExtremeWindWarning: &#x27;#FF1493&#x27;,
+  FireWarning: &#x27;#A0522D&#x27;,
+  FireWeatherWatch: &#x27;#FFDEAD&#x27;,
+  FlashFloodStatement: &#x27;#9ACD32&#x27;,
+  FlashFloodWarning: &#x27;#8B0000&#x27;,
+  FlashFloodWatch: &#x27;#32CD32&#x27;,
+  FloodAdvisory: &#x27;#00FF7F&#x27;,
+  FloodStatement: &#x27;#00FF00&#x27;,
+  FloodWarning: &#x27;#00FF00&#x27;,
+  FloodWatch: &#x27;#2E8B57&#x27;,
+  FreezeWarning: &#x27;#00FFFF&#x27;,
+  FreezeWatch: &#x27;#4169E1&#x27;,
+  FreezingDrizzleAdvisory: &#x27;#DA70D6&#x27;,
+  FreezingFogAdvisory: &#x27;#008080&#x27;,
+  FreezingRainAdvisory: &#x27;#DA70D6&#x27;,
+  FreezingSprayAdvisory: &#x27;#00BFFF&#x27;,
+  FrostAdvisory: &#x27;#6495ED&#x27;,
+  GaleWarning: &#x27;#DDA0DD&#x27;,
+  GaleWatch: &#x27;#E1C0CB&#x27;,
+  HardFreezeWarning: &#x27;#0000FF&#x27;,
+  HardFreezeWatch: &#x27;#4169E1&#x27;,
+  HazardousMaterialsWarning: &#x27;#4B0082&#x27;,
+  HazardousSeasWarning: &#x27;#DDA0DD&#x27;,
+  HazardousSeasWatch: &#x27;#483D8B&#x27;,
+  HazardousWeatherOutlook: &#x27;#EEE8AA&#x27;,
+  HeatAdvisory: &#x27;#FF7F50&#x27;,
+  HeavyFreezingSprayWarning: &#x27;#00BFFF&#x27;,
+  HeavyFreezingSprayWatch: &#x27;#BC8F8F&#x27;,
+  HeavySnowWarning: &#x27;#8A2BE2&#x27;,
+  HighSurfAdvisory: &#x27;#BA55D3&#x27;,
+  HighSurfWarning: &#x27;#228B22&#x27;,
+  HighWindWarning: &#x27;#DAA520&#x27;,
+  HighWindWatch: &#x27;#B8860B&#x27;,
+  HurricaneForceWindWarning: &#x27;#CD5C5C&#x27;,
+  HurricaneForceWindWatch: &#x27;#9932CC&#x27;,
+  HurricaneStatement: &#x27;#9370DB&#x27;,
+  HurricaneWarning: &#x27;#DC143C&#x27;,
+  HurricaneWatch: &#x27;#FF00FF&#x27;,
+  HurricaneWindWarning: &#x27;#CD5C5C&#x27;,
+  HurricaneWindWatch: &#x27;#FF00FF&#x27;,
+  HydrologicAdvisory: &#x27;#00FF7F&#x27;,
+  HydrologicOutlook: &#x27;#90EE90&#x27;,
+  IceStormWarning: &#x27;#8B008B&#x27;,
+  LakeEffectSnowAdvisory: &#x27;#48D1CC&#x27;,
+  LakeEffectSnowWarning: &#x27;#48D1CC&#x27;,
+  LakeEffectSnowWatch: &#x27;#87CEFA&#x27;,
+  LakeEffectSnowandBlowingSnowAdvisory: &#x27;#48D1CC&#x27;,
+  LakeWindAdvisory: &#x27;#D2B48C&#x27;,
+  LakeshoreFloodAdvisory: &#x27;#7CFC00&#x27;,
+  LakeshoreFloodStatement: &#x27;#6B8E23&#x27;,
+  LakeshoreFloodWarning: &#x27;#228B22&#x27;,
+  LakeshoreFloodWatch: &#x27;#66CDAA&#x27;,
+  LawEnforcementWarning: &#x27;#C0C0C0&#x27;,
+  LocalAreaEmergency: &#x27;#C0C0C0&#x27;,
+  LowWaterAdvisory: &#x27;#A52A2A&#x27;,
+  MarineWeatherStatement: &#x27;#FFEFD5&#x27;,
+  NuclearPowerPlantWarning: &#x27;#4B0082&#x27;,
+  RadiologicalHazardWarning: &#x27;#4B0082&#x27;,
+  RedFlagWarning: &#x27;#FF1493&#x27;,
+  RipCurrentStatement: &#x27;#40E0D0&#x27;,
+  SevereThunderstormWarning: &#x27;#FFA500&#x27;,
+  SevereThunderstormWatch: &#x27;#DB7093&#x27;,
+  SevereWeatherStatement: &#x27;#00FFFF&#x27;,
+  ShelterInPlaceWarning: &#x27;#FA8072&#x27;,
+  ShortTermForecast: &#x27;#98FB98&#x27;,
+  SleetAdvisory: &#x27;#7B68EE&#x27;,
+  SleetWarning: &#x27;#87CEEB&#x27;,
+  SmallCraftAdvisory: &#x27;#D8BFD8&#x27;,
+  SnowandBlowingSnowAdvisory: &#x27;#B0E0E6&#x27;,
+  SpecialMarineWarning: &#x27;#FFA500&#x27;,
+  SpecialWeatherStatement: &#x27;#FFE4B5&#x27;,
+  StormWarning: &#x27;#9400D3&#x27;,
+  StormWatch: &#x27;#EE82EE&#x27;,
+  Test: &#x27;#F0FFFF&#x27;,
+  TornadoWarning: &#x27;#FF0000&#x27;,
+  TornadoWatch: &#x27;#FFFF00&#x27;,
+  TropicalStormWarning: &#x27;#B22222&#x27;,
+  TropicalStormWatch: &#x27;#F08080&#x27;,
+  TropicalStormWindWarning: &#x27;#B22222&#x27;,
+  TropicalStormWindWatch: &#x27;#F08080&#x27;,
+  TsunamiAdvisory: &#x27;#D2691E&#x27;,
+  TsunamiWarning: &#x27;#FD6347&#x27;,
+  TsunamiWatch: &#x27;#FF00FF&#x27;,
+  TyphoonStatement: &#x27;#9370DB&#x27;,
+  TyphoonWarning: &#x27;#DC143C&#x27;,
+  TyphoonWatch: &#x27;#FF00FF&#x27;,
+  VolcanoWarning: &#x27;#2F4F4F&#x27;,
+  WindAdvisory: &#x27;#D2B48C&#x27;,
+  WindChillAdvisory: &#x27;#AFEEEE&#x27;,
+  WindChillWarning: &#x27;#B0C4DE&#x27;,
+  WindChillWatch: &#x27;#5F9EA0&#x27;,
+  WinterStormWarning: &#x27;#FF69B4&#x27;,
+  WinterStormWatch: &#x27;#4682B4&#x27;,
+  WinterWeatherAdvisory: &#x27;#7B68EE&#x27;,
+  EarthquakeDefault: &#x27;#000000&#x27;,
+  PastHour: &#x27;#FF0000&#x27;,
+  PastDay: &#x27;#FFA500&#x27;,
+  PastWeek: &#x27;#FFFF00&#x27;
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/dual-list/src/lib/dual-list.module.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="components"></a>
+                        <span class="name">
+                            <b>
+                            components</b>
+                            <a href="#components"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+  DualListComponent,
+  SourceListDirective,
+  TargetListDirective,
+  DualListDirective,
+  ListActionDirective
+]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/dialog/src/lib/confirm-dialog/confirm-dialog-service.token.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="CONFIRM_DIALOG_SERVICE"></a>
+                        <span class="name">
+                            <b>
+                            CONFIRM_DIALOG_SERVICE</b>
+                            <a href="#CONFIRM_DIALOG_SERVICE"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new InjectionToken&lt;IConfirmDialogService&gt;(&#x27;CONFIRM_DIALOG_SERVICE&#x27;)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/color-picker/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/data-table/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/drag-drop/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/auto-collapsible/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/formatters/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/date/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/accessibility/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/code-dependency/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/dialog/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/collaborative-platform/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/button/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/close-app/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/alert/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/browser/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/branding/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/dual-list/src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/date/src/lib/date.module.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dateRoutes"></a>
+                        <span class="name">
+                            <b>
+                            dateRoutes</b>
+                            <a href="#dateRoutes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Route[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/data-table/src/lib/grid-layout/grid-layout.token.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="GRID_LAYOUT"></a>
+                        <span class="name">
+                            <b>
+                            GRID_LAYOUT</b>
+                            <a href="#GRID_LAYOUT"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new InjectionToken&lt;string&gt;(&#x27;GRID_LAYOUT&#x27;)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/code-dependency/src/lib/testing-utilities/mock-code-dependency-message.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="MockCodeDependencyMessage"></a>
+                        <span class="name">
+                            <b>
+                            MockCodeDependencyMessage</b>
+                            <a href="#MockCodeDependencyMessage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/ICodeDependencyMessage.html" target="_self" >ICodeDependencyMessage</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  ChangeConfirmationMessage: &#x27;Changing {0} will invalidate the following field(s): {1}.  Are you sure?&#x27;,
+  ChangeNoConfirmationMessage: &#x27;Changing {0} has invalidated the following field(s): {1}.&#x27;,
+  InvalidParentsMessage: &#x27;This control is disabled because of the following empty field(s): {0}&#x27;,
+  DomainAllowsDependencies: true,
+  UserMustConfirmParentChanges: true,
+  DisableControlsWithEmptyParents: true,
+  DomainName: &#x27;STARS.Claim&#x27;,
+  GroupKeys: [&#x27;24&#x27;, &#x27;30&#x27;],
+  ChildrenParentNames: {
+    ChildNamesArrayForCoverageCode: [&#x27;Cause&#x27;],
+    ChildNamesArrayForLossDate: [&#x27;LocationID&#x27;],
+    ChildNamesArrayForPeril: [&#x27;Jurisdiction&#x27;],
+    ParentNamesArrayForJurisdiction: [&#x27;Peril&#x27;],
+    ParentNamesArrayForLocationID: [&#x27;LossDate&#x27;],
+    ParentNamesArrayForCause: [&#x27;CoverageCode&#x27;]
+  },
+  FieldNameLabels: {
+    LossDate: &#x27;Loss Date&#x27;,
+    Cause: &#x27;Cause Category&#x27;,
+    Carrier: &#x27;AMB_Carrier/TPA&#x27;,
+    LocationID: &#x27;AMB_Location&#x27;,
+    Jurisdiction: &#x27;Jurisdiction&#x27;
+  },
+  FieldNames: [&#x27;Cause&#x27;, &#x27;Carrier&#x27;, &#x27;LocationID&#x27;, &#x27;Litigation&#x27;, &#x27;Peril&#x27;],
+  ManagedLookupFields: [&#x27;Jurisdiction&#x27;, &#x27;Peril&#x27;, &#x27;LocationID&#x27;, &#x27;CoverageCode&#x27;]
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="MockInvalidatedResponse"></a>
+                        <span class="name">
+                            <b>
+                            MockInvalidatedResponse</b>
+                            <a href="#MockInvalidatedResponse"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/ICodeDepdendencyInvalidatedResponse.html" target="_self" >ICodeDepdendencyInvalidatedResponse</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  FieldName: &#x27;LossDate&#x27;,
+  FieldNames: [&#x27;LocationID&#x27;],
+  FieldValues: &#x27;123&#x27;,
+  SuppressConfirmationPopup: false,
+  Value: &#x27;1/2/2019&#x27;
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/code-dependency/src/lib/mock-code-dependency-message.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="MockCodeDependencyMessage"></a>
+                        <span class="name">
+                            <b>
+                            MockCodeDependencyMessage</b>
+                            <a href="#MockCodeDependencyMessage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/ICodeDependencyMessage.html" target="_self" >ICodeDependencyMessage</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  ChangeConfirmationMessage: &#x27;Changing {0} will invalidate the following field(s): {1}.  Are you sure?&#x27;,
+  ChangeNoConfirmationMessage: &#x27;Changing {0} has invalidated the following field(s): {1}.&#x27;,
+  InvalidParentsMessage: &#x27;This control is disabled because of the following empty field(s): {0}&#x27;,
+  DomainAllowsDependencies: true,
+  UserMustConfirmParentChanges: true,
+  DisableControlsWithEmptyParents: true,
+  DomainName: &#x27;STARS.Claim&#x27;,
+  GroupKeys: [&#x27;24&#x27;, &#x27;30&#x27;],
+  ChildrenParentNames: {
+    ChildNamesArrayForCoverageCode: [&#x27;Cause&#x27;],
+    ChildNamesArrayForLossDate: [&#x27;LocationID&#x27;],
+    ChildNamesArrayForPeril: [&#x27;Jurisdiction&#x27;],
+    ParentNamesArrayForJurisdiction: [&#x27;Peril&#x27;],
+    ParentNamesArrayForLocationID: [&#x27;LossDate&#x27;],
+    ParentNamesArrayForCause: [&#x27;CoverageCode&#x27;]
+  },
+  FieldNameLabels: {
+    LossDate: &#x27;Loss Date&#x27;,
+    Cause: &#x27;Cause Category&#x27;,
+    Carrier: &#x27;AMB_Carrier/TPA&#x27;,
+    LocationID: &#x27;AMB_Location&#x27;,
+    Jurisdiction: &#x27;Jurisdiction&#x27;
+  },
+  FieldNames: [&#x27;Cause&#x27;, &#x27;Carrier&#x27;, &#x27;LocationID&#x27;, &#x27;Litigation&#x27;, &#x27;Peril&#x27;],
+  ManagedLookupFields: [&#x27;Jurisdiction&#x27;, &#x27;Peril&#x27;, &#x27;LocationID&#x27;, &#x27;CoverageCode&#x27;]
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="MockInvalidatedResponse"></a>
+                        <span class="name">
+                            <b>
+                            MockInvalidatedResponse</b>
+                            <a href="#MockInvalidatedResponse"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/ICodeDepdendencyInvalidatedResponse.html" target="_self" >ICodeDepdendencyInvalidatedResponse</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  FieldName: &#x27;LossDate&#x27;,
+  FieldNames: [&#x27;LocationID&#x27;],
+  FieldValues: &#x27;123&#x27;,
+  SuppressConfirmationPopup: false,
+  Value: &#x27;1/2/2019&#x27;
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/browser/src/lib/scroll-to.const.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ScrollTo"></a>
+                        <span class="name">
+                            <b>
+                            ScrollTo</b>
+                            <a href="#ScrollTo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(parent: HTMLElement, child: HTMLElement, padding &#x3D; 30): void &#x3D;&gt; {
+  const parentTop &#x3D; parent.getBoundingClientRect().top;
+  const parentHeight &#x3D; parent.clientHeight;
+
+  const childTop &#x3D; child.getBoundingClientRect().top;
+  const childHeight &#x3D; child.clientHeight;
+  let scrollTop;
+  if (childTop - padding &lt; parentTop) {
+    scrollTop &#x3D; childTop - (childHeight + padding) + parent.scrollTop - parentTop;
+  } else {
+    scrollTop &#x3D; childTop + parent.scrollTop - parentTop - (parentHeight - (childHeight + padding));
+  }
+
+  parent.scrollTop &#x3D; scrollTop;
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>libs/shared/framework/browser/src/lib/window-events.token.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="WINDOW_TOKEN"></a>
+                        <span class="name">
+                            <b>
+                            WINDOW_TOKEN</b>
+                            <a href="#WINDOW_TOKEN"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new InjectionToken&lt;any&gt;(&#x27;WINDOW_TOKEN&#x27;)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
+            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

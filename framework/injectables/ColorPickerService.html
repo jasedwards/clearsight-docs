@@ -1,0 +1,1202 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Clearsight Apps Framework</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Clearsight Apps Framework</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>ColorPickerService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>libs/shared/framework/color-picker/src/lib/color-picker.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#denormalizeRGBA">denormalizeRGBA</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#hsla2hsva">hsla2hsva</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#hsva2hsla">hsva2hsla</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#hsvaToRgba">hsvaToRgba</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#outputFormat">outputFormat</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#rgbaToCmyk">rgbaToCmyk</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#rgbaToHex">rgbaToHex</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#rgbaToHsva">rgbaToHsva</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#stringToHsva">stringToHsva</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.service.ts:7</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="denormalizeRGBA"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            denormalizeRGBA
+                        </b>
+                        <a href="#denormalizeRGBA"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>denormalizeRGBA(rgba: <a href="../classes/Rgba.html">Rgba</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="147"
+                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.service.ts:147</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rgba</td>
+                                    <td>
+                                                <code><a href="../classes/Rgba.html" target="_self" >Rgba</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Rgba.html" target="_self" >Rgba</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hsla2hsva"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            hsla2hsva
+                        </b>
+                        <a href="#hsla2hsva"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hsla2hsva(hsla: <a href="../classes/Hsla.html">Hsla</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.service.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>hsla</td>
+                                    <td>
+                                                <code><a href="../classes/Hsla.html" target="_self" >Hsla</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Hsva.html" target="_self" >Hsva</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hsva2hsla"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            hsva2hsla
+                        </b>
+                        <a href="#hsva2hsla"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hsva2hsla(hsva: <a href="../classes/Hsva.html">Hsva</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="10"
+                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.service.ts:10</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>hsva</td>
+                                    <td>
+                                                <code><a href="../classes/Hsva.html" target="_self" >Hsva</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Hsla.html" target="_self" >Hsla</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hsvaToRgba"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            hsvaToRgba
+                        </b>
+                        <a href="#hsvaToRgba"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hsvaToRgba(hsva: <a href="../classes/Hsva.html">Hsva</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.service.ts:42</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>hsva</td>
+                                    <td>
+                                                <code><a href="../classes/Hsva.html" target="_self" >Hsva</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Rgba.html" target="_self" >Rgba</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="outputFormat"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            outputFormat
+                        </b>
+                        <a href="#outputFormat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>outputFormat(hsva: <a href="../classes/Hsva.html">Hsva</a>, outputFormat: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, alphaChannel: string | null)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="241"
+                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.service.ts:241</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>hsva</td>
+                                    <td>
+                                                <code><a href="../classes/Hsva.html" target="_self" >Hsva</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>outputFormat</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>alphaChannel</td>
+                                    <td>
+                                            <code>string | null</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="rgbaToCmyk"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            rgbaToCmyk
+                        </b>
+                        <a href="#rgbaToCmyk"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>rgbaToCmyk(rgba: <a href="../classes/Rgba.html">Rgba</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.service.ts:82</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rgba</td>
+                                    <td>
+                                                <code><a href="../classes/Rgba.html" target="_self" >Rgba</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Cmyk.html" target="_self" >Cmyk</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="rgbaToHex"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            rgbaToHex
+                        </b>
+                        <a href="#rgbaToHex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>rgbaToHex(rgba: <a href="../classes/Rgba.html">Rgba</a>, allowHex8?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="135"
+                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.service.ts:135</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rgba</td>
+                                    <td>
+                                                <code><a href="../classes/Rgba.html" target="_self" >Rgba</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>allowHex8</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="rgbaToHsva"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            rgbaToHsva
+                        </b>
+                        <a href="#rgbaToHsva"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>rgbaToHsva(rgba: <a href="../classes/Rgba.html">Rgba</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.service.ts:96</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rgba</td>
+                                    <td>
+                                                <code><a href="../classes/Rgba.html" target="_self" >Rgba</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Hsva.html" target="_self" >Hsva</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="stringToHsva"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            stringToHsva
+                        </b>
+                        <a href="#stringToHsva"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>stringToHsva(colorString: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, allowHex8: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="151"
+                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.service.ts:151</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>colorString</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;&#x27;</code>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>allowHex8</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Hsva.html" target="_self" >Hsva | null</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { Cmyk, Rgba, Hsla, Hsva } from &#x27;./formats&#x27;;
+
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class ColorPickerService {
+  constructor() {}
+
+  public hsva2hsla(hsva: Hsva): Hsla {
+    const h &#x3D; hsva.h,
+      s &#x3D; hsva.s,
+      v &#x3D; hsva.v,
+      a &#x3D; hsva.a;
+
+    if (v &#x3D;&#x3D;&#x3D; 0) {
+      return new Hsla(h, 0, 0, a);
+    } else if (s &#x3D;&#x3D;&#x3D; 0 &amp;&amp; v &#x3D;&#x3D;&#x3D; 1) {
+      return new Hsla(h, 1, 1, a);
+    } else {
+      const l &#x3D; (v * (2 - s)) / 2;
+
+      return new Hsla(h, (v * s) / (1 - Math.abs(2 * l - 1)), l, a);
+    }
+  }
+
+  public hsla2hsva(hsla: Hsla): Hsva {
+    const h &#x3D; Math.min(hsla.h, 1),
+      s &#x3D; Math.min(hsla.s, 1);
+    const l &#x3D; Math.min(hsla.l, 1),
+      a &#x3D; Math.min(hsla.a, 1);
+
+    if (l &#x3D;&#x3D;&#x3D; 0) {
+      return new Hsva(h, 0, 0, a);
+    } else {
+      const v &#x3D; l + (s * (1 - Math.abs(2 * l - 1))) / 2;
+
+      return new Hsva(h, (2 * (v - l)) / v, v, a);
+    }
+  }
+
+  public hsvaToRgba(hsva: Hsva): Rgba {
+    let r: number, g: number, b: number;
+
+    const h &#x3D; hsva.h,
+      s &#x3D; hsva.s,
+      v &#x3D; hsva.v,
+      a &#x3D; hsva.a;
+
+    const i &#x3D; Math.floor(h * 6);
+    const f &#x3D; h * 6 - i;
+    const p &#x3D; v * (1 - s);
+    const q &#x3D; v * (1 - f * s);
+    const t &#x3D; v * (1 - (1 - f) * s);
+
+    switch (i % 6) {
+      case 0:
+        (r &#x3D; v), (g &#x3D; t), (b &#x3D; p);
+        break;
+      case 1:
+        (r &#x3D; q), (g &#x3D; v), (b &#x3D; p);
+        break;
+      case 2:
+        (r &#x3D; p), (g &#x3D; v), (b &#x3D; t);
+        break;
+      case 3:
+        (r &#x3D; p), (g &#x3D; q), (b &#x3D; v);
+        break;
+      case 4:
+        (r &#x3D; t), (g &#x3D; p), (b &#x3D; v);
+        break;
+      case 5:
+        (r &#x3D; v), (g &#x3D; p), (b &#x3D; q);
+        break;
+      default:
+        (r &#x3D; 0), (g &#x3D; 0), (b &#x3D; 0);
+    }
+
+    return new Rgba(r, g, b, a);
+  }
+
+  public rgbaToCmyk(rgba: Rgba): Cmyk {
+    const k: number &#x3D; 1 - Math.max(rgba.r, rgba.g, rgba.b);
+
+    if (k &#x3D;&#x3D;&#x3D; 1) {
+      return new Cmyk(0, 0, 0, 1);
+    } else {
+      const c &#x3D; (1 - rgba.r - k) / (1 - k);
+      const m &#x3D; (1 - rgba.g - k) / (1 - k);
+      const y &#x3D; (1 - rgba.b - k) / (1 - k);
+
+      return new Cmyk(c, m, y, k);
+    }
+  }
+
+  public rgbaToHsva(rgba: Rgba): Hsva {
+    let h: number, s: number;
+
+    const r &#x3D; Math.min(rgba.r, 1),
+      g &#x3D; Math.min(rgba.g, 1);
+    const b &#x3D; Math.min(rgba.b, 1),
+      a &#x3D; Math.min(rgba.a, 1);
+
+    const max &#x3D; Math.max(r, g, b),
+      min &#x3D; Math.min(r, g, b);
+
+    const v: number &#x3D; max,
+      d &#x3D; max - min;
+
+    s &#x3D; max &#x3D;&#x3D;&#x3D; 0 ? 0 : d / max;
+
+    if (max &#x3D;&#x3D;&#x3D; min) {
+      h &#x3D; 0;
+    } else {
+      switch (max) {
+        case r:
+          h &#x3D; (g - b) / d + (g &lt; b ? 6 : 0);
+          break;
+        case g:
+          h &#x3D; (b - r) / d + 2;
+          break;
+        case b:
+          h &#x3D; (r - g) / d + 4;
+          break;
+        default:
+          h &#x3D; 0;
+      }
+
+      h /&#x3D; 6;
+    }
+
+    return new Hsva(h, s, v, a);
+  }
+
+  public rgbaToHex(rgba: Rgba, allowHex8?: boolean): string {
+    /* tslint:disable:no-bitwise */
+    let hex &#x3D; &#x27;#&#x27; + ((1 &lt;&lt; 24) | (rgba.r &lt;&lt; 16) | (rgba.g &lt;&lt; 8) | rgba.b).toString(16).substr(1);
+
+    if (allowHex8) {
+      hex +&#x3D; ((1 &lt;&lt; 8) | Math.round(rgba.a * 255)).toString(16).substr(1);
+    }
+    /* tslint:enable:no-bitwise */
+
+    return hex;
+  }
+
+  public denormalizeRGBA(rgba: Rgba): Rgba {
+    return new Rgba(Math.round(rgba.r * 255), Math.round(rgba.g * 255), Math.round(rgba.b * 255), rgba.a);
+  }
+
+  public stringToHsva(colorString: string &#x3D; &#x27;&#x27;, allowHex8: boolean &#x3D; false): Hsva | null {
+    let hsva: Hsva | null &#x3D; null;
+
+    colorString &#x3D; (colorString || &#x27;&#x27;).toLowerCase();
+
+    const stringParsers &#x3D; [
+      {
+        re: /(rgb)a?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*%?,\s*(\d{1,3})\s*%?(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,
+        parse: function(execResult: any) {
+          return new Rgba(
+            parseInt(execResult[2], 10) / 255,
+            parseInt(execResult[3], 10) / 255,
+            parseInt(execResult[4], 10) / 255,
+            isNaN(parseFloat(execResult[5])) ? 1 : parseFloat(execResult[5])
+          );
+        }
+      },
+      {
+        re: /(hsl)a?\(\s*(\d{1,3})\s*,\s*(\d{1,3})%\s*,\s*(\d{1,3})%\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,
+        parse: function(execResult: any) {
+          return new Hsla(
+            parseInt(execResult[2], 10) / 360,
+            parseInt(execResult[3], 10) / 100,
+            parseInt(execResult[4], 10) / 100,
+            isNaN(parseFloat(execResult[5])) ? 1 : parseFloat(execResult[5])
+          );
+        }
+      }
+    ];
+
+    if (allowHex8) {
+      stringParsers.push({
+        re: /#([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})?$/,
+        parse: function(execResult: any) {
+          return new Rgba(
+            parseInt(execResult[1], 16) / 255,
+            parseInt(execResult[2], 16) / 255,
+            parseInt(execResult[3], 16) / 255,
+            parseInt(execResult[4] || &#x27;FF&#x27;, 16) / 255
+          );
+        }
+      });
+    } else {
+      stringParsers.push({
+        re: /#([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})$/,
+        parse: function(execResult: any) {
+          return new Rgba(
+            parseInt(execResult[1], 16) / 255,
+            parseInt(execResult[2], 16) / 255,
+            parseInt(execResult[3], 16) / 255,
+            1
+          );
+        }
+      });
+    }
+
+    stringParsers.push({
+      re: /#([a-fA-F0-9])([a-fA-F0-9])([a-fA-F0-9])$/,
+      parse: function(execResult: any) {
+        return new Rgba(
+          parseInt(execResult[1] + execResult[1], 16) / 255,
+          parseInt(execResult[2] + execResult[2], 16) / 255,
+          parseInt(execResult[3] + execResult[3], 16) / 255,
+          1
+        );
+      }
+    });
+
+    for (const key in stringParsers) {
+      if (stringParsers.hasOwnProperty(key)) {
+        const parser &#x3D; stringParsers[key];
+
+        const match &#x3D; parser.re.exec(colorString),
+          color: any &#x3D; match &amp;&amp; parser.parse(match);
+
+        if (color) {
+          if (color instanceof Rgba) {
+            hsva &#x3D; this.rgbaToHsva(color);
+          } else if (color instanceof Hsla) {
+            hsva &#x3D; this.hsla2hsva(color);
+          }
+
+          return hsva;
+        }
+      }
+    }
+
+    return hsva;
+  }
+
+  public outputFormat(hsva: Hsva, outputFormat: string, alphaChannel: string | null): string {
+    if (outputFormat &#x3D;&#x3D;&#x3D; &#x27;auto&#x27;) {
+      outputFormat &#x3D; hsva.a &lt; 1 ? &#x27;rgba&#x27; : &#x27;hex&#x27;;
+    }
+
+    switch (outputFormat) {
+      case &#x27;hsla&#x27;:
+        const hsla &#x3D; this.hsva2hsla(hsva);
+
+        const hslaText &#x3D; new Hsla(
+          Math.round(hsla.h * 360),
+          Math.round(hsla.s * 100),
+          Math.round(hsla.l * 100),
+          Math.round(hsla.a * 100) / 100
+        );
+
+        if (hsva.a &lt; 1 || alphaChannel &#x3D;&#x3D;&#x3D; &#x27;always&#x27;) {
+          return &#x27;hsla(&#x27; + hslaText.h + &#x27;,&#x27; + hslaText.s + &#x27;%,&#x27; + hslaText.l + &#x27;%,&#x27; + hslaText.a + &#x27;)&#x27;;
+        } else {
+          return &#x27;hsl(&#x27; + hslaText.h + &#x27;,&#x27; + hslaText.s + &#x27;%,&#x27; + hslaText.l + &#x27;%)&#x27;;
+        }
+
+      case &#x27;rgba&#x27;:
+        const rgba &#x3D; this.denormalizeRGBA(this.hsvaToRgba(hsva));
+
+        if (hsva.a &lt; 1 || alphaChannel &#x3D;&#x3D;&#x3D; &#x27;always&#x27;) {
+          return &#x27;rgba(&#x27; + rgba.r + &#x27;,&#x27; + rgba.g + &#x27;,&#x27; + rgba.b + &#x27;,&#x27; + Math.round(rgba.a * 100) / 100 + &#x27;)&#x27;;
+        } else {
+          return &#x27;rgb(&#x27; + rgba.r + &#x27;,&#x27; + rgba.g + &#x27;,&#x27; + rgba.b + &#x27;)&#x27;;
+        }
+
+      default:
+        const allowHex8 &#x3D; alphaChannel &#x3D;&#x3D;&#x3D; &#x27;always&#x27; || alphaChannel &#x3D;&#x3D;&#x3D; &#x27;forced&#x27;;
+
+        return this.rgbaToHex(this.denormalizeRGBA(this.hsvaToRgba(hsva)), allowHex8);
+    }
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ColorPickerService.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1216 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Clearsight Apps Framework</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Clearsight Apps Framework</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>CodeDependencyHandler</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>libs/shared/framework/code-dependency/src/lib/code-dependency-handler.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addCustomDependency">addCustomDependency</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getParents">getParents</a>
+                            </li>
+                            <li>
+                                <a href="#handleValueChange">handleValueChange</a>
+                            </li>
+                            <li>
+                                <a href="#init">init</a>
+                            </li>
+                            <li>
+                                <a href="#isChild">isChild</a>
+                            </li>
+                            <li>
+                                <a href="#isParent">isParent</a>
+                            </li>
+                            <li>
+                                <a href="#registerField">registerField</a>
+                            </li>
+                            <li>
+                                <a href="#setCodeDependencyMessage">setCodeDependencyMessage</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(modalService: <a href="../injectables/ConfirmDialogService.html">IConfirmDialogService</a>, service: <a href="../injectables/CodeDependencyService.html">CodeDependencyService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.service.ts:24</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConfirmDialogService.html" target="_self" >IConfirmDialogService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>service</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CodeDependencyService.html" target="_self" >CodeDependencyService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addCustomDependency"></a>
+                    <span class="name">
+                        <b>
+                            addCustomDependency
+                        </b>
+                        <a href="#addCustomDependency"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addCustomDependency(parentField: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, children: string[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.service.ts:76</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>parentField</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>children</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getParents"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getParents
+                        </b>
+                        <a href="#getParents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getParents(fieldName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="296"
+                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.service.ts:296</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fieldName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>string[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleValueChange"></a>
+                    <span class="name">
+                        <b>
+                            handleValueChange
+                        </b>
+                        <a href="#handleValueChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleValueChange(fieldName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, previousValues: literal type, model: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.service.ts:53</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fieldName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>previousValues</td>
+                                    <td>
+                                            <code>literal type</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>model</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="init"></a>
+                    <span class="name">
+                        <b>
+                            init
+                        </b>
+                        <a href="#init"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>init(fieldName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, model: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.service.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fieldName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>model</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isChild"></a>
+                    <span class="name">
+                        <b>
+                            isChild
+                        </b>
+                        <a href="#isChild"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isChild(fieldName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.service.ts:96</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fieldName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isParent"></a>
+                    <span class="name">
+                        <b>
+                            isParent
+                        </b>
+                        <a href="#isParent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isParent(fieldName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.service.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fieldName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerField"></a>
+                    <span class="name">
+                        <b>
+                            registerField
+                        </b>
+                        <a href="#registerField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>registerField(fieldName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, cb: (status: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>) => void)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.service.ts:45</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fieldName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>cb</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Subscription</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setCodeDependencyMessage"></a>
+                    <span class="name">
+                        <b>
+                            setCodeDependencyMessage
+                        </b>
+                        <a href="#setCodeDependencyMessage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setCodeDependencyMessage(message: <a href="../interfaces/ICodeDependencyMessage.html">ICodeDependencyMessage</a>, packageName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.service.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                                <code><a href="../interfaces/ICodeDependencyMessage.html" target="_self" >ICodeDependencyMessage</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>packageName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Subject&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, Inject } from &#x27;@angular/core&#x27;;
+import { hasValue } from &#x27;@clearsight-apps/common-functions/has-value&#x27;;
+import { Subject, Subscription } from &#x27;rxjs&#x27;;
+import { NgbModalRef } from &#x27;@ng-bootstrap/ng-bootstrap&#x27;;
+import { IConfirmDialogService } from &#x27;@clearsight-apps/shared/framework/dialog&#x27;;
+import { CONFIRM_DIALOG_SERVICE } from &#x27;@clearsight-apps/shared/framework/dialog&#x27;;
+import { ICodeDependencyMessage } from &#x27;./code-dependency-message.interface&#x27;;
+import { ICodeDependencyHandler } from &#x27;./code-dependency-handler.interface&#x27;;
+import { CodeDependencyService } from &#x27;./code-dependency.service&#x27;;
+import { isNullUndefinedOrEmptyString } from &#x27;@clearsight-apps/common-functions/util&#x27;;
+import { isNullOrUndefined } from &#x27;util&#x27;;
+import { ICodeDependencyFieldUpdate } from &#x27;./code-dependency-field-update.interface&#x27;;
+import { ICodeDependencyStateUpdate } from &#x27;./code-dependency-state-update.interface&#x27;;
+import { FieldUpdateType } from &#x27;./field-update-type.enum&#x27;;
+import { ICodeDepdendencyInvalidatedRequest } from &#x27;./code-dependency-invalidated-request.interface&#x27;;
+import { ICodeDepdendencyInvalidatedResponse } from &#x27;./code-dependency-invalidated-response.interface&#x27;;
+
+@Injectable()
+export class CodeDependencyHandler implements ICodeDependencyHandler {
+  protected packageName: string;
+  protected codeDepMessage: ICodeDependencyMessage;
+  private fieldUpdates$: Subject&lt;ICodeDependencyFieldUpdate&gt; &#x3D; new Subject&lt;ICodeDependencyFieldUpdate&gt;();
+  private fieldsMap$: Map&lt;string, Subject&lt;ICodeDependencyStateUpdate&gt;&gt; &#x3D; new Map();
+  private invalidating &#x3D; false;
+  constructor(
+    @Inject(CONFIRM_DIALOG_SERVICE) protected modalService: IConfirmDialogService,
+    protected service: CodeDependencyService
+  ) {}
+
+  init(fieldName: string, model: any): void {
+    if (this.isParent(fieldName)) {
+      const children &#x3D; this.getChildren(fieldName);
+      const disableChildren &#x3D; this.isEmpty(model[fieldName]);
+
+      children.forEach(child &#x3D;&gt; {
+        if (disableChildren) {
+          this.safeDisableField(child, model);
+        } else {
+          this.init(child, model);
+        }
+      });
+    }
+  }
+
+  registerField(fieldName: string, cb: (status: any) &#x3D;&gt; void): Subscription {
+    if (!this.fieldsMap$.has(fieldName)) {
+      this.fieldsMap$.set(fieldName, new Subject());
+    }
+
+    return this.fieldsMap$.get(fieldName).subscribe(cb);
+  }
+
+  handleValueChange(fieldName: string, previousValues: { [key: string]: any }, model: any): void {
+    if (!this.invalidating) {
+      if (previousValues[fieldName] &#x3D;&#x3D;&#x3D; model[fieldName]) {
+        return;
+      }
+
+      if (this.isParent(fieldName)) {
+        this.service
+          .invalidatedFieldNames(this.packageName, this.buildPayload(fieldName, previousValues[fieldName], model))
+          .subscribe(response &#x3D;&gt; {
+            this.handleInvalidateResponse(fieldName, previousValues, model, response);
+          });
+      }
+    }
+  }
+
+  setCodeDependencyMessage(message: ICodeDependencyMessage, packageName: string): Subject&lt;any&gt; {
+    this.packageName &#x3D; packageName;
+    this.codeDepMessage &#x3D; message;
+    this.fieldsMap$.clear();
+    return this.fieldUpdates$;
+  }
+
+  addCustomDependency(parentField: string, children: string[]): void {
+    const childFields &#x3D; this.getChildren(parentField);
+
+    if (childFields) {
+      children.map(child &#x3D;&gt; {
+        if (!this.isChildRegistered(parentField, child)) {
+          this.updateChildNamesNode(parentField, child);
+          this.updateParentNamesNode(parentField, child);
+        }
+      });
+    }
+  }
+
+  isParent(fieldName: string): boolean {
+    if (this.codeDepMessage &amp;&amp; this.codeDepMessage.ChildrenParentNames) {
+      return !this.isEmpty(this.codeDepMessage.ChildrenParentNames[&#x60;ChildNamesArrayFor${fieldName}&#x60;]);
+    }
+    return false;
+  }
+
+  isChild(fieldName: string): boolean {
+    if (this.codeDepMessage &amp;&amp; this.codeDepMessage.ChildrenParentNames) {
+      return !this.isEmpty(this.codeDepMessage.ChildrenParentNames[&#x60;ParentNamesArrayFor${fieldName}&#x60;]);
+    }
+    return false;
+  }
+
+  private isEmpty(val: any): boolean {
+    return !hasValue(val, true);
+  }
+
+  private isLookup(fieldName: string): boolean {
+    return this.codeDepMessage.ManagedLookupFields.indexOf(fieldName) &gt;&#x3D; 0;
+  }
+
+  private buildPayload(parentField: string, oldValue: any, model: any): ICodeDepdendencyInvalidatedRequest {
+    const payload: ICodeDepdendencyInvalidatedRequest &#x3D; {
+      DomainName: this.codeDepMessage.DomainName,
+      FieldNameValues: {},
+      GroupKeys: this.codeDepMessage.GroupKeys,
+      ParentFieldName: parentField,
+      PreviousValue: isNullUndefinedOrEmptyString(oldValue) ? &#x27;&#x27; : oldValue
+    };
+    payload.FieldNameValues[parentField] &#x3D; isNullUndefinedOrEmptyString(model[parentField]) ? &#x27;&#x27; : model[parentField];
+
+    this.getChildrenAndGrandChildrenValues(parentField, payload.FieldNameValues, model);
+    return payload;
+  }
+
+  private getChildrenAndGrandChildrenValues(parentField: string, values: { [key: string]: any }, model: any) {
+    this.getChildren(parentField).forEach(child &#x3D;&gt; {
+      if (!isNullOrUndefined(model[child])) {
+        values[child] &#x3D; model[child];
+        this.getChildrenAndGrandChildrenValues(child, values, model);
+      }
+    });
+  }
+
+  private handleInvalidateResponse(
+    parentField: string,
+    previousValues: { [key: string]: any },
+    model: any,
+    response: ICodeDepdendencyInvalidatedResponse
+  ): void {
+    if (response.FieldNames &amp;&amp; response.FieldNames.length &gt; 0) {
+      if (this.codeDepMessage.UserMustConfirmParentChanges &#x3D;&#x3D;&#x3D; true &amp;&amp; response.SuppressConfirmationPopup &#x3D;&#x3D;&#x3D; false) {
+        this.getUserConfirmation(parentField, response.FieldNames).result.then(
+          () &#x3D;&gt; {
+            this.invalidateChildren(parentField, model, response.FieldNames);
+          },
+          () &#x3D;&gt; {
+            this.resetField(parentField, previousValues);
+          }
+        );
+      } else {
+        this.invalidateChildren(parentField, model, response.FieldNames);
+      }
+    } else {
+      this.enableOrDisableChildren(parentField, model);
+    }
+  }
+
+  private getUserConfirmation(parentField: string, children: string[]): NgbModalRef {
+    const childLabels: string[] &#x3D; [];
+    children.forEach(fld &#x3D;&gt; childLabels.push(this.getFieldLabel(fld)));
+    const confirmationMessage: string &#x3D; (this.codeDepMessage.UserMustConfirmParentChanges &#x3D;&#x3D;&#x3D; true
+      ? this.codeDepMessage.ChangeConfirmationMessage
+      : this.codeDepMessage.ChangeNoConfirmationMessage
+    )
+      .replace(&#x27;{0}&#x27;, this.getFieldLabel(parentField))
+      .replace(&#x27;{1}&#x27;, childLabels.join(&#x27;,&#x27;));
+
+    return this.modalService.open({
+      confirmText: confirmationMessage,
+      confirmHeader: &#x27;CS_WARNING&#x27;
+    });
+  }
+
+  private getFieldLabel(fieldName: string) {
+    if (this.codeDepMessage.FieldNameLabels &amp;&amp; this.codeDepMessage.FieldNameLabels[fieldName]) {
+      return this.codeDepMessage.FieldNameLabels[fieldName];
+    }
+
+    return fieldName;
+  }
+
+  private resetField(fieldName: string, previousValues: { [key: string]: any }): void {
+    this.performUpdates(FieldUpdateType.Reset, fieldName, previousValues);
+  }
+
+  private invalidateField(fieldName: string): void {
+    this.performUpdates(FieldUpdateType.Invalidate, fieldName);
+  }
+
+  private performUpdates(updateType: FieldUpdateType, fieldName: string, value: any &#x3D; null, children: string[] &#x3D; []) {
+    if (this.fieldsMap$.has(fieldName)) {
+      const fieldMap &#x3D; this.fieldsMap$.get(fieldName);
+      fieldMap.next(this.buildStatusUpdate(updateType, fieldName, value, children));
+    }
+  }
+
+  private buildStatusUpdate(
+    updateType: FieldUpdateType,
+    fieldName: string,
+    value: any &#x3D; null,
+    children: string[] &#x3D; []
+  ): ICodeDependencyStateUpdate {
+    return {
+      Name: fieldName,
+      Value: value,
+      UpdateType: updateType,
+      IsLookup: this.isLookup(fieldName),
+      Children: children
+    };
+  }
+
+  private enableOrDisableChildren(parentField: string, model: any): void {
+    const disable &#x3D; this.isEmpty(model[parentField]);
+    const children &#x3D; this.getChildren(parentField);
+
+    children.forEach(child &#x3D;&gt; {
+      if (disable) {
+        this.safeDisableField(child, model);
+      } else {
+        this.enableField(child, model);
+      }
+
+      if (this.isParent(child)) {
+        this.enableOrDisableChildren(child, model);
+      }
+    });
+    this.fieldUpdates$.next({ name: parentField, value: model[parentField] });
+  }
+
+  private invalidateChildren(parentField: string, model: any, affectedChildren: string[]): void {
+    this.invalidating &#x3D; true;
+
+    const children &#x3D; affectedChildren || this.getChildren(parentField);
+    children.forEach(child &#x3D;&gt; {
+      this.performUpdates(FieldUpdateType.Invalidate, child);
+      model[child] &#x3D; null;
+    });
+
+    this.enableOrDisableChildren(parentField, model);
+
+    this.invalidating &#x3D; false;
+  }
+
+  private safeDisableField(fieldName: string, model: any): void {
+    if (this.fieldsMap$.has(fieldName)) {
+      this.fieldsMap$.get(fieldName).next({
+        Name: fieldName,
+        Value: null,
+        UpdateType: FieldUpdateType.DisableField,
+        Message: this.buildDisableMessage(fieldName, model)
+      });
+    }
+  }
+
+  private buildDisableMessage(fieldName: string, model: any) {
+    const message: string &#x3D; this.codeDepMessage.InvalidParentsMessage;
+    const emptyParents &#x3D; this.getParents(fieldName).filter(parent &#x3D;&gt; this.isEmpty(model[parent]));
+    const emptyFieldLabels: string[] &#x3D; [];
+    emptyParents.forEach(field &#x3D;&gt; {
+      emptyFieldLabels.push(this.getFieldLabel(field));
+    });
+
+    return message.replace(&#x27;{0}&#x27;, emptyFieldLabels.join(&#x27;,&#x27;));
+  }
+
+  private safeEnableField(fieldName: string): void {
+    this.performUpdates(FieldUpdateType.EnableField, fieldName);
+  }
+
+  private enableField(fieldName: string, model: any &#x3D; {}, invalidate: boolean &#x3D; false) {
+    const parentFields: string[] &#x3D; this.getParents(fieldName);
+    if (parentFields.length &gt; 0) {
+      const emptyParent &#x3D; parentFields.find(parent &#x3D;&gt; this.isEmpty(model[parent]));
+
+      if (!emptyParent) {
+        this.safeEnableField(fieldName);
+      } else {
+        this.safeDisableField(fieldName, model);
+      }
+    } else {
+      this.safeEnableField(fieldName);
+    }
+
+    if (invalidate &#x3D;&#x3D;&#x3D; true) {
+      this.invalidateField(fieldName);
+    }
+  }
+
+  private getChildren(fieldName: string): string[] {
+    if (this.isParent(fieldName)) {
+      return this.codeDepMessage.ChildrenParentNames[&#x60;ChildNamesArrayFor${fieldName}&#x60;];
+    }
+    return [];
+  }
+
+  public getParents(fieldName: string): string[] {
+    if (this.codeDepMessage &amp;&amp; this.codeDepMessage.ChildrenParentNames) {
+      if (this.codeDepMessage.ChildrenParentNames[&#x60;ParentNamesArrayFor${fieldName}&#x60;]) {
+        return this.codeDepMessage.ChildrenParentNames[&#x60;ParentNamesArrayFor${fieldName}&#x60;];
+      }
+    }
+    return [];
+  }
+
+  private updateChildNamesNode(parentField: string, childField: string) {
+    const childFieldNode &#x3D; this.codeDepMessage.ChildrenParentNames[&#x60;ChildNamesArrayFor${parentField}&#x60;];
+    if (childFieldNode) {
+      childFieldNode.push(childField);
+    } else {
+      this.codeDepMessage.ChildrenParentNames[&#x60;ChildNamesArrayFor${parentField}&#x60;] &#x3D; [childField];
+    }
+  }
+
+  private updateParentNamesNode(parentField: string, childField: string) {
+    const parentNode &#x3D; this.codeDepMessage.ChildrenParentNames[&#x60;ParentNamesArrayFor${childField}&#x60;];
+    if (parentNode) {
+      parentNode.push(parentField);
+    } else {
+      this.codeDepMessage.ChildrenParentNames[&#x60;ParentNamesArrayFor${childField}&#x60;] &#x3D; [parentField];
+    }
+  }
+
+  private isChildRegistered(parentField: string, childField: string): boolean {
+    const childFields &#x3D; this.getChildren(parentField);
+    if (childFields) {
+      return childFields.indexOf(childField) !&#x3D;&#x3D; -1;
+    }
+    return false;
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'CodeDependencyHandler.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
