@@ -558,6 +558,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </div>
                             <ul class="links collapse " ${ isNormalMode ? 'id="directives-links"' : 'id="xs-directives-links"' }>
                                 <li class="link">
+                                    <a href="directives/KeyPressDirective.html" data-type="entity-link">KeyPressDirective</a>
+                                </li>
+                                <li class="link">
                                     <a href="directives/NavigatorControlDirective.html" data-type="entity-link">NavigatorControlDirective</a>
                                 </li>
                             </ul>
