@@ -45,9 +45,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -113,11 +110,6 @@
 <code>constructor(el: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, cd: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>)</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator/list-navigator-item.directive.ts:8</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -185,11 +177,6 @@
                             <i>Default value : </i><code>0</code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator/list-navigator-item.directive.ts:8</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -203,21 +190,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ChangeDetectorRef, Directive, ElementRef, HostBinding } from &#x27;@angular/core&#x27;;
-import { ListItem } from &#x27;@clearsight-apps/shared/framework/accessibility&#x27;;
-
-@Directive({
-  selector: &#x27;[csListNavigatorItem]&#x27;
-})
-export class ListNavigatorItemDirective extends ListItem {
-  @HostBinding(&#x27;tabindex&#x27;) tabindex &#x3D; 0;
-  constructor(protected el: ElementRef, protected cd: ChangeDetectorRef) {
-    super(el, cd);
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

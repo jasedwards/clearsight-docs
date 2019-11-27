@@ -46,9 +46,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -125,11 +122,6 @@
 <code>constructor()</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">libs/shared/framework/browser/src/lib/media.service.ts:27</a></div>
-                            </td>
-                        </tr>
 
             </tbody>
         </table>
@@ -160,12 +152,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="90"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/media.service.ts:90</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -199,12 +185,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="82"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/media.service.ts:82</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -238,12 +218,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="74"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/media.service.ts:74</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -282,11 +256,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">libs/shared/framework/browser/src/lib/media.service.ts:26</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -309,11 +278,6 @@
                             <i>Default value : </i><code>new BehaviorSubject&lt;MediaType&gt;(MediaType.Unknown)</code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">libs/shared/framework/browser/src/lib/media.service.ts:27</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -323,127 +287,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { BehaviorSubject } from &#x27;rxjs&#x27;;
-import { hasValue } from &#x27;@clearsight-apps/common-functions/has-value&#x27;;
-
-
-export enum MediaType {
-  Phone,
-  Tablet,
-  Desktop,
-  Unknown
-}
-
-@Injectable({
-  providedIn: &#x27;root&#x27;
-})
-export class MediaService {
-  private isIe: boolean;
-  private isEdge: boolean;
-  private isFireFox: boolean;
-  private isSafari: boolean;
-  private isCompability: boolean;
-  private phoneQuery: MediaQueryList;
-  private tabletQuery: MediaQueryList;
-  private mobileQuery: MediaQueryList;
-  private desktopQuery: MediaQueryList;
-  public isMobileChanged$: BehaviorSubject&lt;boolean&gt;;
-  public mediaTypeChanged &#x3D; new BehaviorSubject&lt;MediaType&gt;(MediaType.Unknown);
-
-  constructor() {
-    this.wireEvents();
-  }
-
-  private wireEvents() {
-    this.phoneQuery &#x3D; window.matchMedia(&#x27;(max-width: 767px)&#x27;);
-
-    this.tabletQuery &#x3D; window.matchMedia(&#x27;(min-width: 768px) and (max-width: 991px)&#x27;);
-
-    this.mobileQuery &#x3D; window.matchMedia(&#x27;(max-width: 991px)&#x27;);
-    this.isMobileChanged$ &#x3D; new BehaviorSubject&lt;boolean&gt;(this.mobileQuery.matches);
-
-    this.desktopQuery &#x3D; window.matchMedia(&#x27;(min-width: 992px)&#x27;);
-
-    this.mobileQuery.addListener((mql: MediaQueryListEvent) &#x3D;&gt; {
-      this.isMobileChanged$.next(mql.matches);
-    });
-
-    this.phoneQuery.addListener((mql: MediaQueryListEvent) &#x3D;&gt; {
-      if (mql.matches) {
-        this.mediaTypeChanged.next(MediaType.Phone);
-      }
-    });
-
-    this.tabletQuery.addListener((mql: MediaQueryListEvent) &#x3D;&gt; {
-      if (mql.matches) {
-        this.mediaTypeChanged.next(MediaType.Tablet);
-      }
-    });
-
-    this.desktopQuery.addListener((mql: MediaQueryListEvent) &#x3D;&gt; {
-      if (mql.matches) {
-        this.mediaTypeChanged.next(MediaType.Desktop);
-      }
-    });
-
-    if (this.mobileQuery.matches) {
-      if (this.phoneQuery.matches) {
-        this.mediaTypeChanged.next(MediaType.Phone);
-      } else {
-        this.mediaTypeChanged.next(MediaType.Tablet);
-      }
-    }
-  }
-
-  isIE(): boolean {
-    if (hasValue(this.isIe)) {
-      return this.isIe;
-    }
-    this.isIe &#x3D; navigator.userAgent.indexOf(&#x27;MSIE&#x27;) !&#x3D;&#x3D; -1 || navigator.appVersion.indexOf(&#x27;Trident/&#x27;) &gt; 0;
-    return this.isIe;
-  }
-
-  isEDGE(): boolean {
-    if (hasValue(this.isEdge)) {
-      return this.isEdge;
-    }
-    this.isEdge &#x3D; !!navigator.userAgent.match(/Trident\/7\./) || window.navigator.userAgent.indexOf(&#x27;Edge&#x27;) &gt; -1;
-    return this.isEdge;
-  }
-
-  browserCompatibility(): boolean {
-    if (hasValue(this.isCompability)) {
-      return this.isCompability;
-    }
-    this.isIe &#x3D; navigator.userAgent.indexOf(&#x27;MSIE&#x27;) !&#x3D;&#x3D; -1 || navigator.appVersion.indexOf(&#x27;Trident/&#x27;) &gt; 0;
-    this.isEdge &#x3D; !!navigator.userAgent.match(/Trident\/7\./) || window.navigator.userAgent.indexOf(&#x27;Edge&#x27;) &gt; -1;
-    this.isFireFox &#x3D; window.navigator.userAgent.indexOf(&#x27;Firefox&#x27;) &gt; -1;
-    this.isSafari &#x3D; /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    switch (true) {
-      case this.isIe: {
-        this.isCompability &#x3D; this.isIe;
-        break;
-      }
-      case this.isEdge: {
-        this.isCompability &#x3D; this.isEdge;
-        break;
-      }
-      case this.isFireFox: {
-        this.isCompability &#x3D; this.isFireFox;
-        break;
-      }
-      case this.isSafari: {
-        this.isCompability &#x3D; this.isSafari;
-        break;
-      }
-    }
-    return this.isCompability;
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

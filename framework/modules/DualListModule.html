@@ -246,9 +246,6 @@
     <li  class="active" >
         <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
     </li>
-    <li >
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
 </ul>
 
 <div class="tab-content">
@@ -327,35 +324,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { CommonModule } from &#x27;@angular/common&#x27;;
-import { DragDropModule } from &#x27;@angular/cdk/drag-drop&#x27;;
-import { DualListComponent } from &#x27;./dual-list.component&#x27;;
-import { SourceListDirective, TargetListDirective } from &#x27;./list-type.directive&#x27;;
-import { DualListDirective, DualListDragDrop } from &#x27;./dual-list.directive&#x27;;
-import { ListActionDirective } from &#x27;./list-action.directive&#x27;;
-import { ListModule } from &#x27;@clearsight-apps/common-controls&#x27;;
-import { ButtonTitleModule } from &#x27;@clearsight-apps/shared/framework/button&#x27;;
-
-const components &#x3D; [
-  DualListComponent,
-  SourceListDirective,
-  TargetListDirective,
-  DualListDirective,
-  ListActionDirective
-];
-
-@NgModule({
-  imports: [CommonModule, DragDropModule, ButtonTitleModule, ListModule],
-  declarations: [...components],
-  exports: [...components]
-})
-class DualListModule {}
-
-export { DualListModule, DualListDragDrop };
-</code></pre>
-    </div>
 </div>
 
 

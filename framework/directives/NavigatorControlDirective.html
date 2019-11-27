@@ -45,9 +45,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -140,11 +137,6 @@
                         <i>Default value : </i><code>NavDirection.Next</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">libs/shared/framework/accessibility/src/lib/item-list-navigator/navigator-control.directive.ts:9</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -176,12 +168,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">libs/shared/framework/accessibility/src/lib/item-list-navigator/navigator-control.directive.ts:11</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -201,23 +187,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Directive, Input } from &#x27;@angular/core&#x27;;
-import { NavDirection } from &#x27;@clearsight-apps/models/common/nav-direction&#x27;;
-import { SelectBase } from &#x27;../select-base&#x27;;
-
-@Directive({
-  selector: &#x27;[csNavigatorControl]&#x27;
-})
-export class NavigatorControlDirective extends SelectBase {
-  @Input() direction: NavDirection &#x3D; NavDirection.Next;
-
-  onSelect() {
-    this.csSelect.emit(this.direction);
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

@@ -45,9 +45,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -142,11 +139,6 @@
 
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">libs/shared/framework/drag-drop/src/lib/drag-drop.directive.ts:8</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -163,11 +155,6 @@
 
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">libs/shared/framework/drag-drop/src/lib/drag-drop.directive.ts:7</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -198,12 +185,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">libs/shared/framework/drag-drop/src/lib/drag-drop.directive.ts:18</a></div>
-                </td>
-            </tr>
 
 
         </tbody>
@@ -233,12 +214,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">libs/shared/framework/drag-drop/src/lib/drag-drop.directive.ts:11</a></div>
-                </td>
-            </tr>
 
 
         </tbody>
@@ -250,32 +225,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Directive, EventEmitter, Output, HostListener } from &#x27;@angular/core&#x27;;
-
-@Directive({
-  selector: &#x27;[csDragDrop]&#x27;
-})
-export class DragDropDirective {
-  @Output() itemsDrop &#x3D; new EventEmitter&lt;DragEvent&gt;();
-  @Output() itemsDragOver &#x3D; new EventEmitter&lt;DragEvent&gt;();
-
-  @HostListener(&#x27;drop&#x27;, [&#x27;$event&#x27;])
-  onFileDropped(evt: DragEvent) {
-    evt.preventDefault();
-    evt.stopPropagation();
-    this.itemsDrop.emit(evt);
-  }
-
-  @HostListener(&#x27;dragover&#x27;, [&#x27;$event&#x27;])
-  onFileDrag(evt: DragEvent) {
-    evt.preventDefault();
-    evt.stopPropagation();
-    this.itemsDrop.emit(evt);
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

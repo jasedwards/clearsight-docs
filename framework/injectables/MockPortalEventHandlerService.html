@@ -46,9 +46,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -115,11 +112,6 @@
 <code>constructor()</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/mock-portal-event-handler.service.ts:10</a></div>
-                            </td>
-                        </tr>
 
             </tbody>
         </table>
@@ -150,12 +142,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/mock-portal-event-handler.service.ts:20</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -220,12 +206,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/mock-portal-event-handler.service.ts:14</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -259,12 +239,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/mock-portal-event-handler.service.ts:24</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -341,12 +315,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="38"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/mock-portal-event-handler.service.ts:38</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -411,12 +379,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/mock-portal-event-handler.service.ts:30</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -493,12 +455,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/mock-portal-event-handler.service.ts:26</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -548,48 +504,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { PortalEventHandler, PostParameter } from &#x27;./portal-event-handler.interface&#x27;;
-import { Subscription, Subject } from &#x27;rxjs&#x27;;
-import { ON_CLOSED } from &#x27;./portal-events.const&#x27;;
-
-@Injectable({
-  providedIn: &#x27;root&#x27;
-})
-export class MockPortalEventHandlerService implements PortalEventHandler {
-  private subscriptions: { [key: string]: Subject&lt;any&gt; } &#x3D; {};
-
-  constructor() {}
-
-  init(): Promise&lt;any&gt; {
-    return new Promise&lt;any&gt;(resolve &#x3D;&gt; {
-      resolve();
-    });
-  }
-
-  hasAccess(appName: string): boolean {
-    return false;
-  }
-
-  openRelatedApp(appName: string, relativeUrl: string) {}
-
-  subscribeClosed(fn: () &#x3D;&gt; void): Subscription {
-    return this.subscribe(ON_CLOSED, fn);
-  }
-
-  subscribe(eventName: string, fn: (data: any) &#x3D;&gt; void): Subscription {
-    if (!this.subscriptions.hasOwnProperty(eventName)) {
-      this.subscriptions[eventName] &#x3D; new Subject&lt;any&gt;();
-    }
-
-    return this.subscriptions[eventName].subscribe(fn);
-  }
-
-  post(data: PostParameter) {}
-}
-</code></pre>
-    </div>
 
 </div>
 

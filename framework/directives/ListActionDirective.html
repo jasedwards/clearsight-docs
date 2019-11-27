@@ -45,9 +45,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -140,11 +137,6 @@
                         <i>Default value : </i><code>ListAction.Add</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">libs/shared/framework/dual-list/src/lib/list-action.directive.ts:17</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -176,12 +168,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">libs/shared/framework/dual-list/src/lib/list-action.directive.ts:18</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -201,30 +187,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Directive, forwardRef, Input } from &#x27;@angular/core&#x27;;
-import { SelectDirective } from &#x27;@clearsight-apps/shared/framework/accessibility&#x27;;
-
-export enum ListAction {
-  Add &#x3D; &#x27;Add&#x27;,
-  Remove &#x3D; &#x27;Remove&#x27;,
-  AddAll &#x3D; &#x27;AddAll&#x27;,
-  RemoveAll &#x3D; &#x27;RemoveAll&#x27;,
-  MoveUp &#x3D; &#x27;MoveUp&#x27;,
-  MoveDown &#x3D; &#x27;MoveDown&#x27;
-}
-
-@Directive({
-  selector: &#x27;[csListAction]&#x27;
-})
-export class ListActionDirective extends SelectDirective {
-  @Input(&#x27;csListAction&#x27;) type: ListAction &#x3D; ListAction.Add;
-  onSelect() {
-    this.csSelect.emit(this.type);
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

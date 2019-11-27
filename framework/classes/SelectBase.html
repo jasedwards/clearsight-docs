@@ -50,9 +50,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -88,11 +85,6 @@
                         <i>Default value : </i><code>&#x27;13,32&#x27;</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="4" class="link-to-prism">libs/shared/framework/accessibility/src/lib/select-base.ts:4</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -112,11 +104,6 @@
 
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">libs/shared/framework/accessibility/src/lib/select-base.ts:5</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -147,12 +134,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">libs/shared/framework/accessibility/src/lib/select-base.ts:18</a></div>
-                </td>
-            </tr>
 
 
         </tbody>
@@ -182,12 +163,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="9"
-                            class="link-to-prism">libs/shared/framework/accessibility/src/lib/select-base.ts:9</a></div>
-                </td>
-            </tr>
 
 
         </tbody>
@@ -196,30 +171,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EventEmitter, HostListener, Input, Output } from &#x27;@angular/core&#x27;;
-
-export class SelectBase {
-  @Input() allowedKeys &#x3D; &#x27;13,32&#x27;;
-  @Output() csSelect &#x3D; new EventEmitter&lt;any&gt;();
-
-  @HostListener(&#x27;keydown&#x27;, [&#x27;$event&#x27;])
-  @HostListener(&#x27;keypress&#x27;, [&#x27;$event&#x27;])
-  onKeyPress(event: KeyboardEvent) {
-    if (this.allowedKeys.split(&#x27;,&#x27;).indexOf(event[&#x27;which&#x27;].toString()) &gt; -1) {
-      event.preventDefault();
-      event.stopPropagation();
-      this.onSelect(event);
-    }
-  }
-
-  @HostListener(&#x27;click&#x27;, [&#x27;$event&#x27;])
-  onSelect(event) {
-    this.csSelect.emit(event);
-  }
-}
-</code></pre>
-    </div>
 </div>
 
 

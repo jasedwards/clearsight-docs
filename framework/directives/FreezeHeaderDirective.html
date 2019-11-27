@@ -45,9 +45,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -164,11 +161,6 @@
 <code>constructor(el: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, renderer: <a href="https://angular.io/api/core/Renderer2" target="_blank">Renderer2</a>, zone: <a href="https://angular.io/api/core/NgZone" target="_blank">NgZone</a>)</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">libs/shared/framework/data-table/src/lib/grid-layout/freeze-header.directive.ts:24</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -252,12 +244,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="102"
-                            class="link-to-prism">libs/shared/framework/data-table/src/lib/grid-layout/freeze-header.directive.ts:102</a></div>
-                </td>
-            </tr>
 
 
         </tbody>
@@ -288,12 +274,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="85"
-                            class="link-to-prism">libs/shared/framework/data-table/src/lib/grid-layout/freeze-header.directive.ts:85</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -327,12 +307,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="110"
-                            class="link-to-prism">libs/shared/framework/data-table/src/lib/grid-layout/freeze-header.directive.ts:110</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -366,12 +340,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="69"
-                            class="link-to-prism">libs/shared/framework/data-table/src/lib/grid-layout/freeze-header.directive.ts:69</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -418,11 +386,6 @@
                             </code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">libs/shared/framework/data-table/src/lib/grid-layout/freeze-header.directive.ts:17</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -454,11 +417,6 @@
                             </code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">libs/shared/framework/data-table/src/lib/grid-layout/freeze-header.directive.ts:18</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -490,11 +448,6 @@
                             </code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">libs/shared/framework/data-table/src/lib/grid-layout/freeze-header.directive.ts:19</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -526,11 +479,6 @@
                             </code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">libs/shared/framework/data-table/src/lib/grid-layout/freeze-header.directive.ts:20</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -541,128 +489,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
-  AfterViewChecked,
-  AfterViewInit,
-  ContentChild,
-  Directive,
-  ElementRef,
-  HostListener,
-  NgZone,
-  OnDestroy,
-  Renderer2
-} from &#x27;@angular/core&#x27;;
-
-@Directive({
-  selector: &#x27;[csFreezeHeader]&#x27;
-})
-export class FreezeHeaderDirective implements AfterViewInit, AfterViewChecked, OnDestroy {
-  @ContentChild(&#x27;headerContainer&#x27;, { static: false }) headerContainer: ElementRef;
-  @ContentChild(&#x27;headerTable&#x27;, { static: false }) headerTable: ElementRef;
-  @ContentChild(&#x27;mainContainer&#x27;, { static: false }) mainContainer: ElementRef;
-  @ContentChild(&#x27;mainTable&#x27;, { static: false }) mainTable: ElementRef;
-
-  private mainListener;
-  private headerListener;
-  private isLoaded &#x3D; false;
-  constructor(private el: ElementRef, private renderer: Renderer2, private zone: NgZone) {}
-
-  private scrollHeaderTable() {
-    this.zone.runOutsideAngular(() &#x3D;&gt; {
-      this.renderer.setProperty(
-        this.headerContainer.nativeElement,
-        &#x27;scrollLeft&#x27;,
-        this.mainContainer.nativeElement.scrollLeft
-      );
-    });
-  }
-
-  private scrollMainTable() {
-    this.zone.runOutsideAngular(() &#x3D;&gt; {
-      this.renderer.setProperty(
-        this.mainContainer.nativeElement,
-        &#x27;scrollLeft&#x27;,
-        this.headerContainer.nativeElement.scrollLeft
-      );
-    });
-  }
-
-  private setColumnWidth() {
-    this.renderer.setStyle(
-      this.headerContainer.nativeElement,
-      &#x27;minHeight&#x27;,
-      this.headerTable.nativeElement.offsetHeight + &#x27;px&#x27;
-    );
-    this.renderer.setStyle(
-      this.headerContainer.nativeElement,
-      &#x27;right&#x27;,
-      this.mainContainer.nativeElement.offsetWidth - this.mainContainer.nativeElement.clientWidth + &#x27;px&#x27;
-    );
-    const headerCells &#x3D; this.headerTable.nativeElement.getElementsByTagName(&#x27;th&#x27;);
-    const bodyCells: HTMLCollection &#x3D; this.mainTable.nativeElement.getElementsByTagName(&#x27;th&#x27;);
-    if (bodyCells &amp;&amp; bodyCells.length) {
-      for (let i &#x3D; 0; i &lt; bodyCells.length; i++) {
-        if (headerCells[i]) {
-          this.renderer.setStyle(headerCells[i], &#x27;minWidth&#x27;, (&lt;HTMLElement&gt;bodyCells[i]).offsetWidth + &#x27;px&#x27;);
-        }
-      }
-    }
-  }
-
-  setMeasurements() {
-    if (!this.isLoaded) {
-      return;
-    }
-    const mainOffsetHeight &#x3D; this.mainContainer.nativeElement.offsetHeight;
-    const scrollBarHeight &#x3D; mainOffsetHeight - this.mainContainer.nativeElement.clientHeight;
-    const height &#x3D;
-      mainOffsetHeight + (this.el.nativeElement.offsetHeight - this.el.nativeElement.clientHeight) + scrollBarHeight;
-
-    if (height &lt;&#x3D; 0) {
-      return;
-    }
-    this.renderer.setStyle(this.el.nativeElement, &#x27;height&#x27;, height + &#x27;px&#x27;);
-    this.setColumnWidth();
-  }
-
-  ngAfterViewInit() {
-    if (!this.mainContainer || !this.headerContainer) {
-      return;
-    }
-    this.zone.runOutsideAngular(() &#x3D;&gt; {
-      this.headerListener &#x3D; this.renderer.listen(this.headerContainer.nativeElement, &#x27;scroll&#x27;, () &#x3D;&gt; {
-        this.scrollMainTable();
-      });
-      this.mainListener &#x3D; this.renderer.listen(this.mainContainer.nativeElement, &#x27;scroll&#x27;, () &#x3D;&gt; {
-        this.scrollHeaderTable();
-      });
-      this.isLoaded &#x3D; true;
-      this.setMeasurements();
-    });
-  }
-
-  @HostListener(&#x27;window:resize&#x27;, [])
-  ngAfterViewChecked() {
-    this.zone.runOutsideAngular(() &#x3D;&gt; {
-      setTimeout(() &#x3D;&gt; {
-        this.setMeasurements();
-      });
-    });
-  }
-
-  ngOnDestroy() {
-    if (this.headerListener) {
-      this.headerListener();
-    }
-
-    if (this.mainListener) {
-      this.mainListener();
-    }
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

@@ -45,9 +45,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -114,11 +111,6 @@
 <code>constructor(hostComponent: <a href="../classes/ListItem.html">IListComponent<IListItem></a>)</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">libs/shared/framework/dual-list/src/lib/list-type.directive.ts:11</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -192,11 +184,6 @@
                             </code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">libs/shared/framework/dual-list/src/lib/list-type.directive.ts:12</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -207,22 +194,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Directive, Input, Inject } from &#x27;@angular/core&#x27;;
-import { IListComponent, IListItem } from &#x27;@clearsight-apps/models/list&#x27;;
-import { LIST_COMPONENT } from &#x27;@clearsight-apps/models/common/injection-tokens&#x27;;
-
-@Directive({ selector: &#x27;[csSourceList]&#x27; })
-export class SourceListDirective {
-  constructor(@Inject(LIST_COMPONENT) public hostComponent: IListComponent&lt;IListItem&gt;) {}
-}
-
-@Directive({ selector: &#x27;[csTargetList]&#x27; })
-export class TargetListDirective {
-  constructor(@Inject(LIST_COMPONENT) public hostComponent: IListComponent&lt;IListItem&gt;) {}
-}
-</code></pre>
-    </div>
 
 </div>
 

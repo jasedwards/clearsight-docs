@@ -45,9 +45,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -164,11 +161,6 @@
 <code>constructor()</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator/list-navigator.directive.ts:20</a></div>
-                            </td>
-                        </tr>
 
             </tbody>
         </table>
@@ -189,11 +181,6 @@
                         <i>Default value : </i><code>false</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator/list-navigator.directive.ts:20</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -210,11 +197,6 @@
 
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator/list-navigator.directive.ts:19</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -237,11 +219,6 @@
                             <i>Default value : </i><code>0</code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator/list-navigator.directive.ts:18</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -274,12 +251,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator/list-navigator.directive.ts:25</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -326,11 +297,6 @@
                             </code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator/list-navigator.directive.ts:17</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -341,37 +307,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
-  AfterContentInit,
-  AfterViewInit,
-  ContentChildren,
-  Directive,
-  HostBinding,
-  Input,
-  QueryList
-} from &#x27;@angular/core&#x27;;
-import { ListNavigatorItemDirective } from &#x27;./list-navigator-item.directive&#x27;;
-import { ListNavigator } from &#x27;@clearsight-apps/shared/framework/accessibility&#x27;;
-
-@Directive({
-  selector: &#x27;[csListNavigator]&#x27;
-})
-export class ListNavigatorDirective extends ListNavigator&lt;ListNavigatorItemDirective&gt; implements AfterContentInit {
-  @ContentChildren(ListNavigatorItemDirective) items: QueryList&lt;ListNavigatorItemDirective&gt;;
-  @HostBinding(&#x27;tabindex&#x27;) tabindex &#x3D; 0;
-  @Input() horizontal: &#x27;ltr&#x27; | &#x27;rtl&#x27;;
-  @Input() autoSetFirstItem &#x3D; false;
-  constructor() {
-    super();
-  }
-
-  ngAfterContentInit(): void {
-    super.init(this.horizontal);
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

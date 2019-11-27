@@ -51,9 +51,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -646,29 +643,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { FieldTypes } from &#x27;@clearsight-apps/models/common/field-types.enum&#x27;;
-import { TemplateRef } from &#x27;@angular/core&#x27;;
-
-export interface ColumnDefinition {
-  Name: string;
-  Header?: string;
-  FieldType: FieldTypes;
-  Decode?: boolean;
-  ShowDecode?: boolean;
-  Mask?: string;
-  FieldPermissionFlag?: number;
-  UiMode?: string;
-  IsProtected?: boolean;
-  QueryName: string;
-  IsSortable?: boolean;
-  HeaderCellContentTemplate?: TemplateRef&lt;any&gt;;
-  CellContentTemplate?: TemplateRef&lt;any&gt;;
-  IsSelected?: boolean;
-  Width?: number;
-}
-</code></pre>
-    </div>
 </div>
 
 

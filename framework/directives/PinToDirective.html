@@ -45,9 +45,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -163,11 +160,6 @@
 <code>constructor(renderer: <a href="https://angular.io/api/core/Renderer2" target="_blank">Renderer2</a>, el: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, zone: <a href="https://angular.io/api/core/NgZone" target="_blank">NgZone</a>, media: <a href="../injectables/MediaService.html">MediaService</a>)</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">libs/shared/framework/browser/src/lib/pin-to/pin-to.directive.ts:20</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -254,11 +246,6 @@
                         <i>Default value : </i><code>20</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">libs/shared/framework/browser/src/lib/pin-to/pin-to.directive.ts:19</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -274,11 +261,6 @@
                         <i>Default value : </i><code>&#x27;maxHeight&#x27;</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">libs/shared/framework/browser/src/lib/pin-to/pin-to.directive.ts:18</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -294,11 +276,6 @@
                         <i>Default value : </i><code>false</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">libs/shared/framework/browser/src/lib/pin-to/pin-to.directive.ts:20</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -325,12 +302,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/pin-to/pin-to.directive.ts:48</a></div>
-                </td>
-            </tr>
 
 
         </tbody>
@@ -361,12 +332,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="27"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/pin-to/pin-to.directive.ts:27</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -400,12 +365,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="56"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/pin-to/pin-to.directive.ts:56</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -439,12 +398,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/pin-to/pin-to.directive.ts:34</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -509,12 +462,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/pin-to/pin-to.directive.ts:42</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -534,70 +481,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
-  AfterViewInit,
-  Directive,
-  DoCheck,
-  ElementRef,
-  HostListener,
-  Input,
-  NgZone,
-  OnInit,
-  Renderer2
-} from &#x27;@angular/core&#x27;;
-import { MediaService } from &#x27;../media.service&#x27;;
-
-@Directive({
-  selector: &#x27;[csPinTo]&#x27;
-})
-export class PinToDirective implements DoCheck, OnInit {
-  @Input() prop &#x3D; &#x27;maxHeight&#x27;;
-  @Input() margin &#x3D; 20;
-  @Input() useParent &#x3D; false;
-
-  constructor(private renderer: Renderer2, private el: ElementRef, private zone: NgZone, private media: MediaService) {}
-
-  private getTopToParent() {
-    return this.el.nativeElement.offsetTop; // - this.el.nativeElement.parentElement.offsetTop;
-  }
-  getHeightForWindow() {
-    if (this.useParent) {
-      return this.el.nativeElement.parentElement.clientHeight;
-    }
-    return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-  }
-
-  setHeight(top: number) {
-    const val &#x3D; this.getHeightForWindow();
-    const bottom &#x3D; this.margin;
-    if (val &gt; 0) {
-      this.renderer.setStyle(this.el.nativeElement, this.prop, val - top - bottom + &#x27;px&#x27;);
-    }
-  }
-
-  setMeasurements() {
-    const top &#x3D; this.useParent ? this.getTopToParent() : this.el.nativeElement.getBoundingClientRect().top;
-    this.setHeight(top);
-  }
-
-  @HostListener(&#x27;window:resize&#x27;, [])
-  ngDoCheck() {
-    this.zone.runOutsideAngular(() &#x3D;&gt; {
-      setTimeout(() &#x3D;&gt; {
-        this.setMeasurements();
-      });
-    });
-  }
-
-  ngOnInit() {
-    if (this.media.isIE()) {
-      this.prop &#x3D; &#x27;height&#x27;;
-    }
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

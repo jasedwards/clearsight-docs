@@ -50,9 +50,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -149,11 +146,6 @@
 <code>constructor(horz: "ltr" | "rtl")</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator.ts:7</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -211,11 +203,6 @@
                             <i>Default value : </i><code>true</code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator.ts:7</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -239,11 +226,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator.ts:5</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -266,11 +248,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator.ts:6</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -302,12 +279,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="37"
-                            class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator.ts:37</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -376,12 +347,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator.ts:30</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -457,12 +422,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator.ts:26</a></div>
-                </td>
-            </tr>
 
 
         </tbody>
@@ -492,12 +451,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator.ts:19</a></div>
-                </td>
-            </tr>
 
 
         </tbody>
@@ -527,12 +480,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">libs/shared/framework/accessibility/src/lib/list-navigator.ts:12</a></div>
-                </td>
-            </tr>
 
 
         </tbody>
@@ -541,56 +488,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HostListener, QueryList } from &#x27;@angular/core&#x27;;
-import { FocusableOption, FocusKeyManager } from &#x27;@angular/cdk/a11y&#x27;;
-
-export abstract class ListNavigator&lt;T extends FocusableOption&gt; {
-  abstract items: QueryList&lt;T&gt;;
-  keyManager: FocusKeyManager&lt;T&gt;;
-  autoSetFirstItem &#x3D; true;
-
-  constructor(private horz: &#x27;ltr&#x27; | &#x27;rtl&#x27; &#x3D; null) {}
-
-  @HostListener(&#x27;keydown.home&#x27;, [&#x27;$event&#x27;])
-  homePressed(event) {
-    event.preventDefault();
-    event.stopPropagation();
-    this.keyManager.setFirstItemActive();
-  }
-
-  @HostListener(&#x27;keydown.end&#x27;, [&#x27;$event&#x27;])
-  endPressed(event) {
-    event.preventDefault();
-    event.stopPropagation();
-    this.keyManager.setLastItemActive();
-  }
-
-  @HostListener(&#x27;keydown&#x27;, [&#x27;$event&#x27;])
-  keyPress(event) {
-    this.keyManager.onKeydown(event);
-  }
-
-  setActive(item: T) {
-    const index &#x3D; this.items.toArray().findIndex(x &#x3D;&gt; x &#x3D;&#x3D;&#x3D; item);
-    if (index &gt;&#x3D; 0) {
-      this.keyManager.setActiveItem(index);
-    }
-  }
-
-  init(horz &#x3D; null) {
-    horz &#x3D; horz || this.horz;
-    this.keyManager &#x3D; new FocusKeyManager&lt;T&gt;(this.items)
-      .skipPredicate(item &#x3D;&gt; item.disabled)
-      .withWrap()
-      .withHorizontalOrientation(horz);
-    if (this.autoSetFirstItem) {
-      this.keyManager.setFirstItemActive();
-    }
-  }
-}
-</code></pre>
-    </div>
 </div>
 
 

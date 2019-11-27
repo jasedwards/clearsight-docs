@@ -1,0 +1,131 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Dashboards</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+	      <link rel="stylesheet" href="../../styles/style.css">
+        <link rel="stylesheet" href="../../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../../" class="navbar-brand">Dashboards</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content additional-page">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+<h1 id="adding-a-widget-to-the-dashboards-app">Adding a widget to the dashboards app</h1>
+<p>In order to add a widget to dashboards you will need to build a couple modules and components.  Then you will register your widget.</p>
+<h3 id="terminology">Terminology:</h3>
+<ul>
+<li>widget: the module that gets registered in the dashboards application</li>
+<li>web-part: the control that your widget will use (i.e. chart, claims task list...)</li>
+</ul>
+<p>You will place your controls in two different spots.  Widgets go in the storms-dashboard application and your web-part goes in the libs/web-parts folder.</p>
+<p>The reason behind putting your actual web-part somewhere else is so that can easily be reused because it will have no knowledge of the dashboards app.  Your widget communicates with the functionality of 
+dashboards and your web-part communicates to the widget.</p>
+<h3 id="to-create-and-register-your-widget-you-will-run-these-commands">To create and register your widget you will run these commands:</h3>
+<div><pre class="line-numbers"><code class="language-none">ng g m widgets/&lt;web-part-name&gt;Widget --app storms-dashboard</code></pre></div><div><pre class="line-numbers"><code class="language-none">ng g c widgets/&lt;web-part-name&gt;Widget --app storms-dashboard</code></pre></div><p>After you have generated these files you need to implement a couple interfaces.  The module will need to implement the <a href="../../classes/WidgetModule.html">WidgetModule</a> interface.</p>
+<p>This interface requires the class to have a static property called &#39;entry&#39;.  The value is the component you previously created.  The screenshot
+below shows the widget module for MyLinks.  As you can see the MyLinksComponent is referenced as entry in the class and also as entryComponents in the decorator.</p>
+<p><img src="../../dashboards-screenshots/dashboards/WidgetModule.png" alt="Screenshot" class="img-responsive"></p>
+<p>The component you just created will need to implement <a href="../../interfaces/WidgetComponent.html">WidgetComponent</a>.  The interface requires a property with the name widget and type <a href="../../interfaces/Widget.html">Widget</a>.  
+To simplify things a base class
+has been provided that you can extend.  This is what the next screen shot is showing</p>
+<p><img src="../../dashboards-screenshots/dashboards/WidgetComponent.png" alt="Screenshot" class="img-responsive"></p>
+<p>Once you have implemented these interfaces you need to register your widget.  this is so the app can load it on demand if it is used in a dashboard.  The interface for this is of type 
+<a href="../../interfaces/WidgetSchema.html">WidgetSchema</a> and is added to the <a href="../../Miscellaneous/Variables.html#lazyWidgets">lazyWidgets</a> variable.  </p>
+<p>When registering your widget the name value is the ModuleType property that comes down from enterprise.  The value is the path to your widget module.  See screen shot for example.</p>
+<p><img src="../../dashboards-screenshots/dashboards/lazyWidgets.png" alt="Screenshot" class="img-responsive"></p>
+<h3 id="to-add-your-web-part-run-these-commands">To add your web-part run these commands</h3>
+<div><pre class="line-numbers"><code class="language-none">ng g m &lt;web-part-name&gt; --app web-parts</code></pre></div><div><pre class="line-numbers"><code class="language-none">ng g c &lt;web-part-name&gt; --app web-parts</code></pre></div><p>Once you have created these files you will want to go back to your <web-part-name>WidgetModule from earlier and import your <web-part-name>Module so that it can be used.
+Next make sure your web part module has your component listed as an export:</p>
+<p><img src="../../dashboards-screenshots/dashboards/WebPartModule.png" alt="Screenshot" class="img-responsive"></p>
+<p>The final step is to go to web-parts/index.ts and export your module.  </p>
+<p><img src="../../dashboards-screenshots/dashboards/WebPartExport.png" alt="Screenshot" class="img-responsive"></p>
+<p>Congratulations!  You have a widget.</p>
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 2;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'additional-page';
+            var COMPODOC_CURRENT_PAGE_URL = 'adding-a-widget-to-dashboards.html';
+       </script>
+
+       <script src="../../js/libs/custom-elements.min.js"></script>
+       <script src="../../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../../js/menu-wc.js" defer></script>
+
+       <script src="../../js/libs/bootstrap-native.js"></script>
+
+       <script src="../../js/libs/es6-shim.min.js"></script>
+       <script src="../../js/libs/EventDispatcher.js"></script>
+       <script src="../../js/libs/promise.min.js"></script>
+       <script src="../../js/libs/zepto.min.js"></script>
+
+       <script src="../../js/compodoc.js"></script>
+
+       <script src="../../js/tabs.js"></script>
+       <script src="../../js/menu.js"></script>
+       <script src="../../js/libs/clipboard.min.js"></script>
+       <script src="../../js/libs/prism.js"></script>
+       <script src="../../js/sourceCode.js"></script>
+          <script src="../../js/search/search.js"></script>
+          <script src="../../js/search/lunr.min.js"></script>
+          <script src="../../js/search/search-lunr.js"></script>
+          <script src="../../js/search/search_index.js"></script>
+       <script src="../../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -47,12 +47,6 @@
             <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">README</a>
         </li>
         <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
-        </li>
-        <li >
             <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
         </li>
         <li >
@@ -189,11 +183,6 @@
 <code>constructor()</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">libs/shared/framework/alert/src/lib/alert.component.ts:11</a></div>
-                            </td>
-                        </tr>
 
             </tbody>
         </table>
@@ -214,11 +203,6 @@
                         <i>Default value : </i><code>&#x27;&#x27;</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">libs/shared/framework/alert/src/lib/alert.component.ts:9</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -240,11 +224,6 @@
                         <i>Default value : </i><code>AlertType.info</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">libs/shared/framework/alert/src/lib/alert.component.ts:10</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -264,11 +243,6 @@
 
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">libs/shared/framework/alert/src/lib/alert.component.ts:11</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -299,12 +273,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">libs/shared/framework/alert/src/lib/alert.component.ts:14</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -327,39 +295,7 @@
 </p>
     </div>
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, EventEmitter, Output } from &#x27;@angular/core&#x27;;
 
-@Component({
-  selector: &#x27;cs-alert&#x27;,
-  templateUrl: &#x27;./alert.component.html&#x27;,
-  styleUrls: [&#x27;./alert.component.scss&#x27;]
-})
-export class AlertComponent implements OnInit {
-  @Input() message &#x3D; &#x27;&#x27;;
-  @Input() type: AlertType &#x3D; AlertType.info;
-  @Output() close &#x3D; new EventEmitter();
-  constructor() {}
-
-  ngOnInit() {}
-}
-
-export enum AlertType {
-  error &#x3D; &#x27;error&#x27;,
-  warning &#x3D; &#x27;warning&#x27;,
-  info &#x3D; &#x27;info&#x27;,
-  success &#x3D; &#x27;success&#x27;
-}
-</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;cs-alert {{ type }}&quot; (click)&#x3D;&quot;close.emit()&quot;&gt;
-  &lt;div class&#x3D;&quot;alert-msg&quot;&gt;&lt;ng-content&gt;&lt;/ng-content&gt;&lt;/div&gt;
-  &lt;a class&#x3D;&quot;close-alert&quot;&gt;&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-    </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">

@@ -46,9 +46,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -100,11 +97,6 @@
 <code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, baseUri: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency.service.ts:13</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -177,12 +169,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency.service.ts:16</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -244,34 +230,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, Inject } from &#x27;@angular/core&#x27;;
-import { Observable, of } from &#x27;rxjs&#x27;;
-import {
-  ICodeDepdendencyInvalidatedRequest
-} from &#x27;./code-dependency-invalidated-request.interface&#x27;;
-import {ICodeDepdendencyInvalidatedResponse} from &#x27;./code-dependency-invalidated-response.interface&#x27;
-import { HttpClient } from &#x27;@angular/common/http&#x27;;
-import { BASE_URI } from &#x27;@clearsight-apps/models/common/injection-tokens&#x27;;
-
-@Injectable({
-  providedIn: &#x27;root&#x27;
-})
-export class CodeDependencyService {
-  constructor(private http: HttpClient, @Inject(BASE_URI) protected baseUri: string) {}
-
-  invalidatedFieldNames(
-    packageName: string,
-    request: ICodeDepdendencyInvalidatedRequest
-  ): Observable&lt;ICodeDepdendencyInvalidatedResponse&gt; {
-    const url &#x3D; &#x60;${this.baseUri}/${packageName}/${
-      request.DomainName
-    }.mvc/metadata/CodeDependency/InvalidatedFieldNames&#x60;;
-    return this.http.post&lt;ICodeDepdendencyInvalidatedResponse&gt;(url, request);
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

@@ -1,0 +1,1424 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Dashboards</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Dashboards</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>WidgetContainerComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>apps/storms-dashboard/src/app/widgets/widget-container/widget-container.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../injectables/WidgetCommunicatorService.html" target="_self" >{ provide: WIDGET_COMMUNICATOR, useClass: WidgetCommunicatorService }</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>da-widget-container</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./widget-container.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./widget-container.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#actions">actions</a>
+                            </li>
+                            <li>
+                                <a href="#container">container</a>
+                            </li>
+                            <li>
+                                <a href="#content">content</a>
+                            </li>
+                            <li>
+                                <a href="#footer">footer</a>
+                            </li>
+                            <li>
+                                <a href="#isView">isView</a>
+                            </li>
+                            <li>
+                                <a href="#isWidgetLoaded">isWidgetLoaded</a>
+                            </li>
+                            <li>
+                                <a href="#personalize">personalize</a>
+                            </li>
+                            <li>
+                                <a href="#widget">widget</a>
+                            </li>
+                            <li>
+                                <a href="#widgetConfig">widgetConfig</a>
+                            </li>
+                            <li>
+                                <a href="#widgetPosition$">widgetPosition$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#export">export</a>
+                            </li>
+                            <li>
+                                <a href="#exportToExcel">exportToExcel</a>
+                            </li>
+                            <li>
+                                <a href="#logError">logError</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openPersonalize">openPersonalize</a>
+                            </li>
+                            <li>
+                                <a href="#refresh">refresh</a>
+                            </li>
+                            <li>
+                                <a href="#removeWidget">removeWidget</a>
+                            </li>
+                            <li>
+                                <a href="#saveWidget">saveWidget</a>
+                            </li>
+                            <li>
+                                <a href="#toggleExpanded">toggleExpanded</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#expandedId">expandedId</a>
+                            </li>
+                            <li>
+                                <a href="#layout">layout</a>
+                            </li>
+                            <li>
+                                <a href="#modifyOption">modifyOption</a>
+                            </li>
+                            <li>
+                                <a href="#selector">selector</a>
+                            </li>
+                            <li>
+                                <a href="#showExpander">showExpander</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#class">class</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(service: <a href="../injectables/WidgetLoaderService.html">WidgetLoaderService</a>, store: <a href="../interfaces/WidgetsState.html">Store<WidgetsState></a>, communicator: WidgetCommunicator, exportService: ExportService, modalService: NgbModal, confirmModal: ConfirmDialogService, exportToExcelService: ExportToExcelService)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>service</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/WidgetLoaderService.html" target="_self" >WidgetLoaderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>store</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/WidgetsState.html" target="_self" >Store&lt;WidgetsState&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>communicator</td>
+                                                  
+                                                        <td>
+                                                                    <code>WidgetCommunicator</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>exportService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ExportService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgbModal</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>confirmModal</td>
+                                                  
+                                                        <td>
+                                                                    <code>ConfirmDialogService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>exportToExcelService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ExportToExcelService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="expandedId"></a>
+                        <b>expandedId</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="layout"></a>
+                        <b>layout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>ColumnLayout.THREE</code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="modifyOption"></a>
+                        <b>modifyOption</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selector"></a>
+                        <b>selector</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showExpander"></a>
+                        <b>showExpander</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3>HostBindings</h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="class"></a>
+                        <span class="name">
+                            <b>
+                            class</b>
+                            <a href="#class"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.zoomedOutClass</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="export"></a>
+                    <span class="name">
+                        <b>
+                            export
+                        </b>
+                        <a href="#export"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>export(type: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="exportToExcel"></a>
+                    <span class="name">
+                        <b>
+                            exportToExcel
+                        </b>
+                        <a href="#exportToExcel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>exportToExcel()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="logError"></a>
+                    <span class="name">
+                        <b>
+                            logError
+                        </b>
+                        <a href="#logError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>logError()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <b>
+                            ngOnChanges
+                        </b>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>changes</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openPersonalize"></a>
+                    <span class="name">
+                        <b>
+                            openPersonalize
+                        </b>
+                        <a href="#openPersonalize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openPersonalize()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refresh"></a>
+                    <span class="name">
+                        <b>
+                            refresh
+                        </b>
+                        <a href="#refresh"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>refresh()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeWidget"></a>
+                    <span class="name">
+                        <b>
+                            removeWidget
+                        </b>
+                        <a href="#removeWidget"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeWidget()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveWidget"></a>
+                    <span class="name">
+                        <b>
+                            saveWidget
+                        </b>
+                        <a href="#saveWidget"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveWidget(widgetMessage)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>widgetMessage</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleExpanded"></a>
+                    <span class="name">
+                        <b>
+                            toggleExpanded
+                        </b>
+                        <a href="#toggleExpanded"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleExpanded()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="actions"></a>
+                        <span class="name">
+                            <b>
+                            actions</b>
+                            <a href="#actions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/View.html" target="_self" >ViewContainerRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;actions&#x27;, {read: ViewContainerRef, static: false})<br />
+                            </code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="container"></a>
+                        <span class="name">
+                            <b>
+                            container</b>
+                            <a href="#container"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/View.html" target="_self" >ViewContainerRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;container&#x27;, {read: ViewContainerRef, static: true})<br />
+                            </code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="content"></a>
+                        <span class="name">
+                            <b>
+                            content</b>
+                            <a href="#content"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;content&#x27;, {static: true})<br />
+                            </code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="footer"></a>
+                        <span class="name">
+                            <b>
+                            footer</b>
+                            <a href="#footer"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/View.html" target="_self" >ViewContainerRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;innerfooter&#x27;, {read: ViewContainerRef, static: true})<br />
+                            </code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isView"></a>
+                        <span class="name">
+                            <b>
+                            isView</b>
+                            <a href="#isView"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isWidgetLoaded"></a>
+                        <span class="name">
+                            <b>
+                            isWidgetLoaded</b>
+                            <a href="#isWidgetLoaded"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="personalize"></a>
+                        <span class="name">
+                            <b>
+                            personalize</b>
+                            <a href="#personalize"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>literal type</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="widget"></a>
+                        <span class="name">
+                            <b>
+                            widget</b>
+                            <a href="#widget"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Widget</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="widgetConfig"></a>
+                        <span class="name">
+                            <b>
+                            widgetConfig</b>
+                            <a href="#widgetConfig"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/ChartWidgetConfig.html" target="_self" >ChartWidgetConfig</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="widgetPosition$"></a>
+                        <span class="name">
+                            <b>
+                            widgetPosition$</b>
+                            <a href="#widgetPosition$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./widget-container.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;~@clearsight-apps/styles/variables/_index&#x27;;
+@import &#x27;~@clearsight-apps/styles/mixins/cs-icon&#x27;;
+@import &#x27;~@clearsight-apps/styles/mixins/cs-action-icon-no-label&#x27;;
+@import &#x27;~@clearsight-apps/styles/variables/index&#x27;;
+:host {
+  min-height: 300px;
+  max-height: 400px;
+  margin-bottom: 10px;
+
+  &amp;.expanded {
+    min-height: 83vh;
+  }
+}
+
+.content {
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.card {
+  height: 100%;
+  padding: 5px;
+  .card-block {
+    .widget-title {
+      font-weight: 700;
+    }
+  }
+}
+
+.expander {
+  cursor: pointer;
+  &amp;:hover {
+    color: $button-hover-color;
+  }
+  &amp;:before {
+    @include cs-icon($cs-icon-expand);
+  }
+  &amp;.collapsed {
+    &amp;:before {
+      content: $cs-icon-collapse;
+    }
+  }
+}
+
+.right-buttons {
+  float: right;
+}
+
+.widget-actions-dropdown {
+  @include cs-action-icon-no-label($cs-icon-chevrondown, 5px);
+  color: $default-text-color;
+  &amp;:after {
+    content: none;
+  }
+  &amp;:before {
+    vertical-align: middle;
+  }
+}
+
+// ----------------------------------------------------
+
+.box {
+  display: inline-block;
+  padding: 20px;
+  background-color: aqua;
+  border: 2px solid black;
+}
+
+.box {
+  background: rgb(211, 182, 88);
+  border: 1px solid black;
+  padding: 10px 20px;
+  margin: 4px;
+  display: inline-block;
+
+  &amp;.dragging {
+    background: antiquewhite;
+  }
+
+  &amp;.sortable.dragging {
+    background: none;
+    border: 1px dashed black;
+    color: transparent;
+  }
+}
+
+.area {
+  background: #c0ffee;
+  padding: 40px;
+}
+
+ul {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+
+  &amp;.horizontal {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.boundary {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.dnd-anchor {
+  &amp;:before {
+    margin-right: $spacing-x-small;
+    vertical-align: top;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="card" tabindex="0" daWidgetSizer draggable="true">  <div class="card-block" #header>    <div *ngIf="modifyOption" class="cs-button cs-button_icon cs-icon-uniE780 dnd-anchor"></div>    <span *ngIf="widget; else loading" class="widget-title" [title]="widget.message.Title" tabindex="0">{{      widget.message.Title    }}</span>    <span *ngIf="widget; else loading" class="right-buttons">      <div ngbDropdown placement="bottom-right" class="d-inline-block">        <button          class="widget-actions-dropdown"          tabindex="0"          title="{{ \'STORMS_TOGGLE_MENU\' | translate }}"          id="{{ selector }}"          ngbDropdownToggle        ></button>        <div ngbDropdownMenu [attr.aria-labeledby]="selector">          <button            class="dropdown-item export-jpg"            tabindex="0"            title="{{ \'STORMS_EXPORT_JPG\' | translate }}"            (click)="export(\'jpg\')"          >            {{ \'STORMS_EXPORT_JPG\' | translate }}          </button>          <button            class="dropdown-item export-pdf"            tabindex="0"            title="{{ \'STORMS_EXPORT_PDF\' | translate }}"            (click)="export(\'Pdf\')"          >            {{ \'STORMS_EXPORT_PDF\' | translate }}          </button>          <button            *ngIf="canRemoveContent"            class="dropdown-item remove-content"            tabindex="0"            title="{{ \'STORMS_REMOVE_CONTENT\' | translate }}"            (click)="removeWidget()"          >            {{ \'STORMS_REMOVE_CONTENT\' | translate }}          </button>          <button            *ngIf="personalize"            class="dropdown-item personalize"            title="{{ \'STORMS_PERSONALIZE_CONTENT\' | translate }}"            (click)="openPersonalize()"          >            {{ \'STORMS_PERSONALIZE_CONTENT\' | translate }}          </button>          <button            class="dropdown-item export-to-excel"            title="{{ \'STORMS_EXPORT_EXCEL\' | translate }}"            (click)="exportToExcel()"            *ngIf="isView"          >            {{ \'STORMS_EXPORT_EXCEL\' | translate }}          </button>          <ng-template #actions></ng-template>        </div>      </div>      <span class="d-none d-md-inline-block">        <span          class="expander"          *ngIf="showExpander"          tabindex="0"          (click)="toggleExpanded(); $event.preventDefault(); $event.stopPropagation()"          (csKeyPress)="toggleExpanded()"          allowedKeys="13,32"          daWidgetToggleDecorator          [isExpanded]="expandedId === widget.message.Id"        ></span>      </span>    </span>  </div>  <ng-template #loading>    <div class="card-block content"><cs-loading></cs-loading></div>  </ng-template>  <div class="card-block content" #content><ng-template #container></ng-template></div>  <div class="card-block widget-footer" #footer><ng-template #innerfooter></ng-template></div></div><ng-container *ngIf="modifyOption"> <div *csDraggableHelper class="boundary"></div> </ng-container></div>'
+    var COMPONENTS = [{'name': 'ActionPlanAlertModalComponent', 'selector': 'da-action-plan-alert-modal'},{'name': 'AddContentComponent', 'selector': 'da-add-content'},{'name': 'AddPageDialogueComponent', 'selector': 'da-add-page-dialogue'},{'name': 'AdvancedFilterComponent', 'selector': 'da-advanced-filter'},{'name': 'AppComponent', 'selector': 'da-root'},{'name': 'BasicFilterComponent', 'selector': 'da-basic-filter'},{'name': 'BiReportsWidgetComponent', 'selector': 'da-bi-reports-widget'},{'name': 'BiReportsWidgetPersonalizationComponent', 'selector': 'da-bi-reports-widget-personalization'},{'name': 'ChartDetailsWrapperComponent', 'selector': 'da-chart-details-wrapper'},{'name': 'ChartWidgetComponent', 'selector': 'da-chart-widget'},{'name': 'CountryIntelligenceWidgetComponent', 'selector': 'da-country-intelligence-widget'},{'name': 'DashboardComponent', 'selector': 'da-dashboard'},{'name': 'DashboardsComponent', 'selector': 'da-dashboards'},{'name': 'DocumentsFolderViewerComponent', 'selector': 'da-documents-folder-viewer'},{'name': 'DocumentsFolderViewerPersonalizationComponent', 'selector': 'da-documents-folder-viewer-personalization'},{'name': 'DynamicAnalysisWidgetChartComponent', 'selector': 'da-dynamic-analysis-widget-chart'},{'name': 'DynamicAnalysisWidgetComponent', 'selector': 'da-dynamic-analysis-widget'},{'name': 'DynamicAnalysisWidgetPersonalizationComponent', 'selector': 'da-dynamic-analysis-widget-personalization'},{'name': 'DynamicAnalysisWidgetTableComponent', 'selector': 'da-dynamic-analysis-widget-table'},{'name': 'EditFolderToolbarComponent', 'selector': 'da-edit-folder-toolbar'},{'name': 'EditPageDialogueComponent', 'selector': 'da-edit-page-dialogue'},{'name': 'EmailNotificationWidgetComponent', 'selector': 'da-email-notification-widget'},{'name': 'FilterDataComponent', 'selector': 'da-filter-data'},{'name': 'GridChartWidgetComponent', 'selector': 'da-grid-chart-widget'},{'name': 'LagChartWidgetComponent', 'selector': 'da-lag-chart-widget'},{'name': 'LinearGaugeWidgetComponent', 'selector': 'da-linear-gauge-widget'},{'name': 'MonthlyAnalysisWidgetComponent', 'selector': 'da-monthly-analysis-widget'},{'name': 'MonthlyAnalysisWidgetPersonalizationComponent', 'selector': 'da-monthly-analysis-widget-personalization'},{'name': 'MyCalendarWidgetComponent', 'selector': 'da-my-calendar-widget'},{'name': 'MyCalenderWidgetPersonalizationComponent', 'selector': 'da-my-calender-widget-personalization'},{'name': 'MyFavoriteDocumentsComponent', 'selector': 'da-my-favorite-documents'},{'name': 'MyFavoriteDocumentsPersonalizationComponent', 'selector': 'da-my-favorite-documents-personalization'},{'name': 'MyLinksToolbarComponent', 'selector': 'da-my-links-toolbar'},{'name': 'MyLinksWidgetComponent', 'selector': 'da-my-links-widget'},{'name': 'MyReportsPersonalizationComponent', 'selector': 'da-my-reports-personalization'},{'name': 'MyReportsWidgetAditionalDataComponent', 'selector': 'da-my-reports-widget-aditional-data'},{'name': 'MyReportsWidgetAlertsGridComponent', 'selector': 'da-my-reports-widget-alerts-grid'},{'name': 'MyReportsWidgetComponent', 'selector': 'da-my-reports-widget'},{'name': 'MyReportsWidgetStatusBarComponent', 'selector': 'da-my-reports-widget-status-bar'},{'name': 'MyViewsWidgetComponent', 'selector': 'da-my-views-widget'},{'name': 'MyViewsWidgetPersonalizationComponent', 'selector': 'da-my-views-widget-personalization'},{'name': 'NewFolderComponent', 'selector': 'da-new-folder'},{'name': 'NewLinkComponent', 'selector': 'da-new-link'},{'name': 'NewsWidgetComponent', 'selector': 'da-news-widget'},{'name': 'NewsWidgetPersonalizationComponent', 'selector': 'da-news-widget-personalization'},{'name': 'PendingApprovalWidgetComponent', 'selector': 'da-pending-approval-widget'},{'name': 'PersonalizeChartComponent', 'selector': 'da-personalize-chart'},{'name': 'RadialGaugeWidgetComponent', 'selector': 'da-radial-gauge-widget'},{'name': 'RiskMapWidgetComponent', 'selector': 'da-risk-map-widget'},{'name': 'RiskMapWidgetPersonalizationComponent', 'selector': 'da-risk-map-widget-personalization'},{'name': 'SimpleChartComponent', 'selector': 'da-simple-chart'},{'name': 'WidgetContainerComponent', 'selector': 'da-widget-container'},{'name': 'WidgetPersonalizeComponent', 'selector': 'da-widget-personalize'}];
+    var DIRECTIVES = [{'name': 'WidgetActionsDirective', 'selector': '[daWidgetActions]'},{'name': 'WidgetFooterDirective', 'selector': '[daWidgetFooter]'},{'name': 'WidgetSizerDirective', 'selector': '[daWidgetSizer]'},{'name': 'WidgetToggleDecoratorDirective', 'selector': '[daWidgetToggleDecorator]'}];
+    var ACTUAL_COMPONENT = {'name': 'WidgetContainerComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'WidgetContainerComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

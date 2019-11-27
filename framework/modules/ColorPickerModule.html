@@ -186,9 +186,6 @@
     <li  class="active" >
         <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
     </li>
-    <li >
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
 </ul>
 
 <div class="tab-content">
@@ -252,23 +249,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { CommonModule } from &#x27;@angular/common&#x27;;
-import { ColorPickerComponent } from &#x27;./color-picker.component&#x27;;
-import { ColorPaletteComponent } from &#x27;./color-palette/color-palette.component&#x27;;
-import { ColorSliderComponent } from &#x27;./color-slider/color-slider.component&#x27;;
-import { ColorPickerService } from &#x27;./color-picker.service&#x27;;
-
-@NgModule({
-  declarations: [ColorPickerComponent, ColorPaletteComponent, ColorSliderComponent],
-  imports: [CommonModule],
-  providers: [ColorPickerService],
-  exports: [ColorPickerComponent, ColorPaletteComponent, ColorSliderComponent]
-})
-export class ColorPickerModule {}
-</code></pre>
-    </div>
 </div>
 
 

@@ -46,9 +46,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -101,11 +98,6 @@
 <code>constructor()</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">libs/shared/framework/browser/src/lib/valid-keys.service.ts:6</a></div>
-                            </td>
-                        </tr>
 
             </tbody>
         </table>
@@ -138,12 +130,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="9"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/valid-keys.service.ts:9</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -189,30 +175,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-
-@Injectable({
-  providedIn: &#x27;root&#x27;
-})
-export class ValidKeysService {
-  constructor() {}
-
-  public getValidKey(prefKey) {
-    let validKey;
-    switch (prefKey) {
-      case &#x27;lookup&#x27;:
-        validKey &#x3D; [&#x27;DomainName&#x27;, &#x27;Package&#x27;, &#x27;FieldName&#x27;];
-        break;
-      case &#x27;summarystate&#x27;:
-        validKey &#x3D; [&#x27;UiMode&#x27;, &#x27;DomainName&#x27;, &#x27;Package&#x27;, &#x27;FieldName&#x27;];
-        break;
-    }
-    return validKey;
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

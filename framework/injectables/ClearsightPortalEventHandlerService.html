@@ -46,9 +46,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -118,11 +115,6 @@
 <code>constructor(appName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/clearsight-portal-event-handler.service.ts:22</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -183,12 +175,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="70"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/clearsight-portal-event-handler.service.ts:70</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -253,12 +239,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/clearsight-portal-event-handler.service.ts:39</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -292,12 +272,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/clearsight-portal-event-handler.service.ts:26</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -362,12 +336,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="74"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/clearsight-portal-event-handler.service.ts:74</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -444,12 +412,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="90"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/clearsight-portal-event-handler.service.ts:90</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -514,12 +476,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="82"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/clearsight-portal-event-handler.service.ts:82</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -596,12 +552,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="78"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/clearsight-portal-event-handler.service.ts:78</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -651,108 +601,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Inject, Injectable, Optional } from &#x27;@angular/core&#x27;;
-import { PortalEventHandler, PostParameter } from &#x27;./portal-event-handler.interface&#x27;
-import {
-  ACTIVATE_APP,
-  LICENSED_APPS,
-  NAV_APP,
-  NAV_COMMANDS,
-  ON_CLOSED,
-  RETURN_LICENSED_APPS
-} from &#x27;./portal-events.const&#x27;;
-import { Subscription, Subject } from &#x27;rxjs&#x27;;
-import { AppModel } from &#x27;./app-model.interface&#x27;;
-import keyBy from &#x27;lodash-es/keyBy&#x27;;
-import { APP_NAME } from &#x27;@clearsight-apps/models/common/injection-tokens&#x27;;
-
-@Injectable({
-  providedIn: &#x27;root&#x27;
-})
-export class ClearsightPortalEventHandlerService implements PortalEventHandler {
-  private licensedApps: { [key: string]: AppModel } &#x3D; {};
-  private subscriptions: { [key: string]: Subject&lt;any&gt; } &#x3D; {};
-  private targetOrigin: string;
-
-  constructor(@Inject(APP_NAME) private appName: string) {}
-
-  messageReceived(event: any): void {
-    if (this.subscriptions &amp;&amp; event &amp;&amp; event.data) {
-      const parsed &#x3D; typeof event.data &#x3D;&#x3D;&#x3D; &#x27;string&#x27; ? JSON.parse(event.data) : event.data;
-      if (!parsed.eventName) {
-        return;
-      }
-      const eventName &#x3D; parsed.eventName;
-      if (this.subscriptions.hasOwnProperty(eventName)) {
-        this.subscriptions[eventName].next(parsed.data);
-      }
-    }
-  }
-
-  init(): Promise&lt;any&gt; {
-    let timer;
-    return new Promise(resolve &#x3D;&gt; {
-      this.targetOrigin &#x3D; window.location.protocol + &#x27;//&#x27; + window.location.host;
-      if (window.parent) {
-        if (window.parent.addEventListener) {
-          window.addEventListener(&#x27;message&#x27;, e &#x3D;&gt; {
-            this.messageReceived(e);
-          });
-        } else {
-          window.parent[&#x27;attachEvent&#x27;](&#x27;onmessage&#x27;, e &#x3D;&gt; {
-            this.messageReceived(e);
-          });
-        }
-      }
-
-      const sub &#x3D; this.subscribe(RETURN_LICENSED_APPS, (data: { licensedApps: AppModel[] }) &#x3D;&gt; {
-        window.clearTimeout(timer);
-        this.licensedApps &#x3D; keyBy(data.licensedApps, &#x27;name&#x27;);
-        sub.unsubscribe();
-        resolve();
-      });
-
-      this.post({ eventName: LICENSED_APPS, appName: this.appName });
-
-      timer &#x3D; setTimeout(() &#x3D;&gt; {
-        resolve();
-      }, 2000);
-    });
-  }
-
-  hasAccess(appName: string): boolean {
-    return this.licensedApps.hasOwnProperty(appName);
-  }
-
-  openRelatedApp(appName: string, relativeUrl: string) {
-    this.post({ eventName: ACTIVATE_APP, appName, relativeUrl });
-  }
-
-  subscribeClosed(fn: () &#x3D;&gt; void): Subscription {
-    return this.subscribe(ON_CLOSED, fn);
-  }
-
-  subscribe(eventName: string, fn: (data: any) &#x3D;&gt; void): Subscription {
-    if (!this.subscriptions.hasOwnProperty(eventName)) {
-      this.subscriptions[eventName] &#x3D; new Subject&lt;any&gt;();
-    }
-
-    return this.subscriptions[eventName].subscribe(fn);
-  }
-
-  post(data: PostParameter) {
-    if (!data.appName) {
-      data.appName &#x3D; this.appName;
-    }
-
-    if (window.postMessage) {
-      window.parent.postMessage(data, this.targetOrigin);
-    }
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

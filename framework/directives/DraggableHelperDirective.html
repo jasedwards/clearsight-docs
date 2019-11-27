@@ -45,9 +45,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -123,11 +120,6 @@
 <code>constructor(draggable: DraggableDirective, templateRef: TemplateRef<any>, viewContainerRef: <a href="https://angular.io/api/core/ViewContainerRef" target="_blank">ViewContainerRef</a>, overlay: Overlay)</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">libs/shared/framework/drag-drop/src/lib/draggable-helper.directive.ts:13</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -228,12 +220,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">libs/shared/framework/drag-drop/src/lib/draggable-helper.directive.ts:33</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -267,12 +253,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">libs/shared/framework/drag-drop/src/lib/draggable-helper.directive.ts:22</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -292,75 +272,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Directive, OnInit, OnDestroy, TemplateRef, ViewContainerRef } from &#x27;@angular/core&#x27;;
-import { DraggableDirective } from &#x27;./draggable.directive&#x27;;
-import { GlobalPositionStrategy, Overlay, OverlayRef } from &#x27;@angular/cdk/overlay&#x27;;
-import { TemplatePortal } from &#x27;@angular/cdk/portal&#x27;;
-
-@Directive({
-  selector: &#x27;[csDraggableHelper]&#x27;,
-  exportAs: &#x27;[csDraggableHelper]&#x27;
-})
-export class DraggableHelperDirective implements OnInit, OnDestroy {
-  private overlayRef: OverlayRef;
-  private positionStrategy &#x3D; new GlobalPositionStrategy();
-  private startPosition?: { x: number; y: number };
-
-  constructor(
-    private draggable: DraggableDirective,
-    private templateRef: TemplateRef&lt;any&gt;,
-    private viewContainerRef: ViewContainerRef,
-    private overlay: Overlay
-  ) {}
-
-  ngOnInit(): void {
-    this.draggable.dragStart.subscribe(event &#x3D;&gt; this.onDragStart(event));
-    this.draggable.dragMove.subscribe(event &#x3D;&gt; this.onDragMove(event));
-    this.draggable.dragEnd.subscribe(() &#x3D;&gt; this.onDragEnd());
-
-    // create an overlay
-    this.overlayRef &#x3D; this.overlay.create({
-      positionStrategy: this.positionStrategy
-    });
-  }
-
-  ngOnDestroy(): void {
-    // remove the overlay...
-    this.overlayRef.dispose();
-  }
-
-  private onDragStart(event: PointerEvent): void {
-    // determine relative start position
-    const clientRect &#x3D; this.draggable.element.nativeElement.getBoundingClientRect();
-    this.startPosition &#x3D; {
-      x: event.clientX - clientRect.left,
-      y: event.clientY - clientRect.top
-    };
-
-    this.overlayRef.overlayElement.style.width &#x3D; &#x60;${clientRect.width}px&#x60;;
-  }
-
-  private onDragMove(event: PointerEvent): void {
-    if (!this.overlayRef.hasAttached()) {
-      this.overlayRef.attach(new TemplatePortal(this.templateRef, this.viewContainerRef));
-      const rootElement &#x3D; this.overlayRef.overlayElement.firstChild as HTMLElement;
-      rootElement.style.width &#x3D; &#x60;${this.draggable.element.nativeElement.offsetWidth}px&#x60;;
-      rootElement.style.height &#x3D; &#x60;${this.draggable.element.nativeElement.offsetHeight}px&#x60;;
-      rootElement.style.boxSizing &#x3D; &#x27;border-box&#x27;;
-    }
-
-    this.positionStrategy.left(&#x60;${event.clientX - this.startPosition.x}px&#x60;);
-    this.positionStrategy.top(&#x60;${event.clientY - this.startPosition.y}px&#x60;);
-    this.positionStrategy.apply();
-  }
-
-  private onDragEnd(): void {
-    this.overlayRef.detach();
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

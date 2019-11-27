@@ -50,9 +50,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -130,11 +127,6 @@
 <code>constructor(appName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, viewId: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="128" class="link-to-prism">libs/shared/framework/browser/src/lib/window-events.ts:128</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -206,11 +198,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">libs/shared/framework/browser/src/lib/window-events.ts:129</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -234,11 +221,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">libs/shared/framework/browser/src/lib/window-events.ts:129</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -270,12 +252,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="131"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/window-events.ts:131</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -298,143 +274,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ClientInfo } from &#x27;@clearsight-apps/models/common/client-info&#x27;;
-
-import {
-  LicensedAppModel,
-  NAV_APP,
-  ON_DELETE_FAVORITE
-} from &#x27;@clearsight-apps/shared/framework/collaborative-platform&#x27;;
-import { RecentFolderItem } from &#x27;@clearsight-apps/models/recent-items/recent-item&#x27;;
-
-export const ActivateAppEventName &#x3D; &#x27;ACTIVATE_APP&#x27;;
-export const OpenRecentItemEventName &#x3D; &#x27;OPEN_RECENT_ITEM&#x27;;
-export const RemoveRecentItemEventName &#x3D; &#x27;REMOVE_RECENT_ITEM&#x27;;
-export const CloseRecentItemEventName &#x3D; &#x27;CLOSE_RECENT_ITEM&#x27;;
-export const SetRecentItemsEventName &#x3D; &#x27;SET_RECENT_ITEMS&#x27;;
-export const NavClicked &#x3D; &#x27;NAV_CLICKED&#x27;;
-export const CloseAppEvent &#x3D; &#x27;CLOSE_APP&#x27;;
-export const RequestLicensedAppsEvent &#x3D; &#x27;LICENSED_APPS&#x27;;
-export const ReturnLicensedAppsEvent &#x3D; &#x27;RETURN_LICENSED_APPS&#x27;;
-export const RequestClientInfoEvent &#x3D; &#x27;CLIENT_INFO&#x27;;
-export const PostClientInfoEvent &#x3D; &#x27;POST_CLIENT_INFO&#x27;;
-export const OnClosedEventName &#x3D; &#x27;ON_CLOSED&#x27;;
-
-export interface CloseAppMessage {
-  url: string;
-}
-
-export interface ActivateAppMessage {
-  appName: string;
-  relativeUrl?: string;
-}
-
-export interface RequestLicensedAppsMessage {
-  appName: string;
-}
-
-export interface WindowEvent {
-  appName?: string;
-  toEventData(): any;
-}
-
-export class AppNavigation implements WindowEvent {
-  constructor(public appName: string, private state: string) {}
-
-  toEventData(): any {
-    return { eventName: NAV_APP, data: { appName: this.appName, navTo: this.state } };
-  }
-}
-
-export class CloseRecentItemEvent implements WindowEvent {
-  constructor(public appName: string, private id: string, private featureKey: string) {}
-
-  toEventData() {
-    return {
-      eventName: CloseRecentItemEventName,
-      data: {
-        appName: this.appName,
-        data: {
-          id: this.id,
-          featureKey: this.featureKey
-        }
-      }
-    };
-  }
-}
-
-export class OpenRecentItemEvent implements WindowEvent {
-  constructor(public appName: string, public item: RecentFolderItem) {}
-
-  toEventData() {
-    return { eventName: OpenRecentItemEventName, data: this.item };
-  }
-}
-
-export class SetRecentItemsEvent implements WindowEvent {
-  constructor(public appName: string, public openRecords: RecentFolderItem[]) {}
-
-  toEventData() {
-    return { eventName: SetRecentItemsEventName, openRecords: this.openRecords };
-  }
-}
-
-export class RemoveRecentItemEvent implements WindowEvent {
-  constructor(public appName: string, public id: string, public featureKey: string) {}
-
-  toEventData() {
-    return {
-      eventName: OpenRecentItemEventName,
-      data: {
-        appName: this.appName,
-        data: { id: this.id, featureKey: this.featureKey }
-      }
-    };
-  }
-}
-
-export class PostLicensedApps implements WindowEvent {
-  constructor(public appName: string, public apps: LicensedAppModel[]) {}
-
-  toEventData() {
-    return { eventName: ReturnLicensedAppsEvent, data: { appName: this.appName, licensedApps: this.apps } };
-  }
-}
-
-export class PostClientInfo implements WindowEvent {
-  constructor(public client: ClientInfo) {}
-
-  toEventData() {
-    return { eventName: PostClientInfoEvent, data: { clientInfo: this.client } };
-  }
-}
-
-export class ToggleMobileMenu implements WindowEvent {
-  constructor(public appName: string) {}
-
-  toEventData() {
-    return { eventName: NavClicked, data: { appName: this.appName } };
-  }
-}
-
-export class OnClosedEvent implements WindowEvent {
-  constructor() {}
-
-  toEventData() {
-    return { eventName: OnClosedEventName };
-  }
-}
-
-export class OnDeleteFavoritesEvent implements WindowEvent {
-  constructor(public appName: string, public viewId: any) {}
-
-  toEventData() {
-    return { eventName: ON_DELETE_FAVORITE, data: { appName: this.appName, ViewId: this.viewId } };
-  }
-}
-</code></pre>
-    </div>
 </div>
 
 

@@ -44,12 +44,6 @@
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
         <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
-        </li>
-        <li >
             <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
         </li>
         <li >
@@ -212,11 +206,6 @@
 <code>constructor()</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-slider/color-slider.component.ts:15</a></div>
-                            </td>
-                        </tr>
 
             </tbody>
         </table>
@@ -239,11 +228,6 @@
 
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-slider/color-slider.component.ts:11</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -274,12 +258,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="74"
-                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-slider/color-slider.component.ts:74</a></div>
-                </td>
-            </tr>
 
 
         </tbody>
@@ -310,12 +288,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-slider/color-slider.component.ts:19</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -349,12 +321,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="78"
-                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-slider/color-slider.component.ts:78</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -431,12 +397,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="83"
-                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-slider/color-slider.component.ts:83</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -513,12 +473,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="54"
-                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-slider/color-slider.component.ts:54</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -552,12 +506,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="58"
-                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-slider/color-slider.component.ts:58</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -622,12 +570,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="65"
-                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-slider/color-slider.component.ts:65</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -705,11 +647,6 @@
                             </code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-slider/color-slider.component.ts:10</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -719,109 +656,7 @@
 </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ViewChild, ElementRef, AfterViewInit, HostListener, Output, EventEmitter } from &#x27;@angular/core&#x27;;
 
-@Component({
-  selector: &#x27;cs-color-slider&#x27;,
-  templateUrl: &#x27;./color-slider.component.html&#x27;,
-  styleUrls: [&#x27;./color-slider.component.scss&#x27;]
-})
-export class ColorSliderComponent implements AfterViewInit {
-  @ViewChild(&#x27;canvas&#x27;, { static: true })
-  canvas: ElementRef&lt;HTMLCanvasElement&gt;;
-  @Output() color: EventEmitter&lt;string&gt; &#x3D; new EventEmitter();
-
-  private ctx: CanvasRenderingContext2D;
-  private mouseDown: Boolean &#x3D; false;
-  private selectedHeight: number;
-
-  constructor() {}
-
-  draw() {
-    if (!this.ctx) {
-      this.ctx &#x3D; this.canvas.nativeElement.getContext(&#x27;2d&#x27;);
-    }
-    const width &#x3D; this.canvas.nativeElement.width;
-    const height &#x3D; this.canvas.nativeElement.height;
-
-    this.ctx.clearRect(0, 0, width, height);
-
-    const gradient &#x3D; this.ctx.createLinearGradient(0, 0, 0, height);
-
-    gradient.addColorStop(0, &#x27;rgba(255, 0, 0, 1)&#x27;);
-    gradient.addColorStop(0.17, &#x27;rgba(255, 255, 0, 1)&#x27;);
-    gradient.addColorStop(0.34, &#x27;rgba(0, 255, 0, 1)&#x27;);
-    gradient.addColorStop(0.51, &#x27;rgba(0, 255, 255, 1)&#x27;);
-    gradient.addColorStop(0.68, &#x27;rgba(0, 0, 255, 1)&#x27;);
-    gradient.addColorStop(0.85, &#x27;rgba(255, 0, 255, 1)&#x27;);
-    gradient.addColorStop(1, &#x27;rgba(255, 0, 0, 1)&#x27;);
-
-    this.ctx.beginPath();
-    this.ctx.rect(0, 0, width, height);
-    this.ctx.fillStyle &#x3D; gradient;
-    this.ctx.fill();
-    this.ctx.closePath();
-
-    if (this.selectedHeight) {
-      this.ctx.beginPath();
-      this.ctx.strokeStyle &#x3D; &#x27;white&#x27;;
-      this.ctx.lineWidth &#x3D; 5;
-      this.ctx.rect(0, this.selectedHeight - 5, width, 10);
-      this.ctx.stroke();
-      this.ctx.closePath();
-    }
-  }
-
-  ngAfterViewInit() {
-    this.draw();
-  }
-
-  onMouseDown(evt: MouseEvent) {
-    this.mouseDown &#x3D; true;
-    this.selectedHeight &#x3D; evt.offsetY;
-    this.draw();
-    this.emitColor(evt.offsetX, evt.offsetY);
-  }
-
-  onMouseMove(evt: MouseEvent) {
-    if (this.mouseDown) {
-      this.selectedHeight &#x3D; evt.offsetY;
-      this.draw();
-      this.emitColor(evt.offsetX, evt.offsetY);
-    }
-  }
-
-  @HostListener(&#x27;window:mouseup&#x27;, [&#x27;$event&#x27;])
-  onMouseUp(evt: MouseEvent) {
-    this.mouseDown &#x3D; false;
-  }
-
-  emitColor(x: number, y: number) {
-    const rgbaColor &#x3D; this.getColorAtPosition(x, y);
-    this.color.emit(rgbaColor);
-  }
-
-  getColorAtPosition(x: number, y: number) {
-    const imageData &#x3D; this.ctx.getImageData(x, y, 1, 1).data;
-    return &#x27;rgba(&#x27; + imageData[0] + &#x27;,&#x27; + imageData[1] + &#x27;,&#x27; + imageData[2] + &#x27;,1)&#x27;;
-  }
-}
-</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;canvas
-  #canvas
-  class&#x3D;&quot;color-slider&quot;
-  width&#x3D;&quot;50&quot;
-  height&#x3D;&quot;250&quot;
-  (mousedown)&#x3D;&quot;onMouseDown($event)&quot;
-  (mousemove)&#x3D;&quot;onMouseMove($event)&quot;
-&gt;
-&lt;/canvas&gt;
-</code></pre>
-    </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">

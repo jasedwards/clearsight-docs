@@ -46,9 +46,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -136,11 +133,6 @@
 <code>constructor()</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">libs/shared/framework/browser/src/lib/local-storage.service.ts:10</a></div>
-                            </td>
-                        </tr>
 
             </tbody>
         </table>
@@ -173,12 +165,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="49"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/local-storage.service.ts:49</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -245,12 +231,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="58"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/local-storage.service.ts:58</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -317,12 +297,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/local-storage.service.ts:20</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -407,12 +381,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/local-storage.service.ts:30</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -497,12 +465,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/local-storage.service.ts:34</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -581,12 +543,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/local-storage.service.ts:45</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -673,11 +629,6 @@
                             <i>Default value : </i><code>&#x27;cs-&#x27;</code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">libs/shared/framework/browser/src/lib/local-storage.service.ts:10</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -687,70 +638,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import isArray from &#x27;lodash-es/isArray&#x27;;
-import { hasValue } from &#x27;@clearsight-apps/common-functions/has-value&#x27;;
-import { Observable, of } from &#x27;rxjs&#x27;;
-
-@Injectable({
-  providedIn: &#x27;root&#x27;
-})
-export class LocalStorageService {
-  static prefix &#x3D; &#x27;cs-&#x27;;
-  constructor() {}
-
-  private static generateKey(key: string): string {
-    if (!hasValue(key)) {
-      return null;
-    }
-    return &#x60;${LocalStorageService.prefix}${isArray(key) ? key.join(&#x27;$&#x27;) : key}&#x60;;
-  }
-
-  static get(key: string, defaultValue: any &#x3D; null): any {
-    key &#x3D; LocalStorageService.generateKey(key);
-    if (!hasValue(key) || !localStorage) {
-      return defaultValue;
-    }
-
-    const result &#x3D; localStorage.getItem(key);
-    return hasValue(result) ? JSON.parse(result) : defaultValue;
-  }
-
-  static getAsync(key: string, defaultValue: any &#x3D; null): Observable&lt;any&gt; {
-    return of(LocalStorageService.get(key, defaultValue));
-  }
-
-  static set(key: string, value: any): boolean {
-    key &#x3D; LocalStorageService.generateKey(key);
-    if (!hasValue(key) || !localStorage) {
-      return false;
-    }
-
-    const val &#x3D; typeof value &#x3D;&#x3D;&#x3D; &#x27;object&#x27; ? JSON.stringify(value) : value;
-    localStorage.setItem(key, val);
-    return true;
-  }
-
-  static setAsync(key: string, value: any): Observable&lt;boolean&gt; {
-    return of(LocalStorageService.set(key, value));
-  }
-
-  static delete(key: string): boolean {
-    key &#x3D; LocalStorageService.generateKey(key);
-    if (!hasValue(key) || !localStorage) {
-      return false;
-    }
-    localStorage.removeItem(key);
-    return true;
-  }
-
-  static deleteAsync(key: string): Observable&lt;boolean&gt; {
-    return of(LocalStorageService.delete(key));
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

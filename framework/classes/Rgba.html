@@ -50,9 +50,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -118,11 +115,6 @@
 <code>constructor(r: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, g: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, b: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, a: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">libs/shared/framework/color-picker/src/lib/formats.ts:19</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -218,11 +210,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">libs/shared/framework/color-picker/src/lib/formats.ts:20</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -246,11 +233,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">libs/shared/framework/color-picker/src/lib/formats.ts:20</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -274,11 +256,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">libs/shared/framework/color-picker/src/lib/formats.ts:20</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -302,11 +279,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">libs/shared/framework/color-picker/src/lib/formats.ts:20</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -322,37 +294,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export enum ColorFormats {
-  HEX,
-  RGBA,
-  HSLA
-}
-
-export class Cmyk {
-  constructor(public c: number, public m: number, public y: number, public k: number) {}
-}
-
-export class Hsla {
-  constructor(public h: number, public s: number, public l: number, public a: number) {}
-}
-
-export class Hsva {
-  constructor(public h: number, public s: number, public v: number, public a: number) {}
-}
-
-export class Rgba {
-  constructor(public r: number, public g: number, public b: number, public a: number) {}
-}
-
-export interface ColorOutput {
-  Rgba: Rgba;
-  Cymk?: Cmyk;
-  Hsla?: Hsla;
-  Hex: string;
-}
-</code></pre>
-    </div>
 </div>
 
 

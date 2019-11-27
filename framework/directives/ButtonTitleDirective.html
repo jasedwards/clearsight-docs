@@ -45,9 +45,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -146,11 +143,6 @@
 <code>constructor(globalization: GlobalizationService, el: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, renderer: <a href="https://angular.io/api/core/Renderer2" target="_blank">Renderer2</a>)</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">libs/shared/framework/button/src/lib/button-title/button-title.directive.ts:10</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -226,11 +218,6 @@
 
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">libs/shared/framework/button/src/lib/button-title/button-title.directive.ts:8</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -246,11 +233,6 @@
                         <i>Default value : </i><code>false</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">libs/shared/framework/button/src/lib/button-title/button-title.directive.ts:10</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -266,11 +248,6 @@
                         <i>Default value : </i><code>false</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">libs/shared/framework/button/src/lib/button-title/button-title.directive.ts:9</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -302,12 +279,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">libs/shared/framework/button/src/lib/button-title/button-title.directive.ts:39</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -341,12 +312,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="43"
-                            class="link-to-prism">libs/shared/framework/button/src/lib/button-title/button-title.directive.ts:43</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -411,12 +376,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">libs/shared/framework/button/src/lib/button-title/button-title.directive.ts:14</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -436,57 +395,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AfterViewInit, Directive, ElementRef, Input, OnChanges, Renderer2, SimpleChanges } from &#x27;@angular/core&#x27;;
-import { GlobalizationService } from &#x27;@clearsight-apps/global-services&#x27;;
-
-@Directive({
-  selector: &#x27;[csButtonTitle]&#x27;
-})
-export class ButtonTitleDirective implements AfterViewInit, OnChanges {
-  @Input() csButtonTitle: string;
-  @Input() isLink &#x3D; false;
-  @Input() insertText &#x3D; false;
-
-  constructor(private globalization: GlobalizationService, private el: ElementRef, private renderer: Renderer2) {}
-
-  updateValues() {
-    const typeAtt &#x3D; this.isLink ? &#x27;link&#x27; : &#x27;button&#x27;;
-    const key &#x3D; this.globalization.translate(this.csButtonTitle);
-    this.renderer.setAttribute(this.el.nativeElement, &#x27;aria-label&#x27;, key);
-    this.renderer.setAttribute(this.el.nativeElement, &#x27;title&#x27;, key);
-    this.renderer.setAttribute(this.el.nativeElement, &#x27;tabindex&#x27;, &#x27;0&#x27;);
-    this.renderer.setAttribute(this.el.nativeElement, &#x27;role&#x27;, typeAtt);
-    if (this.insertText &amp;&amp; this.el.nativeElement) {
-      if (this.el.nativeElement.childElementCount &#x3D;&#x3D;&#x3D; 0) {
-        const span_el &#x3D; this.renderer.createElement(&#x27;span&#x27;);
-        this.renderer.setProperty(span_el, &#x27;innerText&#x27;, key);
-        this.renderer.appendChild(this.el.nativeElement, span_el);
-      } else {
-        this.el.nativeElement.children[0].innerText &#x3D; key;
-      }
-    }
-
-    if (!this.el.nativeElement.hasAttribute(&#x27;type&#x27;)) {
-      this.renderer.setAttribute(this.el.nativeElement, &#x27;type&#x27;, typeAtt);
-    }
-    if (!this.el.nativeElement.id) {
-      this.renderer.setAttribute(this.el.nativeElement, &#x27;id&#x27;, this.csButtonTitle);
-    }
-  }
-
-  ngAfterViewInit() {
-    this.updateValues();
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes &amp;&amp; changes.csButtonTitle &amp;&amp; !changes.csButtonTitle.firstChange) {
-      this.updateValues();
-    }
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

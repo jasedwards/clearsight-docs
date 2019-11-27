@@ -51,9 +51,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -135,12 +132,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="8"
-                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.interface.ts:8</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -217,12 +208,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.interface.ts:13</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -287,12 +272,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="10"
-                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.interface.ts:10</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -381,12 +360,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="6"
-                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.interface.ts:6</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -463,12 +436,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.interface.ts:11</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -533,12 +500,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.interface.ts:12</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -603,12 +564,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="9"
-                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.interface.ts:9</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -685,12 +640,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="7"
-                            class="link-to-prism">libs/shared/framework/code-dependency/src/lib/code-dependency-handler.interface.ts:7</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -752,23 +701,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ICodeDependencyMessage} from &#x27;./code-dependency-message.interface&#x27;;
-import { Subscription, Subject } from &#x27;rxjs&#x27;;
-import { ICodeDependencyStateUpdate } from &#x27;./code-dependency-state-update.interface&#x27;;
-
-export interface ICodeDependencyHandler {
-  init(fieldName: string, model: any);
-  setCodeDependencyMessage(message: ICodeDependencyMessage, packageName: string): Subject&lt;any&gt;;
-  addCustomDependency(parentField: string, children: string[]): void;
-  registerField(fieldName: string, cb: (updateInfo: ICodeDependencyStateUpdate) &#x3D;&gt; void): Subscription;
-  handleValueChange(fieldName: string, previousValues: { [key: string]: any }, model: any): void;
-  isChild(fieldName: string): boolean;
-  isParent(fieldName: string): boolean;
-  getParents(fieldName: string): string[];
-}
-</code></pre>
-    </div>
 </div>
 
 

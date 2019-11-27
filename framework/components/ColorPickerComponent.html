@@ -44,12 +44,6 @@
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
         <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
-        </li>
-        <li >
             <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
         </li>
         <li >
@@ -209,11 +203,6 @@
 
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.component.ts:9</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -233,11 +222,6 @@
 
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.component.ts:10</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -268,12 +252,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="17"
-                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.component.ts:17</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -338,12 +316,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.component.ts:14</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -382,11 +354,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">libs/shared/framework/color-picker/src/lib/color-picker.component.ts:12</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -396,42 +363,7 @@
 </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, Input, Output, OnInit } from &#x27;@angular/core&#x27;;
 
-@Component({
-  selector: &#x27;cs-color-picker&#x27;,
-  templateUrl: &#x27;./color-picker.component.html&#x27;,
-  styleUrls: [&#x27;./color-picker.component.scss&#x27;]
-})
-export class ColorPickerComponent implements OnInit {
-  @Input() selectedColor: string;
-  @Output() selectedColorChanged: EventEmitter&lt;string&gt; &#x3D; new EventEmitter();
-
-  public hue: string;
-
-  ngOnInit() {
-    this.hue &#x3D; this.selectedColor;
-  }
-  colorChanged(color: string) {
-    this.selectedColor &#x3D; color;
-    this.selectedColorChanged.emit(color);
-  }
-}
-</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;color-wrapper&quot;&gt;
-  &lt;cs-color-palette [hue]&#x3D;&quot;hue&quot; (color)&#x3D;&quot;colorChanged((selectedColor &#x3D; $event))&quot;&gt;&lt;/cs-color-palette&gt;
-  &lt;cs-color-slider (color)&#x3D;&quot;colorChanged((hue &#x3D; $event))&quot; class&#x3D;&quot;palette-padding&quot;&gt;&lt;/cs-color-slider&gt;
-&lt;/div&gt;
-&lt;div class&#x3D;&quot;input-wrapper&quot;&gt;
-  &lt;span class&#x3D;&quot;text&quot;&gt;{{ selectedColor }}&lt;/span&gt;
-  &lt;div class&#x3D;&quot;color-div&quot; [ngStyle]&#x3D;&quot;{ &#x27;background-color&#x27;: selectedColor || &#x27;white&#x27; }&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-    </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">

@@ -50,9 +50,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -142,11 +139,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/portal-event-handler.interface.ts:10</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -170,11 +162,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/portal-event-handler.interface.ts:15</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -198,11 +185,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/portal-event-handler.interface.ts:11</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -226,11 +208,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/portal-event-handler.interface.ts:14</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -254,11 +231,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/portal-event-handler.interface.ts:13</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -282,11 +254,6 @@
 
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/portal-event-handler.interface.ts:12</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -302,25 +269,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Subscription } from &#x27;rxjs&#x27;;
-
-export interface PostParameter {
-  eventName: string;
-  appName?: string;
-  [prop: string]: any;
-}
-
-export abstract class PortalEventHandler {
-  abstract hasAccess: (appName: string) &#x3D;&gt; boolean;
-  abstract openRelatedApp: (appName: string, relativeUrl: string) &#x3D;&gt; void;
-  abstract subscribeClosed: (fn: () &#x3D;&gt; void) &#x3D;&gt; Subscription;
-  abstract subscribe: (eventName: string, fn: (data: any) &#x3D;&gt; void) &#x3D;&gt; Subscription;
-  abstract post: (data: PostParameter) &#x3D;&gt; void;
-  abstract init: () &#x3D;&gt; Promise&lt;any&gt;;
-}
-</code></pre>
-    </div>
 </div>
 
 

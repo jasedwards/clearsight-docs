@@ -51,9 +51,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -424,24 +421,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ISortInfo } from &#x27;@clearsight-apps/models/common/sort-info&#x27;;
-import { EntityAccessMessage } from &#x27;@clearsight-apps/models/common/entity-access-message&#x27;;
-import { ColumnDefinition, RowDefinition } from &#x27;@clearsight-apps/shared/framework/data-table&#x27;;
-
-export interface GridDefinition {
-  Columns: Array&lt;ColumnDefinition&gt;;
-  Rows: Array&lt;RowDefinition&gt;;
-  RowsPerPage?: number;
-  ActivePage?: number;
-  TotalRecordCount?: number;
-  SortInfo?: ISortInfo;
-  EntityAccess?: EntityAccessMessage;
-  FilterDescription?: string;
-  GroupKeys?: string[];
-}
-</code></pre>
-    </div>
 </div>
 
 

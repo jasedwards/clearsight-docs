@@ -1,0 +1,629 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Dashboards</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">Dashboards</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="clearsight-apps">clearsight-apps</h1>
+<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 1.5.0 using <a href="https://nrwl.io/nx">Nrwl Nx</a>.</p>
+<h2 id="custom-schematics">Custom Schematics</h2>
+<h4 id="these-are-schematics-created-by-devs-here-at-riskonnect--they-include-not-only-app-generation-but-generating-pages-for-common-scenarios">These are schematics created by devs here at Riskonnect.  They include not only app generation but generating pages for common scenarios</h4>
+<p><strong>generating an app</strong></p>
+<div><pre class="line-numbers"><code class="language-none">ng g &#64;schematics/clearsight:cs-app My.App</code></pre></div><p>Arguments:</p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Argument</th>
+<th>Alias</th>
+<th>Default Value</th>
+<th>Allowed Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>argv</code></td>
+<td><em>none</em></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The name of the app to generate. must be in for Storms.App or storms-app</td>
+</tr>
+<tr>
+<td><code>--prefix</code></td>
+<td><code>-p</code></td>
+<td><em>cs</em></td>
+<td>any</td>
+<td>the component prefix for this app.  defaults to cs but should be something else</td>
+</tr>
+</tbody>
+</table>
+<p>This command will generate &#39;my-app&#39; with component prefix of &#39;ap&#39;.  The prefix will always be first two letters of last word unless specified.</p>
+<p>while the style type defaults to scss a full list of parameters can be found <a href="https://github.com/nrwl/nx/blob/master/packages/schematics/src/collection/application/schema.d.ts">here</a></p>
+<p>Once the app is generated you should go to index.html and replace</p>
+<p>this:</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code></pre></div><p>with this:</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;meta content=&#39;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&#39; name=&#39;viewport&#39; /&gt;</code></pre></div><p>You will then go to app-loading.html and copy the contents into your index.html between your app component selector.
+Once that is copied you will replace instances of <app-rgb> with with the rgb value of your app color (i.e. 1,2,3) and instances 
+of <app-hex> with your app color (i.e. #267aae)</p>
+<p><strong>To create a new library</strong></p>
+<div><pre class="line-numbers"><code class="language-none">ng g &#64;schematics/clearsight:cs-lib &lt;library name&gt; (i.e. ng g cs-schematics:cs-lib my-lib (or My.Lib) will create a library called my-lib)</code></pre></div><p>this creates a library.  At the moment it just calls the base schematic for library and then adds 
+some scripts to package.json.  you can get a full list of arguments <a href="https://github.com/nrwl/nx/blob/master/packages/schematics/src/collection/library/schema.d.ts">here</a></p>
+<p><strong>To create a feature library</strong></p>
+<p>In most common scenarios, we need to build feature library around particular domain and package which includes manager page, folder page, folder manager page, new entity page and other related modules to that feature.</p>
+<p>You can use cs-feature scematics for this purpose with different available options mentioned below which gives enough flexibility to include modules on required basis.</p>
+<div><pre class="line-numbers"><code class="language-none">ng g &#64;schematics/clearsight:cs-feature MyFeature --domainName `Domain.Name` --package `PackageName`</code></pre></div><blockquote>
+<p><code>HINT:</code> use &#39;--dry-run&#39; option in case you just want to check the file &gt; structure supposed to be emitted by the command instead of actual file &gt; generation. </p>
+</blockquote>
+<p>Arguments:</p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Argument</th>
+<th>Alias</th>
+<th>Default Value</th>
+<th>Allowed Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>argv</code></td>
+<td><em>none</em></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The name of the feature (i.e. Claim)</td>
+</tr>
+<tr>
+<td><code>--domainName</code></td>
+<td><code>-dn</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The domain name</td>
+</tr>
+<tr>
+<td><code>--package</code></td>
+<td><code>-pkg</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The package name</td>
+</tr>
+<tr>
+<td><code>--headerLabel</code></td>
+<td><code>-hl</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The dictionary key to use as the header of the page</td>
+</tr>
+<tr>
+<td><code>--hasManager</code></td>
+<td><em>none</em></td>
+<td>true</td>
+<td>true/false</td>
+<td>If manager module should be included in the feature library</td>
+</tr>
+<tr>
+<td><code>--hasFolder</code></td>
+<td><em>none</em></td>
+<td>true</td>
+<td>true/false</td>
+<td>If Folder module should be included in the feature library</td>
+</tr>
+<tr>
+<td><code>--hasNewEntity</code></td>
+<td><em>none</em></td>
+<td>false</td>
+<td>true/false</td>
+<td>If New Entity module should be included in the feature library</td>
+</tr>
+<tr>
+<td><code>--hasViews</code></td>
+<td><em>none</em></td>
+<td>true</td>
+<td>true/false</td>
+<td>If view lookup should be included in manger. This flag will be considered only if hasManager flag is selected</td>
+</tr>
+<tr>
+<td><code>--hasSearch</code></td>
+<td><em>none</em></td>
+<td>true</td>
+<td>true/false</td>
+<td>If search component should be included in manger. This flag will be considered only if hasManager flag is selected</td>
+</tr>
+</tbody>
+</table>
+<p>Apart from these flags the <em>cs-feature</em> schematic asks a question about the type of manager this feature would have. The available options are:</p>
+<p><strong>Manager Type selection:</strong></p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>No Manager</code></td>
+<td>Schematic doesn&#39;t create any manager</td>
+</tr>
+<tr>
+<td><code>Default Manager</code></td>
+<td>Creates a default manager</td>
+</tr>
+<tr>
+<td><code>Domain based Split Manager</code></td>
+<td>Creates a domain based split manager</td>
+</tr>
+<tr>
+<td><code>Default Split Manager</code></td>
+<td>Creates a split manager</td>
+</tr>
+<tr>
+<td><code>Folder Manager (New)</code></td>
+<td>Creates a folder manager page</td>
+</tr>
+<tr>
+<td><code>Folder Manager and Default Manager (New)</code></td>
+<td>Creates a folder manager and default manager page</td>
+</tr>
+</tbody>
+</table>
+<p>This command will create new library under clearsight app.</p>
+<p><strong>To connect a library to an app</strong></p>
+<p>Add Routes to your app.module.ts to load your library feature:</p>
+<div><pre class="line-numbers"><code class="language-none">export const MY_ROUTES: Routes = [
+  {
+    path: &#39;yourpath&#39;,
+    loadChildren: () =&gt; import(&#39;&#64;clearsight-apps/my-feature&#39;).then(m =&gt; m.MyFeatureModule)
+  }
+];</code></pre></div><p>And then pass in the routes to RouterModule.forRoot:</p>
+<div><pre class="line-numbers"><code class="language-none">RouterModule.forRoot(MY_ROUTES, { initialNavigation: &#39;disabled&#39; })</code></pre></div><p><strong>To create a left hand nav</strong></p>
+<p>Add a nav-routing-nav instance to your app.component.html:</p>
+<div><pre class="line-numbers"><code class="language-none">&lt;nav-routing-nav [routes]=&quot;navCommands&quot;&gt;&lt;/nav-routing-nav&gt;</code></pre></div><p>Then in your app.component.ts create your navCommands array:</p>
+<div><pre class="line-numbers"><code class="language-none">navCommands: NavCommand[] = [
+    { icon: &#39;cs-icon-home&#39;, text: &#39;STORMS_LBL_HOME&#39;, id: &#39;/&#39; },
+    { icon: &#39;cs-icon-your-icon&#39;, text: &#39;YOUR_NAV_ITEM_LABEL&#39;, id: &#39;/yourpath&#39; }
+  ];</code></pre></div><p><strong>To pass routes up to Storms.Wrapper</strong></p>
+<p>Add AppNavigationModule to your app.module.ts and duplicate the same
+navCommands array used for the nav-routing-nav component.</p>
+<blockquote>
+<p>NOTE: this will be refactored later to remove duplication.</p>
+</blockquote>
+<div><pre class="line-numbers"><code class="language-none">AppNavigationModule.forRoot([
+  { icon: &#39;cs-icon-home&#39;, text: &#39;STORMS_LBL_HOME&#39;, id: &#39;/&#39; },
+  { icon: &#39;cs-icon-your-icon&#39;, text: &#39;YOUR_NAV_ITEM_LABEL&#39;, id: &#39;/yourpath&#39; }
+]),</code></pre></div><p><strong>To create a manager page in an app</strong></p>
+<div><pre class="line-numbers"><code class="language-none">ng g &#64;schematics/clearsight:cs-manager MyManager --project &#39;app-name&#39; --domainName `Domain.Name` --package `PackageName` --headerLabel `Dictionary Key`</code></pre></div><p>Arguments:</p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Argument</th>
+<th>Alias</th>
+<th>Default Value</th>
+<th>Allowed Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>argv</code></td>
+<td><em>none</em></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The name of the manager (i.e. Claim)</td>
+</tr>
+<tr>
+<td><code>--domainName</code></td>
+<td><code>-dn</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The domain name</td>
+</tr>
+<tr>
+<td><code>--package</code></td>
+<td><code>-pkg</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The package name</td>
+</tr>
+<tr>
+<td><code>--headerLabel</code></td>
+<td><code>-hl</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The dictionary key to use as the header of the page</td>
+</tr>
+<tr>
+<td><code>--hasViews</code></td>
+<td><em>none</em></td>
+<td>true</td>
+<td>true/false</td>
+<td>If view lookup should be included in manger</td>
+</tr>
+<tr>
+<td><code>--hasSearch</code></td>
+<td><em>none</em></td>
+<td>true</td>
+<td>true/false</td>
+<td>If search component should be included in manger</td>
+</tr>
+<tr>
+<td><code>--routing (optional)</code></td>
+<td><em>none</em></td>
+<td><em>none</em></td>
+<td>true/false</td>
+<td>If routing should be included.  If not the manager component is exported</td>
+</tr>
+</tbody>
+</table>
+<p>This will actually generate a module, component and service needed for a manager page.</p>
+<p><strong>To create a Folder page in an app</strong></p>
+<p>Following command will emit folder module under given project for specific domain and package</p>
+<div><pre class="line-numbers"><code class="language-none">ng g &#64;schematics/clearsight:cs-folder MyFolder --project &#39;app-name&#39; --domainName `Domain.Name` --package `PackageName` --headerLabel `Dictionary Key`</code></pre></div><p>Arguments:</p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Argument</th>
+<th>Alias</th>
+<th>Default Value</th>
+<th>Allowed Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>argv</code></td>
+<td><em>none</em></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The name of the folder (i.e. Claim)</td>
+</tr>
+<tr>
+<td><code>--domainName</code></td>
+<td><code>-dn</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The domain name</td>
+</tr>
+<tr>
+<td><code>--package</code></td>
+<td><code>-pkg</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The package name</td>
+</tr>
+<tr>
+<td><code>--headerLabel</code></td>
+<td><code>-hl</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The dictionary key to use as the header of the page</td>
+</tr>
+</tbody>
+</table>
+<p>NOTE: cs-folder schematics is still in progress and provide basic wireframe of folder component. Teams will be notified once folder schematics is ready to use.</p>
+<p><strong>To create a Folder Manager page in an app</strong></p>
+<p>Following command will emit folder manager module under given project for specific domain and package</p>
+<div><pre class="line-numbers"><code class="language-none">ng g &#64;schematics/clearsight:cs-folder-manager &lt;name&gt; --project=&lt;feature to add it to&gt; --domainName=&lt;domain&gt;  --package=&lt;package&gt; --headerLabel=`&lt;dictionary_key&gt;` --dry-run
+</code></pre></div><p>Arguments:</p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Argument</th>
+<th>Alias</th>
+<th>Default Value</th>
+<th>Allowed Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>argv</code></td>
+<td><em>none</em></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The name of the folder manager (i.e. tasks)</td>
+</tr>
+<tr>
+<td><code>--domainName</code></td>
+<td><code>-dn</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The domain name</td>
+</tr>
+<tr>
+<td><code>--package</code></td>
+<td><code>-pkg</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The package name</td>
+</tr>
+<tr>
+<td><code>--headerLabel</code></td>
+<td><code>-hl</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The dictionary key to use as the header of the page</td>
+</tr>
+</tbody>
+</table>
+<p><strong><strong>Example folder structure</strong></strong></p>
+<div><pre class="line-numbers"><code class="language-none">+ tasks-grid (Common Grid Control)
+|   +-- tasks-grid.component.html
+|   +-- tasks-grid.component.ts
+|   +-- tasks-grid.component.spec.ts
+|   +-- tasks-grid.component.scss
+
++ tasks-manager (Default Manager)
+|   + state
+|       +-- tasks-manager.facade.ts
+|       +-- tasks-manager.effects.ts
+|       +-- tasks-manager.*
+|   +-- tasks-manager.component.html
+|   +-- tasks-manager.component.ts
+|   +-- tasks-manager.component.spec.ts
+|   +-- tasks-manager.component.scss
+
++ tasks-folder-manager (Folder Manager)
+|   + state
+|       +-- tasks-folder-manager.facade.ts
+|       +-- tasks-folder-manager.effects.ts
+|       +-- tasks-folder-manager.*
+|   +-- tasks-folder-manager.component.html
+|   +-- tasks-folder-manager.component.ts
+|   +-- tasks-folder-manager.component.spec.ts
+|   +-- tasks-folder-manager.component.scss
+</code></pre></div><blockquote>
+<p>NOTE: If you are adding <em>cs-folder-manager</em> schematic to an existing 
+feature that has common grid control then choose &#39;Yes&#39; to following 
+question: </p>
+</blockquote>
+<blockquote>
+<p><code>Does this feature already contains the common grid component? Yes</code>. </p>
+</blockquote>
+<p><strong><strong>Filtering logic for the folder managers</strong></strong></p>
+<p>Common approaches to filter the folder manager based on the parent&#39;s properties are:</p>
+<p><strong><strong><em>Approach #1: Use searchParms property in the GridSearch</em></strong></strong></p>
+<p>Use parentKey, parentField, parentPackageName, parentDomainName properties in the component html when the folder manager is added as a page to your entity folder</p>
+<div><pre class="line-numbers"><code class="language-none">    &lt;ta-tasks-examplefolder-manager
+        [parentKey]=&quot;folderInfo.Key&quot;
+        parentDomainName=&quot;STARS.Claim&quot;
+        parentPackageName=&quot;RMIS&quot;
+        [groupKeys]=&quot;folderInfo.GroupKeys&quot;
+    &gt;
+    &lt;/ta-tasks-examplefolder-manager&gt;</code></pre></div><p><strong><strong><em>Approach #2: Use attachedEntityDomain, attachedEntityKey attributes</em></strong></strong></p>
+<p>When there are some extra parameters to be sent to the GridSearch api then override the getExtraParamsForSearch method in the folder-manager&#39;s effect class</p>
+<div><pre class="line-numbers"><code class="language-none">    protected getExtraParamsForSearch(state: IFolderPageState) {
+        return {
+            attachedEntityDomain: state.ParentDomainName,
+            attachedEntityKey: state.ParentKey
+        };
+    }
+</code></pre></div><p><strong>To create a New Entiry page in an app</strong></p>
+<div><pre class="line-numbers"><code class="language-none">ng g &#64;schematics/clearsight:cs-new-entity NewEntity --project &#39;app-name&#39; --domainName `Domain.Name` --package `PackageName`</code></pre></div><p>Arguments:</p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Argument</th>
+<th>Alias</th>
+<th>Default Value</th>
+<th>Allowed Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>argv</code></td>
+<td><em>none</em></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The name of the manager (i.e. NewClaim)</td>
+</tr>
+<tr>
+<td><code>--domainName</code></td>
+<td><code>-dn</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The domain name</td>
+</tr>
+<tr>
+<td><code>--package</code></td>
+<td><code>-pkg</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The package name</td>
+</tr>
+</tbody>
+</table>
+<p><strong>To create a empty State Module in an app</strong></p>
+<p>In case, you dont want to create manager/folder but just a custom components module which follow state model. For those cases, you can use cs-state-module schematics to create module with sample component which follows state model.</p>
+<div><pre class="line-numbers"><code class="language-none">ng g &#64;schematics/clearsight:cs-state-module MyModule --project &#39;app-name&#39; --domainName `Domain.Name` --package `PackageName`</code></pre></div><p>Arguments:</p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Argument</th>
+<th>Alias</th>
+<th>Default Value</th>
+<th>Allowed Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>argv</code></td>
+<td><em>none</em></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The name of the module (i.e. setting)</td>
+</tr>
+<tr>
+<td><code>--domainName</code></td>
+<td><code>-dn</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The domain name</td>
+</tr>
+<tr>
+<td><code>--package</code></td>
+<td><code>-pkg</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The package name</td>
+</tr>
+</tbody>
+</table>
+<h2 id="commands-to-know">Commands to know</h2>
+<p><strong>To add a control to the control library:</strong></p>
+<p>Each control should have it&#39;s own module.  this will allow the consumer to just add one control instead of the entire library.  When adding a new control you should follow these steps.</p>
+<p>We will assume that your control name is MyControl</p>
+<div><pre class="line-numbers"><code class="language-none">ng g module MyControl --app=controls
+ng g component MyControl --app=controls</code></pre></div><p>The first command creates a MyControlModule file.  The second command adds a MyControlComponent to that folder.
+After that go to <code>controls/controls.module.ts</code> and add your new module to <code>CONTROLS_MODULE</code> array.  this will also allow the user to pull in all of the input controls</p>
+<p><strong>To create a component in an app (controls-demo...)</strong></p>
+<div><pre class="line-numbers"><code class="language-none">ng g c MyComponent --app controls-demo</code></pre></div><p>** serving an app **</p>
+<div><pre class="line-numbers"><code class="language-none">ng serve --app myapp</code></pre></div><p><strong>building all apps</strong></p>
+<div><pre class="line-numbers"><code class="language-none">npm run build_all</code></pre></div><p><strong>deploying all apps</strong>
+the package.json has a property on it called branch (Trunk/NextRelease).  this will be used for deploying apps</p>
+<div><pre class="line-numbers"><code class="language-none">npm run deploy_all</code></pre></div><p><strong>building a specific app</strong></p>
+<p>This command requires you to call an npm script with some arguments</p>
+<p>Arguments:</p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Argument</th>
+<th>Alias</th>
+<th>Default Value</th>
+<th>Allowed Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--env</code></td>
+<td><code>-e</code></td>
+<td><em>prod</em></td>
+<td><code>dev</code>  <code>prod</code></td>
+<td>The environment to build.</td>
+</tr>
+<tr>
+<td><code>--name</code></td>
+<td><code>-n</code></td>
+<td><em>none</em></td>
+<td>any</td>
+<td>The name of the app to build</td>
+</tr>
+<tr>
+<td><code>--deploy</code></td>
+<td><code>-d</code></td>
+<td><em>false</em></td>
+<td><code>true</code> <code>false</code></td>
+<td>If the app should be deployed</td>
+</tr>
+</tbody>
+</table>
+<p>This command will deploy &#39;my-app&#39; in dev mode</p>
+<div><pre class="line-numbers"><code class="language-none">npm run cs_build -- -e dev -n my-app -d true</code></pre></div><p>See the <a href="https://github.com/angular/angular-cli/wiki">angular-cli wiki</a> for more info and commands</p>
+<p>##reference
+<a href="https://github.com/angular/angular-cli/wiki">Angular CLI</a>
+<a href="https://nrwl.io/nx/guide-nx-workspace#create-an-app">The thing with the schematics</a></p>
+<h2 id="running-unit-tests">Running unit tests</h2>
+<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
+<h2 id="running-end-to-end-tests">Running end-to-end tests</h2>
+<p>Run <code>ng e2e</code> to execute the end-to-end tests via <a href="http://www.protractortest.org/">Protractor</a>.
+Before running the tests make sure you are serving the app via <code>ng serve</code>.</p>
+<h2 id="further-help">Further help</h2>
+<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://github.com/angular/angular-cli/blob/master/README.md">Angular CLI README</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

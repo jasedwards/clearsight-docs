@@ -50,9 +50,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -125,11 +122,6 @@
 <code>constructor(el?: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>)</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="3" class="link-to-prism">libs/shared/framework/browser/src/lib/outside-click-handler.ts:3</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -191,12 +183,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="6"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/outside-click-handler.ts:6</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -230,12 +216,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/outside-click-handler.ts:19</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -300,12 +280,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="8"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/outside-click-handler.ts:8</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -381,12 +355,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/outside-click-handler.ts:13</a></div>
-                </td>
-            </tr>
 
 
         </tbody>
@@ -395,31 +363,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ElementRef, HostListener } from &#x27;@angular/core&#x27;;
-
-export class OutsideClickHandler {
-  constructor(protected el?: ElementRef) {}
-
-  clicked() {}
-
-  init(el: ElementRef) {
-    this.el &#x3D; el;
-  }
-
-  @HostListener(&#x27;document:click&#x27;, [&#x27;$event.target&#x27;])
-  handleClick(targetElement: HTMLElement) {
-    if (!this.clickedInside(targetElement)) {
-      this.clicked();
-    }
-  }
-
-  clickedInside(targetElement: HTMLElement): boolean {
-    return this.el.nativeElement.contains(targetElement);
-  }
-}
-</code></pre>
-    </div>
 </div>
 
 

@@ -46,9 +46,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -100,11 +97,6 @@
 <code>constructor(locale: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">libs/shared/framework/formatters/src/lib/date-formatter/date-formatter.service.ts:5</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -165,12 +157,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="8"
-                            class="link-to-prism">libs/shared/framework/formatters/src/lib/date-formatter/date-formatter.service.ts:8</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -256,22 +242,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Inject, Injectable, LOCALE_ID } from &#x27;@angular/core&#x27;;
-import { DatePipe } from &#x27;@angular/common&#x27;;
-
-@Injectable()
-export class DateFormatterService {
-  constructor(@Inject(LOCALE_ID) private locale: string) {}
-
-  toServerDate(date: Date, format: string, locale?: string, timezone?: string): string {
-    locale &#x3D; locale || this.locale;
-    const pipe &#x3D; new DatePipe(locale);
-    return pipe.transform(date, format, timezone, locale);
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

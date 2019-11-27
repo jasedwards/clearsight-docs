@@ -46,9 +46,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -115,11 +112,6 @@
 <code>constructor(clearsightHandler: <a href="../injectables/ClearsightPortalEventHandlerService.html">ClearsightPortalEventHandlerService</a>, mockHandler: <a href="../injectables/MockPortalEventHandlerService.html">MockPortalEventHandlerService</a>)</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/portal-event-handler.service.ts:13</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -192,12 +184,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/portal-event-handler.service.ts:26</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -262,12 +248,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/portal-event-handler.service.ts:22</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -301,12 +281,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/portal-event-handler.service.ts:30</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -407,12 +381,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="49"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/portal-event-handler.service.ts:49</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -477,12 +445,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/portal-event-handler.service.ts:45</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -559,12 +521,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="41"
-                            class="link-to-prism">libs/shared/framework/collaborative-platform/src/lib/portal-event-handler.service.ts:41</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -614,61 +570,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { PortalEventHandler, PostParameter } from &#x27;./portal-event-handler.interface&#x27;;
-import { Subscription } from &#x27;rxjs&#x27;;
-import { ACTIVATE_APP, ON_CLOSED } from &#x27;./portal-events.const&#x27;;
-import { ClearsightPortalEventHandlerService } from &#x27;./clearsight-portal-event-handler.service&#x27;;
-import { MockPortalEventHandlerService } from &#x27;./mock-portal-event-handler.service&#x27;;
-import { isInPortal } from &#x27;./is-in-portal&#x27;;
-
-@Injectable({
-  providedIn: &#x27;root&#x27;
-})
-export class PortalEventHandlerService implements PortalEventHandler {
-  private handler: PortalEventHandler;
-
-  constructor(
-    private clearsightHandler: ClearsightPortalEventHandlerService,
-    private mockHandler: MockPortalEventHandlerService
-  ) {
-    this.handler &#x3D; isInPortal() ? this.clearsightHandler : this.mockHandler;
-  }
-
-  init(): Promise&lt;any&gt; {
-    return this.handler.init();
-  }
-
-  hasAccess(appName: string): boolean {
-    return this.handler.hasAccess(appName);
-  }
-
-  openRelatedApp(appName: string, relativeUrl?: string, previousApp?: string, previousAppParams?: any) {
-    if (relativeUrl &amp;&amp; previousApp) {
-      relativeUrl +&#x3D; (relativeUrl.indexOf(&#x27;?&#x27;) &#x3D;&#x3D;&#x3D; -1 ? &#x27;?&#x27; : &#x27;&amp;&#x27;) + &#x27;previousApp&#x3D;&#x27; + previousApp;
-
-      if (previousAppParams) {
-        relativeUrl +&#x3D; &#x27;&amp;previousAppParams&#x3D;&#x27; + previousAppParams;
-      }
-    }
-    return this.handler.post({ eventName: ACTIVATE_APP, appName, relativeUrl });
-  }
-
-  subscribeClosed(fn: () &#x3D;&gt; void): Subscription {
-    return this.handler.subscribe(ON_CLOSED, fn);
-  }
-
-  subscribe(eventName: string, fn: (data: any) &#x3D;&gt; void): Subscription {
-    return this.handler.subscribe(eventName, fn);
-  }
-
-  post(data: PostParameter) {
-    return this.handler.post(data);
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

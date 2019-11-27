@@ -1,0 +1,953 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Dashboards</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Dashboards</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>MyFavoriteDocumentsPersonalizationComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>apps/storms-dashboard/src/app/widgets/my-favorite-documents-widget/my-favorite-documents-personalization/my-favorite-documents-personalization.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>da-my-favorite-documents-personalization</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./my-favorite-documents-personalization.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./my-favorite-documents-personalization.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#displayProperty">displayProperty</a>
+                            </li>
+                            <li>
+                                <a href="#selectedNode">selectedNode</a>
+                            </li>
+                            <li>
+                                <a href="#sourceHeader">sourceHeader</a>
+                            </li>
+                            <li>
+                                <a href="#sourceItems">sourceItems</a>
+                            </li>
+                            <li>
+                                <a href="#targetHeader">targetHeader</a>
+                            </li>
+                            <li>
+                                <a href="#targetItems">targetItems</a>
+                            </li>
+                            <li>
+                                <a href="#widget">widget</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#fetchExistingDocuments">fetchExistingDocuments</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#refreshData">refreshData</a>
+                            </li>
+                            <li>
+                                <a href="#savePersonalization">savePersonalization</a>
+                            </li>
+                            <li>
+                                <a href="#selectedItemsChanged">selectedItemsChanged</a>
+                            </li>
+                            <li>
+                                <a href="#SelectedNode">SelectedNode</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#dropped">dropped</a>
+                            </li>
+                            <li>
+                                <a href="#listChanged">listChanged</a>
+                            </li>
+                            <li>
+                                <a href="#selectionChanged">selectionChanged</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dataService: <a href="../injectables/MyFavoriteDocumentsDataService.html">MyFavoriteDocumentsDataService</a>, cdRef: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>, globalization: GlobalizationService, store: <a href="../interfaces/WidgetsState.html">Store<WidgetsState></a>, service: <a href="../injectables/MyFavoriteDocumentsDataService.html">MyFavoriteDocumentsDataService</a>, widgetRefreshService: <a href="../injectables/WidgetRefreshService.html">WidgetRefreshService</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dataService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MyFavoriteDocumentsDataService.html" target="_self" >MyFavoriteDocumentsDataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cdRef</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>globalization</td>
+                                                  
+                                                        <td>
+                                                                    <code>GlobalizationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>store</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/WidgetsState.html" target="_self" >Store&lt;WidgetsState&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>service</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MyFavoriteDocumentsDataService.html" target="_self" >MyFavoriteDocumentsDataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>widgetRefreshService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/WidgetRefreshService.html" target="_self" >WidgetRefreshService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dropped"></a>
+                        <b>dropped</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listChanged"></a>
+                        <b>listChanged</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectionChanged"></a>
+                        <b>selectionChanged</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchExistingDocuments"></a>
+                    <span class="name">
+                        <b>
+                            fetchExistingDocuments
+                        </b>
+                        <a href="#fetchExistingDocuments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fetchExistingDocuments()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshData"></a>
+                    <span class="name">
+                        <b>
+                            refreshData
+                        </b>
+                        <a href="#refreshData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>refreshData(widget: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>widget</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="savePersonalization"></a>
+                    <span class="name">
+                        <b>
+                            savePersonalization
+                        </b>
+                        <a href="#savePersonalization"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>savePersonalization()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedItemsChanged"></a>
+                    <span class="name">
+                        <b>
+                            selectedItemsChanged
+                        </b>
+                        <a href="#selectedItemsChanged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>selectedItemsChanged(items)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>items</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="SelectedNode"></a>
+                    <span class="name">
+                        <b>
+                            SelectedNode
+                        </b>
+                        <a href="#SelectedNode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>SelectedNode(node: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>node</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayProperty"></a>
+                        <span class="name">
+                            <b>
+                            displayProperty</b>
+                            <a href="#displayProperty"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;Description&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedNode"></a>
+                        <span class="name">
+                            <b>
+                            selectedNode</b>
+                            <a href="#selectedNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sourceHeader"></a>
+                        <span class="name">
+                            <b>
+                            sourceHeader</b>
+                            <a href="#sourceHeader"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sourceItems"></a>
+                        <span class="name">
+                            <b>
+                            sourceItems</b>
+                            <a href="#sourceItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ILookup[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="targetHeader"></a>
+                        <span class="name">
+                            <b>
+                            targetHeader</b>
+                            <a href="#targetHeader"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="targetItems"></a>
+                        <span class="name">
+                            <b>
+                            targetItems</b>
+                            <a href="#targetItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ILookup[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="widget"></a>
+                        <span class="name">
+                            <b>
+                            widget</b>
+                            <a href="#widget"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Widget</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./my-favorite-documents-personalization.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="col-12">    <dms-tree (selectedNodePath)="SelectedNode($event)" [isModal]="false"> </dms-tree>  </div></div><div class="row">  <div class="col-12">    <div class="doc-config">      <cs-dual-list        class="dual-list"        [sourceHeader]="sourceHeader"        [targetHeader]="targetHeader"        [displayProperty]="displayProperty"        [allowMultiSelect]="false"        [allowDragDrop]="true"        [sourceItems]="sourceItems"        [targetItems]="targetItems"        (selectionChanged)="selectedItemsChanged($event)"        (listChanged)="selectedItemsChanged($event)"      >      </cs-dual-list>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'ActionPlanAlertModalComponent', 'selector': 'da-action-plan-alert-modal'},{'name': 'AddContentComponent', 'selector': 'da-add-content'},{'name': 'AddPageDialogueComponent', 'selector': 'da-add-page-dialogue'},{'name': 'AdvancedFilterComponent', 'selector': 'da-advanced-filter'},{'name': 'AppComponent', 'selector': 'da-root'},{'name': 'BasicFilterComponent', 'selector': 'da-basic-filter'},{'name': 'BiReportsWidgetComponent', 'selector': 'da-bi-reports-widget'},{'name': 'BiReportsWidgetPersonalizationComponent', 'selector': 'da-bi-reports-widget-personalization'},{'name': 'ChartDetailsWrapperComponent', 'selector': 'da-chart-details-wrapper'},{'name': 'ChartWidgetComponent', 'selector': 'da-chart-widget'},{'name': 'CountryIntelligenceWidgetComponent', 'selector': 'da-country-intelligence-widget'},{'name': 'DashboardComponent', 'selector': 'da-dashboard'},{'name': 'DashboardsComponent', 'selector': 'da-dashboards'},{'name': 'DocumentsFolderViewerComponent', 'selector': 'da-documents-folder-viewer'},{'name': 'DocumentsFolderViewerPersonalizationComponent', 'selector': 'da-documents-folder-viewer-personalization'},{'name': 'DynamicAnalysisWidgetChartComponent', 'selector': 'da-dynamic-analysis-widget-chart'},{'name': 'DynamicAnalysisWidgetComponent', 'selector': 'da-dynamic-analysis-widget'},{'name': 'DynamicAnalysisWidgetPersonalizationComponent', 'selector': 'da-dynamic-analysis-widget-personalization'},{'name': 'DynamicAnalysisWidgetTableComponent', 'selector': 'da-dynamic-analysis-widget-table'},{'name': 'EditFolderToolbarComponent', 'selector': 'da-edit-folder-toolbar'},{'name': 'EditPageDialogueComponent', 'selector': 'da-edit-page-dialogue'},{'name': 'EmailNotificationWidgetComponent', 'selector': 'da-email-notification-widget'},{'name': 'FilterDataComponent', 'selector': 'da-filter-data'},{'name': 'GridChartWidgetComponent', 'selector': 'da-grid-chart-widget'},{'name': 'LagChartWidgetComponent', 'selector': 'da-lag-chart-widget'},{'name': 'LinearGaugeWidgetComponent', 'selector': 'da-linear-gauge-widget'},{'name': 'MonthlyAnalysisWidgetComponent', 'selector': 'da-monthly-analysis-widget'},{'name': 'MonthlyAnalysisWidgetPersonalizationComponent', 'selector': 'da-monthly-analysis-widget-personalization'},{'name': 'MyCalendarWidgetComponent', 'selector': 'da-my-calendar-widget'},{'name': 'MyCalenderWidgetPersonalizationComponent', 'selector': 'da-my-calender-widget-personalization'},{'name': 'MyFavoriteDocumentsComponent', 'selector': 'da-my-favorite-documents'},{'name': 'MyFavoriteDocumentsPersonalizationComponent', 'selector': 'da-my-favorite-documents-personalization'},{'name': 'MyLinksToolbarComponent', 'selector': 'da-my-links-toolbar'},{'name': 'MyLinksWidgetComponent', 'selector': 'da-my-links-widget'},{'name': 'MyReportsPersonalizationComponent', 'selector': 'da-my-reports-personalization'},{'name': 'MyReportsWidgetAditionalDataComponent', 'selector': 'da-my-reports-widget-aditional-data'},{'name': 'MyReportsWidgetAlertsGridComponent', 'selector': 'da-my-reports-widget-alerts-grid'},{'name': 'MyReportsWidgetComponent', 'selector': 'da-my-reports-widget'},{'name': 'MyReportsWidgetStatusBarComponent', 'selector': 'da-my-reports-widget-status-bar'},{'name': 'MyViewsWidgetComponent', 'selector': 'da-my-views-widget'},{'name': 'MyViewsWidgetPersonalizationComponent', 'selector': 'da-my-views-widget-personalization'},{'name': 'NewFolderComponent', 'selector': 'da-new-folder'},{'name': 'NewLinkComponent', 'selector': 'da-new-link'},{'name': 'NewsWidgetComponent', 'selector': 'da-news-widget'},{'name': 'NewsWidgetPersonalizationComponent', 'selector': 'da-news-widget-personalization'},{'name': 'PendingApprovalWidgetComponent', 'selector': 'da-pending-approval-widget'},{'name': 'PersonalizeChartComponent', 'selector': 'da-personalize-chart'},{'name': 'RadialGaugeWidgetComponent', 'selector': 'da-radial-gauge-widget'},{'name': 'RiskMapWidgetComponent', 'selector': 'da-risk-map-widget'},{'name': 'RiskMapWidgetPersonalizationComponent', 'selector': 'da-risk-map-widget-personalization'},{'name': 'SimpleChartComponent', 'selector': 'da-simple-chart'},{'name': 'WidgetContainerComponent', 'selector': 'da-widget-container'},{'name': 'WidgetPersonalizeComponent', 'selector': 'da-widget-personalize'}];
+    var DIRECTIVES = [{'name': 'WidgetActionsDirective', 'selector': '[daWidgetActions]'},{'name': 'WidgetFooterDirective', 'selector': '[daWidgetFooter]'},{'name': 'WidgetSizerDirective', 'selector': '[daWidgetSizer]'},{'name': 'WidgetToggleDecoratorDirective', 'selector': '[daWidgetToggleDecorator]'}];
+    var ACTUAL_COMPONENT = {'name': 'MyFavoriteDocumentsPersonalizationComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MyFavoriteDocumentsPersonalizationComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

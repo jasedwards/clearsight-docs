@@ -45,9 +45,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -168,11 +165,6 @@
 <code>constructor()</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">libs/shared/framework/accessibility/src/lib/item-list-navigator/item-list-navigator.directive.ts:23</a></div>
-                            </td>
-                        </tr>
 
             </tbody>
         </table>
@@ -194,11 +186,6 @@
 
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">libs/shared/framework/accessibility/src/lib/item-list-navigator/item-list-navigator.directive.ts:20</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -218,11 +205,6 @@
 
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">libs/shared/framework/accessibility/src/lib/item-list-navigator/item-list-navigator.directive.ts:21</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 </section>
@@ -253,12 +235,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="27"
-                            class="link-to-prism">libs/shared/framework/accessibility/src/lib/item-list-navigator/item-list-navigator.directive.ts:27</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -292,12 +268,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="61"
-                            class="link-to-prism">libs/shared/framework/accessibility/src/lib/item-list-navigator/item-list-navigator.directive.ts:61</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -331,12 +301,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="37"
-                            class="link-to-prism">libs/shared/framework/accessibility/src/lib/item-list-navigator/item-list-navigator.directive.ts:37</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -414,11 +378,6 @@
                             </code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">libs/shared/framework/accessibility/src/lib/item-list-navigator/item-list-navigator.directive.ts:22</a></div>
-                            </td>
-                        </tr>
 
 
             </tbody>
@@ -429,76 +388,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
-  Directive,
-  EventEmitter,
-  OnDestroy,
-  Input,
-  Output,
-  QueryList,
-  AfterContentInit,
-  ContentChildren
-} from &#x27;@angular/core&#x27;;
-import { Subscription, merge } from &#x27;rxjs&#x27;;
-import { INavigationItem } from &#x27;@clearsight-apps/models/common/navigation-item&#x27;;
-import { NavDirection } from &#x27;@clearsight-apps/models/common/nav-direction&#x27;;
-import { NavigatorControlDirective } from &#x27;@clearsight-apps/shared/framework/accessibility/src/lib/item-list-navigator/navigator-control.directive&#x27;;
-
-@Directive({
-  selector: &#x27;[csItemListNavigator]&#x27;
-})
-export class ItemListNavigatorDirective implements AfterContentInit, OnDestroy {
-  @Input() items: Array&lt;INavigationItem&gt;;
-  @Output() itemSelected &#x3D; new EventEmitter&lt;INavigationItem&gt;();
-  @ContentChildren(NavigatorControlDirective) navControls: QueryList&lt;NavigatorControlDirective&gt;;
-  private sub: Subscription;
-
-  constructor() {}
-
-  ngAfterContentInit(): void {
-    if (!this.items || this.items.length &#x3D;&#x3D;&#x3D; 0 || !this.navControls || this.navControls.length &#x3D;&#x3D;&#x3D; 0) {
-      return;
-    }
-
-    this.sub &#x3D; merge&lt;NavDirection&gt;(...this.navControls.map(ctrl &#x3D;&gt; ctrl.csSelect)).subscribe(dir &#x3D;&gt;
-      this.selectItem(dir)
-    );
-  }
-
-  selectItem(direction: NavDirection) {
-    let index &#x3D; this.items.findIndex(item &#x3D;&gt; item.Selected);
-    this.items.forEach(item &#x3D;&gt; (item.Selected &#x3D; false));
-    index &#x3D; index &lt; 0 ? 0 : index;
-    switch (direction) {
-      case NavDirection.Last: {
-        index &#x3D; this.items.length - 1;
-        break;
-      }
-      case NavDirection.Prev: {
-        index &#x3D; index &gt; 0 ? index - 1 : this.items.length - 1;
-        break;
-      }
-      case NavDirection.Next: {
-        index &#x3D; index &lt; this.items.length - 1 ? index + 1 : 0;
-        break;
-      }
-      default:
-        index &#x3D; 0;
-    }
-    this.items[index].Selected &#x3D; true;
-    this.itemSelected.emit(this.items[index]);
-  }
-
-  ngOnDestroy(): void {
-    if (this.sub) {
-      this.sub.unsubscribe();
-      this.sub &#x3D; null;
-    }
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 

@@ -46,9 +46,6 @@
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
 </ul>
 
 <div class="tab-content">
@@ -105,11 +102,6 @@
 <code>constructor(_validKey: <a href="../injectables/ValidKeysService.html">ValidKeysService</a>)</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">libs/shared/framework/browser/src/lib/preference.service.ts:7</a></div>
-                            </td>
-                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -172,12 +164,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="10"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/preference.service.ts:10</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -249,12 +235,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">libs/shared/framework/browser/src/lib/preference.service.ts:23</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -318,71 +298,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { ValidKeysService } from &#x27;./valid-keys.service&#x27;;
-
-@Injectable({
-  providedIn: &#x27;root&#x27;
-})
-export class PreferenceService {
-  constructor(private _validKey: ValidKeysService) {}
-
-  public getPreference(prefKey, keyObject) {
-    const key &#x3D; this._buildKey(prefKey, keyObject);
-    if (key) {
-      if (localStorage) {
-        const localData &#x3D; JSON.parse(localStorage.getItem(key));
-        if (localData) {
-          return localData;
-        }
-      }
-    }
-    return null;
-  }
-
-  public savePreference(prefKey, keyObject, value) {
-    const key &#x3D; this._buildKey(prefKey, keyObject);
-    if (key) {
-      if (localStorage) {
-        localStorage.setItem(key, JSON.stringify(value));
-      }
-    }
-  }
-
-  private _buildKey(prefKey, keyObject) {
-    if (this.isValidObject(prefKey, keyObject)) {
-      return this.getMappedKeyValues(prefKey, keyObject).join(&#x27;$&#x27;);
-    } else {
-      console.error(&#x27;Not a Valid Key Object. Please provide the valid key object.&#x27;);
-      return null;
-    }
-  }
-
-  private getMappedKeyValues(prefKey, keyObject) {
-    const validKey &#x3D; this._validKey.getValidKey(prefKey);
-    return validKey.map(function(k, v) {
-      if (keyObject[k] &#x3D;&#x3D;&#x3D; undefined) {
-        return &#x27;error&#x27;;
-      }
-      return keyObject[k];
-    });
-  }
-
-  private isValidObject(prefKey, keyObject) {
-    const validDefinedKeys &#x3D; this._validKey.getValidKey(prefKey);
-    let result &#x3D; true;
-    validDefinedKeys.forEach(definedKey &#x3D;&gt; {
-      if (!keyObject[definedKey]) {
-        result &#x3D; false;
-      }
-    });
-
-    return result;
-  }
-}
-</code></pre>
-    </div>
 
 </div>
 
