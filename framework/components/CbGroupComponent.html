@@ -1,0 +1,1652 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Clearsight Apps Framework</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Clearsight Apps Framework</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>CbGroupComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>libs/shared/framework/condition-builder/src/lib/cb-group/cb-group.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>cb-group</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./cb-group.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./cb-group.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#canMoveDown">canMoveDown</a>
+                            </li>
+                            <li>
+                                <a href="#canMoveUp">canMoveUp</a>
+                            </li>
+                            <li>
+                                <a href="#fg">fg</a>
+                            </li>
+                            <li>
+                                <a href="#GROUPS_FA_NAME">GROUPS_FA_NAME</a>
+                            </li>
+                            <li>
+                                <a href="#groupTypeList">groupTypeList</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addChildGroup">addChildGroup</a>
+                            </li>
+                            <li>
+                                <a href="#addCondition">addCondition</a>
+                            </li>
+                            <li>
+                                <a href="#buildFormGroup">buildFormGroup</a>
+                            </li>
+                            <li>
+                                <a href="#dragEnded">dragEnded</a>
+                            </li>
+                            <li>
+                                <a href="#dragStarted">dragStarted</a>
+                            </li>
+                            <li>
+                                <a href="#dropGroup">dropGroup</a>
+                            </li>
+                            <li>
+                                <a href="#getChildGroupsFormArray">getChildGroupsFormArray</a>
+                            </li>
+                            <li>
+                                <a href="#moveDown">moveDown</a>
+                            </li>
+                            <li>
+                                <a href="#moveGroupClicked">moveGroupClicked</a>
+                            </li>
+                            <li>
+                                <a href="#moveUp">moveUp</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onDataChanged">onDataChanged</a>
+                            </li>
+                            <li>
+                                <a href="#onGroupTypeChanged">onGroupTypeChanged</a>
+                            </li>
+                            <li>
+                                <a href="#removeGroupClicked">removeGroupClicked</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#allGroupIdList">allGroupIdList</a>
+                            </li>
+                            <li>
+                                <a href="#config">config</a>
+                            </li>
+                            <li>
+                                <a href="#disabled">disabled</a>
+                            </li>
+                            <li>
+                                <a href="#gpGroup">gpGroup</a>
+                            </li>
+                            <li>
+                                <a href="#group">group</a>
+                            </li>
+                            <li>
+                                <a href="#index">index</a>
+                            </li>
+                            <li>
+                                <a href="#multiDomain">multiDomain</a>
+                            </li>
+                            <li>
+                                <a href="#pGroup">pGroup</a>
+                            </li>
+                            <li>
+                                <a href="#pGroupIndex">pGroupIndex</a>
+                            </li>
+                            <li>
+                                <a href="#targetConfig">targetConfig</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#dataChanged">dataChanged</a>
+                            </li>
+                            <li>
+                                <a href="#removeGroup">removeGroup</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#isDragging">isDragging</a>
+                                </li>
+                                <li>
+                                    <a href="#allXGroupIdList">allXGroupIdList</a>
+                                </li>
+                                <li>
+                                    <a href="#noDropGroupdIds">noDropGroupdIds</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, globalization: GlobalizationService, cbDragnDropService: <a href="../injectables/CbDragDropService.html">CbDragDropService</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>globalization</td>
+                                                  
+                                                        <td>
+                                                                    <code>GlobalizationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cbDragnDropService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CbDragDropService.html" target="_self" >CbDragDropService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="allGroupIdList"></a>
+                        <b>allGroupIdList</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="config"></a>
+                        <b>config</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Field.html" target="_self" >FieldInfo</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disabled"></a>
+                        <b>disabled</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" target="_blank" >Boolean</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gpGroup"></a>
+                        <b>gpGroup</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>GroupCondition</code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="group"></a>
+                        <b>group</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>GroupCondition</code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="index"></a>
+                        <b>index</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="multiDomain"></a>
+                        <b>multiDomain</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" target="_blank" >Boolean</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pGroup"></a>
+                        <b>pGroup</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>GroupCondition</code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pGroupIndex"></a>
+                        <b>pGroupIndex</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="targetConfig"></a>
+                        <b>targetConfig</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Field.html" target="_self" >FieldInfo</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataChanged"></a>
+                        <b>dataChanged</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removeGroup"></a>
+                        <b>removeGroup</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addChildGroup"></a>
+                    <span class="name">
+                        <b>
+                            addChildGroup
+                        </b>
+                        <a href="#addChildGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addChildGroup()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addCondition"></a>
+                    <span class="name">
+                        <b>
+                            addCondition
+                        </b>
+                        <a href="#addCondition"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addCondition()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buildFormGroup"></a>
+                    <span class="name">
+                        <b>
+                            buildFormGroup
+                        </b>
+                        <a href="#buildFormGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>buildFormGroup(group: GroupCondition)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>group</td>
+                                    <td>
+                                            <code>GroupCondition</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dragEnded"></a>
+                    <span class="name">
+                        <b>
+                            dragEnded
+                        </b>
+                        <a href="#dragEnded"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>dragEnded(event: CdkDragEnd)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>CdkDragEnd</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dragStarted"></a>
+                    <span class="name">
+                        <b>
+                            dragStarted
+                        </b>
+                        <a href="#dragStarted"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>dragStarted(event: CdkDragStart)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>CdkDragStart</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dropGroup"></a>
+                    <span class="name">
+                        <b>
+                            dropGroup
+                        </b>
+                        <a href="#dropGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>dropGroup(event: CdkDragDrop<string[]>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>CdkDragDrop&lt;string[]&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getChildGroupsFormArray"></a>
+                    <span class="name">
+                        <b>
+                            getChildGroupsFormArray
+                        </b>
+                        <a href="#getChildGroupsFormArray"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getChildGroupsFormArray()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://angular.io/api/forms/FormArray" target="_blank" >FormArray</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="moveDown"></a>
+                    <span class="name">
+                        <b>
+                            moveDown
+                        </b>
+                        <a href="#moveDown"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>moveDown()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="moveGroupClicked"></a>
+                    <span class="name">
+                        <b>
+                            moveGroupClicked
+                        </b>
+                        <a href="#moveGroupClicked"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>moveGroupClicked(move: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>move</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="moveUp"></a>
+                    <span class="name">
+                        <b>
+                            moveUp
+                        </b>
+                        <a href="#moveUp"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>moveUp()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <b>
+                            ngOnChanges
+                        </b>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>changes</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDataChanged"></a>
+                    <span class="name">
+                        <b>
+                            onDataChanged
+                        </b>
+                        <a href="#onDataChanged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onDataChanged()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onGroupTypeChanged"></a>
+                    <span class="name">
+                        <b>
+                            onGroupTypeChanged
+                        </b>
+                        <a href="#onGroupTypeChanged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onGroupTypeChanged(groupType: IdValuePair)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>groupType</td>
+                                    <td>
+                                            <code>IdValuePair</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeGroupClicked"></a>
+                    <span class="name">
+                        <b>
+                            removeGroupClicked
+                        </b>
+                        <a href="#removeGroupClicked"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeGroupClicked()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="canMoveDown"></a>
+                        <span class="name">
+                            <b>
+                            canMoveDown</b>
+                            <a href="#canMoveDown"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" target="_blank" >Boolean</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="canMoveUp"></a>
+                        <span class="name">
+                            <b>
+                            canMoveUp</b>
+                            <a href="#canMoveUp"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" target="_blank" >Boolean</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fg"></a>
+                        <span class="name">
+                            <b>
+                            fg</b>
+                            <a href="#fg"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="GROUPS_FA_NAME"></a>
+                        <span class="name">
+                            <b>
+                            GROUPS_FA_NAME</b>
+                            <a href="#GROUPS_FA_NAME"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;groupConditions&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="groupTypeList"></a>
+                        <span class="name">
+                            <b>
+                            groupTypeList</b>
+                            <a href="#groupTypeList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>IdValuePair[]</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isDragging"></a>
+                        <span class="name"><b>isDragging</b><a href="#isDragging"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>isDragging()</code></span>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="allXGroupIdList"></a>
+                        <span class="name"><b>allXGroupIdList</b><a href="#allXGroupIdList"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>allXGroupIdList()</code></span>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="noDropGroupdIds"></a>
+                        <span class="name"><b>noDropGroupdIds</b><a href="#noDropGroupdIds"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>noDropGroupdIds()</code></span>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./cb-group.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;~@clearsight-apps/styles/variables/index&#x27;;
+.drop-down {
+  display: inline-block;
+  margin: 5px 13px 5px 0;
+  width: 100px !important;
+  vertical-align: top;
+}
+
+.button {
+  display: inline-block;
+  margin: 5px 13px 5px 0;
+  vertical-align: top;
+}
+
+.span {
+  display: inline-block;
+  margin: 5px 13px 5px 0;
+  vertical-align: top;
+}
+
+.button-text {
+  text-transform: capitalize;
+  white-space: normal;
+  height: 26px;
+  line-height: 0;
+}
+
+.button-padding {
+  float: right;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+.flexcontainer {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-flow: wrap;
+}
+
+.flexcontainer &gt; * {
+  margin: 5px;
+}
+
+.cb-group-container {
+  padding-left: 0.3rem;
+  border: solid $input-border-width $input-border-color;
+  border-radius: $input-border-radius;
+}
+
+.cs-icon-closed {
+  float: right;
+  margin-top: 0.13rem;
+  margin-right: 0.25rem;
+  &amp;:before {
+    line-height: 1;
+    vertical-align: middle;
+  }
+}
+
+.snap-right {
+  float: right;
+}
+
+// .not-dragging {
+//   // height: 1px !important;
+//   background-color: aqua;
+// }
+
+// .on-dragging {
+//   // height: inherit !important;
+//   background-color: aquamarine;
+// }
+
+.cdk-drop-list-dragging {
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #2e6da4;
+}
+
+.dragging {
+  // background-color: lightgray;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #2e6da4;
+}
+
+.move-placeholder {
+  width: 100%;
+  align-content: center;
+  text-align: center;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div *ngIf="fg" [formGroup]="fg" novalidate class="cb-group-container">  <div>    <ng-content select=".spanRightContent"></ng-content>    <button      type="button"      *ngIf="pGroup"      (click)="removeGroupClicked()"      class="cs-button cs-button_icon-container cs-icon-closed"      csButtonTitle="STORMS_CLOSE"    ></button>    <div      *ngIf="pGroup != null"      id="xx_{{ group.id }}"      cdkDropList      [cdkDropListData]="pGroup?.groupConditions"      [cdkDropListConnectedTo]="allXGroupIdList"      class="action-button-no-label snap-right"    >      <span        cdkDrag        [cdkDragData]="{ type: \'group\', id: group.id, group: group }"        (cdkDragStarted)="dragStarted($event)"        (cdkDragEnded)="dragEnded($event)"      >        <div class="move-placeholder" *cdkDragPreview>Move group</div>        <button type="button" class="cs-button cs-button_icon-container cs-icon-draggable" cdkDragHandle></button>      </span>    </div>    <button      type="button"      *ngIf="canMoveDown"      (click)="moveGroupClicked(+1)"      class="cs-button cs-button_icon-container cs-icon-uniE78B snap-right"      csButtonTitle="STORMS_MOVE_DOWN"    ></button>    <button      type="button"      *ngIf="canMoveUp"      (click)="moveGroupClicked(-1)"      class="cs-button cs-button_icon-container cs-icon-uniE78C snap-right"      csButtonTitle="STORMS_MOVE_UP"    ></button>    <div class="drop-down">      <cs-drop-down        [data]="groupTypeList"        formControlName="conditionType"        [canClear]="false"        [attachToBody]="false"        aria-required="true"        (ngModelChange)="onGroupTypeChanged($event)"      >      </cs-drop-down>    </div>    <div class="span">      <span attr.aria-label=" {{ \'STORMS_GROUP_TYPE_DESC\' | translate }}"        >{{ \'STORMS_GROUP_TYPE_DESC\' | translate }}:</span      >    </div>  </div>  <div>    <div class="flexcontainer" *ngIf="!pGroup">      <button        type="button"        (click)="addCondition()"        csButtonTitle="STORMS_ADD_CONDITION"        [insertText]="true"        role="button"        class="action-button cs-icon-add button-text"      ></button>      <button        type="button"        (click)="addChildGroup()"        csButtonTitle="STORMS_GROUP_CONDITION"        [insertText]="true"        class="action-button cs-icon-add button-text"      ></button>    </div>    <cb-conditions      [parentFg]="fg"      [conditions]="group?.conditions"      [pGroup]="group"      [pGroupIndex]="index"      [gpGroup]="pGroup"      [config]="config"      [targetConfig]="targetConfig"      [multiDomain]="multiDomain"      [disabled]="disabled"      [allGroupIdList]="allGroupIdList"      (dataChanged)="onDataChanged()"    >    </cb-conditions>    <div      [ngClass]="{ dragging: isDragging }"      id="x_{{ group.id }}"      cdkDropList      [cdkDropListData]="group?.groupConditions"      [cdkDropListConnectedTo]="allXGroupIdList"      (cdkDropListDropped)="dropGroup($event)"    >      <span>&nbsp;</span>    </div>    <cb-groups      [parentFg]="fg"      [groups]="group?.groupConditions"      [pGroup]="group"      [index]="index"      [gpGroup]="pGroup"      [config]="config"      [targetConfig]="targetConfig"      [multiDomain]="multiDomain"      [disabled]="disabled"      [allGroupIdList]="allGroupIdList"      (dataChanged)="onDataChanged()"    >    </cb-groups>    <div class="flexcontainer" *ngIf="pGroup">      <button        type="button"        (click)="addCondition()"        class="action-button cs-icon-add button-text"        csButtonTitle="STORMS_ADD_CONDITION"        [insertText]="true"      ></button>      <button        type="button"        (click)="addChildGroup()"        class="action-button cs-icon-add button-text"        csButtonTitle="STORMS_GROUP_CONDITION"        [insertText]="true"      ></button>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AlertComponent', 'selector': 'cs-alert'},{'name': 'CbBetweenDateComponent', 'selector': 'cb-between-date'},{'name': 'CbBetweenNumberComponent', 'selector': 'cb-between-number'},{'name': 'CbBetweenStringComponent', 'selector': 'cb-between-string'},{'name': 'CbComparisonDialogComponent', 'selector': 'cb-comparison-dialog'},{'name': 'CbComparisonFieldComponent', 'selector': 'cb-comparison-field'},{'name': 'CbComparisonListComponent', 'selector': 'cb-comparison-list'},{'name': 'CbConditionComponent', 'selector': 'cb-condition'},{'name': 'CbConditionsComponent', 'selector': 'cb-conditions'},{'name': 'CbControlComponent', 'selector': 'cb-control'},{'name': 'CbControlMultidomainComponent', 'selector': 'cb-control-multidomain'},{'name': 'CbEditorComponent', 'selector': 'cb-editor'},{'name': 'CbGroupComponent', 'selector': 'cb-group'},{'name': 'CbGroupsComponent', 'selector': 'cb-groups'},{'name': 'CbSingleDateComponent', 'selector': 'cb-single-date'},{'name': 'CbSingleNumberComponent', 'selector': 'cb-single-number'},{'name': 'CbSingleStringComponent', 'selector': 'cb-single-string'},{'name': 'ColorPaletteComponent', 'selector': 'cs-color-palette'},{'name': 'ColorPickerComponent', 'selector': 'cs-color-picker'},{'name': 'ColorSliderComponent', 'selector': 'cs-color-slider'},{'name': 'ConfirmDialogComponent', 'selector': 'cs-confirm-dialog'},{'name': 'DeleteReasonDialogComponent', 'selector': 'cs-delete-reason-dialog'},{'name': 'DialogShellComponent', 'selector': 'cs-dialog-shell'},{'name': 'DomainListComponent', 'selector': 'li-domain-list'},{'name': 'DualListComponent', 'selector': 'cs-dual-list'},{'name': 'DynamicMenuComponent', 'selector': 'cs-dynamic-menu'},{'name': 'EditorControlComponent', 'selector': 'cs-editor-control'},{'name': 'EntityManagerComponent', 'selector': 'cs-entity-manager'},{'name': 'EntitySearchComponent', 'selector': 'cs-entity-search'}];
+    var DIRECTIVES = [{'name': 'AutoCollapsibleDirective', 'selector': '[csAutoCollapsible]'},{'name': 'ButtonTitleDirective', 'selector': '[csButtonTitle]'},{'name': 'DragDropDirective', 'selector': '[csDragDrop]'},{'name': 'DraggableDirective', 'selector': '[csDraggable]'},{'name': 'DraggableHelperDirective', 'selector': '[csDraggableHelper]'},{'name': 'DualListDirective', 'selector': '[csDualList]'},{'name': 'EntitySearchDirective', 'selector': '[csEntitySearch]'},{'name': 'FocusOnLoadDirective', 'selector': '[csFocusOnLoad]'},{'name': 'FreezeHeaderDirective', 'selector': '[csFreezeHeader]'},{'name': 'ItemListNavigatorDirective', 'selector': '[csItemListNavigator]'},{'name': 'KeyPressDirective', 'selector': '[csKeyPress]'},{'name': 'ListActionDirective', 'selector': '[csListAction]'},{'name': 'ListLayoutDirective', 'selector': '[csListLayout]'},{'name': 'ListNavigatorDirective', 'selector': '[csListNavigator]'},{'name': 'ListNavigatorItemDirective', 'selector': '[csListNavigatorItem]'},{'name': 'NavigatorControlDirective', 'selector': '[csNavigatorControl]'},{'name': 'PinToDirective', 'selector': '[csPinTo]'},{'name': 'ResizePanelDirective', 'selector': '[csResizePanel]'},{'name': 'SelectDirective', 'selector': '[csSelect]'},{'name': 'SourceListDirective', 'selector': '[csSourceList]'},{'name': 'TableLayoutDirective', 'selector': '[csTableLayout]'},{'name': 'TargetListDirective', 'selector': '[csTargetList]'}];
+    var ACTUAL_COMPONENT = {'name': 'CbGroupComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CbGroupComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
